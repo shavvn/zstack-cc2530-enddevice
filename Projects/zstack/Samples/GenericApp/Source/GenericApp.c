@@ -182,7 +182,6 @@ void GenericApp_Init( byte task_id )
   GenericApp_TransID = 0;
   
   HalUARTInit();
-  printf("\r\n Device Init!\r\n"); 
 
   // Device hardware initialization can be added here or in main() (Zmain.c).
   // If the hardware is application specific - add it here.
@@ -211,7 +210,7 @@ void GenericApp_Init( byte task_id )
     
   //ZDO_RegisterForZDOMsg( GenericApp_TaskID, End_Device_Bind_rsp );
   //ZDO_RegisterForZDOMsg( GenericApp_TaskID, Match_Desc_rsp );
-  printf("\r\nGenericApp init complete!\r\n");
+  //printf("\r\nGenericApp init complete!\r\n");
 }
 
 /*********************************************************************
@@ -237,7 +236,7 @@ UINT16 GenericApp_ProcessEvent( byte task_id, UINT16 events )
   ZStatus_t sentStatus;
   byte sentTransID;       // This should match the value sent
   (void)task_id;  // Intentionally unreferenced parameter
-  printf("\r\nEvent Processing!");
+  //printf("\r\nEvent Processing!");
   if ( events & SYS_EVENT_MSG )
   {
     MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( GenericApp_TaskID );
@@ -264,18 +263,18 @@ UINT16 GenericApp_ProcessEvent( byte task_id, UINT16 events )
           if ( sentStatus != ZSuccess )
           {
             // The data wasn't delivered -- Do something
-            printf("\r\n Data not sent");
+            //printf("\r\n Data not sent");
 
           }
           break;
 
         case AF_INCOMING_MSG_CMD:
-          printf("\r\n Msg Coming");
+          //printf("\r\n Msg Coming");
           GenericApp_MessageMSGCB( MSGpkt );
           break;
 
         case ZDO_STATE_CHANGE:
-          printf("\r\n State Changed");
+          //printf("\r\n State Changed");
           GenericApp_NwkState = (devStates_t)(MSGpkt->hdr.status);
           if ( (GenericApp_NwkState == DEV_ZB_COORD)
               || (GenericApp_NwkState == DEV_ROUTER)
@@ -395,16 +394,15 @@ void GenericApp_ProcessZDOMsgs( zdoIncomingMsg_t *inMsg )
  */
 void GenericApp_MessageMSGCB( afIncomingMSGPacket_t *pkt )
 {
-  printf("\r\n  GenericApp_MessageMSGCB");
+  unsigned char cmd = 0;
+  unsigned int data = 0;
+  unsigned char buf[6] = "";
   switch ( pkt->clusterId )
   {
     case GENERICAPP_CLUSTERID:
-      // "the" message
-#if defined( LCD_SUPPORTED )
-      HalLcdWriteScreen( (char*)pkt->cmd.Data, "rcvd" );
-#elif defined( WIN32 )
-      WPRINTSTR( pkt->cmd.Data );
-#endif
+      osal_memcpy(buf, pkt->cmd.Data, 5);
+      HalUARTWrite(0, "Msg!\r\n", 8);
+      HalUARTWrite(0, buf, 5);
       break;
   }
 }
@@ -420,7 +418,7 @@ void GenericApp_MessageMSGCB( afIncomingMSGPacket_t *pkt )
  */
 void GenericApp_SendTheMessage( void )
 {
-  char theMessageData[5] = "";
+  unsigned char theMessageData[5] = "";
   unsigned int temp_data = 0;
   unsigned int sensor_data = 0;
   //address or device info in theMessageData
@@ -431,27 +429,27 @@ void GenericApp_SendTheMessage( void )
   theMessageData[2] = 0xFF; //2nd and 3rd byte of theMessageData is reserved or as check code
   sensor_data = ReadSensorTempData();
   osal_buffer_uint16(&theMessageData[3], sensor_data); //4,5th byte of theMessageData store the temp
-  printf("Temperture:%d.%d¡æ\r\n ",sensor_data/100,sensor_data%100); 
+  //printf("Temperture:%d.%d¡æ\r\n ",sensor_data/100,sensor_data%100); 
   temp_data = HalAdcRead(HAL_ADC_CHN_AIN0,HAL_ADC_RESOLUTION_14);
-  printf("ADC:%d", temp_data);
+  //printf("ADC:%d", temp_data);
   if ( AF_DataRequest( &GenericApp_DstAddr, &GenericApp_epDesc,
                        GENERICAPP_CLUSTERID,
-                       5,//(byte)osal_strlen( theMessageData ) + 1
-                       (byte *)&theMessageData,
+                       6,//(byte)osal_strlen( theMessageData ) + 1
+                       theMessageData,
                        &GenericApp_TransID,
                        AF_DISCV_ROUTE, AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
   {
     // Successfully requested to be sent.
-    printf("\r\n  Hello World sent!\r\n");
+    //printf("\r\n  Hello World sent!\r\n");
   }
   else
   {
     // Error occurred in request to send.
-    printf("\r\n  Hello World not sent!\r\n");
+    //printf("\r\n  Hello World not sent!\r\n");
     err_count++;
     if (err_count == 3) {
       err_count =0;
-      printf("\r\n Reseting Device!");
+      //printf("\r\n Reseting Device!");
       //asm("LJMP 0x0");
       //osal_set_event(ZDAppTaskID, ZDO_DEVICE_RESET);
     }
