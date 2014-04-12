@@ -1,0 +1,1362 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V7.60.1.40026 for 8051             12/Apr/2014  13:11:03 #
+# Copyright (C) 2004-2010 IAR Systems AB.                                     #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\Source\GenericApp.c  #
+#    Command line       =  -f E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \Tools\CC2530DB\f8wEndev.cfg (-DCPU32MHZ           #
+#                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3         #
+#                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f          #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\To #
+#                          ols\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO            #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0x1111                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 E:\Dropbox\grad_proj\zstack #
+#                          -cc2530-enddevice\Projects\zstack\Samples\GenericA #
+#                          pp\Source\GenericApp.c -D HAL_ADC -D               #
+#                          NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D            #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D xPOWER_SAVING -lC    #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \List\ -lA E:\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          EndDeviceEB\List\ --diag_suppress Pe001,Pa010 -o   #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \Obj\ -e --require_prototypes --no_code_motion     #
+#                          --debug --core=plain --dptr=16,1                   #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\ -I      #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\Source\  #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \ZMain\TI2530DB\ -I E:\Dropbox\grad_proj\zstack-cc #
+#                          2530-enddevice\Projects\zstack\Samples\GenericApp\ #
+#                          CC2530DB\..\..\..\..\..\Components\hal\include\    #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\hal\target\CC2530EB\ -I          #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\include\ -I                     #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\high_level\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\ -I             #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\single_chip\    #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\mt\ -I                           #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\osal\include\ -I                    #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\osal\mcu\ccsoc\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\saddr\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\sdata\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\af\ -I                        #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\nwk\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sapi\ -I                      #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sec\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sys\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\zdo\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\zmac\ -I E:\Dropbox\grad_proj\zstac #
+#                          k-cc2530-enddevice\Projects\zstack\Samples\Generic #
+#                          App\CC2530DB\..\..\..\..\..\Components\zmac\f8w\   #
+#                          -I "C:\Program Files\IAR Systems\Embedded          #
+#                          Workbench 5.4\8051\INC\" -I "C:\Program Files\IAR  #
+#                          Systems\Embedded Workbench 5.4\8051\INC\CLIB\"     #
+#                          -Ohz                                               #
+#    List file          =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \List\GenericApp.lst                               #
+#    Object file        =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \Obj\GenericApp.r51                                #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Projects\zstack\Samples\GenericApp\Source\GenericApp.c
+      1          /**************************************************************************************************
+      2            Filename:       GenericApp.c
+      3            Revised:        $Date: 2009-03-18 15:56:27 -0700 (Wed, 18 Mar 2009) $
+      4            Revision:       $Revision: 19453 $
+      5          
+      6            Description:    Generic Application (no Profile).
+      7          
+      8          
+      9            Copyright 2004-2009 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License").  You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product.  Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED “AS IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, 
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com. 
+     38          **************************************************************************************************/
+     39          
+     40          /*********************************************************************
+     41            This application isn't intended to do anything useful, it is
+     42            intended to be a simple example of an application's structure.
+     43          
+     44            This application sends "Hello World" to another "Generic"
+     45            application every 15 seconds.  The application will also
+     46            receive "Hello World" packets.
+     47          
+     48            The "Hello World" messages are sent/received as MSG type message.
+     49          
+     50            This applications doesn't have a profile, so it handles everything
+     51            directly - itself.
+     52          
+     53            Key control:
+     54              SW1:
+     55              SW2:  initiates end device binding
+     56              SW3:
+     57              SW4:  initiates a match description request
+     58          *********************************************************************/
+     59          
+     60          /*********************************************************************
+     61           * INCLUDES
+     62           */
+     63          #include "OSAL.h"
+     64          #include "AF.h"
+     65          #include "ZDApp.h"
+     66          #include "ZDObject.h"
+     67          #include "ZDProfile.h"
+     68          
+     69          #include "GenericApp.h"
+     70          #include "DebugTrace.h"
+     71          
+     72          #if !defined( WIN32 )
+     73            #include "OnBoard.h"
+     74          #endif
+     75          
+     76          /* HAL */
+     77          #include "hal_adc.h"
+     78          #include "hal_lcd.h"
+     79          #include "hal_led.h"
+     80          #include "hal_key.h"
+     81          #include "hal_uart.h"
+     82          #include "hal_ds18b20.h"
+     83          #include "stdio.h"
+     84          
+     85          
+     86          /*********************************************************************
+     87           * MACROS
+     88           */
+     89          
+     90          /*********************************************************************
+     91           * CONSTANTS
+     92           */
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     93           unsigned char err_count = 0;
+   \                     err_count:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     94          
+     95          /*********************************************************************
+     96           * TYPEDEFS
+     97           */
+     98          
+     99          /*********************************************************************
+    100           * GLOBAL VARIABLES
+    101           */
+    102          
+    103          // This list should be filled with Application specific Cluster IDs.
+
+   \                                 In  segment XDATA_ROM_C, align 1
+    104          const cId_t GenericApp_ClusterList[GENERICAPP_MAX_CLUSTERS] =
+   \                     GenericApp_ClusterList:
+   \   000000   0100         DW 1
+    105          {
+    106            GENERICAPP_CLUSTERID
+    107          };
+    108          
+
+   \                                 In  segment XDATA_ROM_C, align 1
+    109          const SimpleDescriptionFormat_t GenericApp_SimpleDesc =
+   \                     GenericApp_SimpleDesc:
+   \   000000   01           DB 1
+   \   000001   040F0100     DW 3844, 1
+   \   000005   0001         DB 0, 1
+   \   000007   ....         DW GenericApp_ClusterList
+   \   000009   01           DB 1
+   \   00000A   ....         DW GenericApp_ClusterList
+    110          {
+    111            GENERICAPP_ENDPOINT,              //  int Endpoint;
+    112            GENERICAPP_PROFID,                //  uint16 AppProfId[2];
+    113            GENERICAPP_DEVICEID,              //  uint16 AppDeviceId[2];
+    114            GENERICAPP_DEVICE_VERSION,        //  int   AppDevVer:4;
+    115            GENERICAPP_FLAGS,                 //  int   AppFlags:4;
+    116            GENERICAPP_MAX_CLUSTERS,          //  byte  AppNumInClusters;
+    117            (cId_t *)GenericApp_ClusterList,  //  byte *pAppInClusterList;
+    118            GENERICAPP_MAX_CLUSTERS,          //  byte  AppNumInClusters;
+    119            (cId_t *)GenericApp_ClusterList   //  byte *pAppInClusterList;
+    120          };
+    121          
+    122          // This is the Endpoint/Interface description.  It is defined here, but
+    123          // filled-in in GenericApp_Init().  Another way to go would be to fill
+    124          // in the structure here and make it a "const" (in code space).  The
+    125          // way it's defined in this sample app it is define in RAM.
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    126          endPointDesc_t GenericApp_epDesc;
+   \                     GenericApp_epDesc:
+   \   000000                DS 6
+   \   000006                REQUIRE __INIT_XDATA_Z
+    127          
+    128          /*********************************************************************
+    129           * EXTERNAL VARIABLES
+    130           */
+    131          
+    132          /*********************************************************************
+    133           * EXTERNAL FUNCTIONS
+    134           */
+    135          
+    136          /*********************************************************************
+    137           * LOCAL VARIABLES
+    138           */
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    139          byte GenericApp_TaskID;   // Task ID for internal task/event processing
+   \                     GenericApp_TaskID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    140                                    // This variable will be received when
+    141                                    // GenericApp_Init() is called.
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    142          devStates_t GenericApp_NwkState;
+   \                     GenericApp_NwkState:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    143          
+    144          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    145          byte GenericApp_TransID;  // This is the unique message ID (counter)
+   \                     GenericApp_TransID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    146          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    147          afAddrType_t GenericApp_DstAddr;
+   \                     GenericApp_DstAddr:
+   \   000000                DS 12
+   \   00000C                REQUIRE __INIT_XDATA_Z
+    148          
+    149          /*********************************************************************
+    150           * LOCAL FUNCTIONS
+    151           */
+    152          void GenericApp_ProcessZDOMsgs( zdoIncomingMsg_t *inMsg );
+    153          void GenericApp_MessageMSGCB( afIncomingMSGPacket_t *pckt );
+    154          void GenericApp_SendTheMessage( void );
+    155          
+    156          /*********************************************************************
+    157           * NETWORK LAYER CALLBACKS
+    158           */
+    159          
+    160          /*********************************************************************
+    161           * PUBLIC FUNCTIONS
+    162           */
+    163          
+    164          /*********************************************************************
+    165           * @fn      GenericApp_Init
+    166           *
+    167           * @brief   Initialization function for the Generic App Task.
+    168           *          This is called during initialization and should contain
+    169           *          any application specific initialization (ie. hardware
+    170           *          initialization/setup, table initialization, power up
+    171           *          notificaiton ... ).
+    172           *
+    173           * @param   task_id - the ID assigned by OSAL.  This ID should be
+    174           *                    used to send messages and set timers.
+    175           *
+    176           * @return  none
+    177           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    178          void GenericApp_Init( byte task_id )
+   \                     GenericApp_Init:
+    179          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+    180            GenericApp_TaskID = task_id;
+   \   000006   90....       MOV     DPTR,#GenericApp_TaskID
+   \   000009   F0           MOVX    @DPTR,A
+    181            GenericApp_NwkState = DEV_INIT;
+   \   00000A   7401         MOV     A,#0x1
+   \   00000C   90....       MOV     DPTR,#GenericApp_NwkState
+   \   00000F   F0           MOVX    @DPTR,A
+    182            GenericApp_TransID = 0;
+   \   000010   E4           CLR     A
+   \   000011   90....       MOV     DPTR,#GenericApp_TransID
+   \   000014   F0           MOVX    @DPTR,A
+    183            
+    184            HalUARTInit();
+   \   000015                ; Setup parameters for call to function HalUARTInit
+   \   000015   12....       LCALL   ??HalUARTInit?relay
+    185            printf("\r\n Device Init!\r\n"); 
+   \   000018                ; Setup parameters for call to function printf
+   \   000018   7A..         MOV     R2,#(`?<Constant "\\r\\n Device Init!\\r\\n">` & 0xff)
+   \   00001A   7B..         MOV     R3,#((`?<Constant "\\r\\n Device Init!\\r\\n">` >> 8) & 0xff)
+   \   00001C   12....       LCALL   ??printf?relay
+    186          
+    187            // Device hardware initialization can be added here or in main() (Zmain.c).
+    188            // If the hardware is application specific - add it here.
+    189            // If the hardware is other parts of the device add it in main().
+    190          
+    191            GenericApp_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;
+   \   00001F   7402         MOV     A,#0x2
+   \   000021   90....       MOV     DPTR,#(GenericApp_DstAddr + 8)
+   \   000024   F0           MOVX    @DPTR,A
+    192            GenericApp_DstAddr.endPoint = 0x20;  //endPoint 0x20 is Coordinator
+   \   000025   7420         MOV     A,#0x20
+   \   000027   90....       MOV     DPTR,#(GenericApp_DstAddr + 9)
+   \   00002A   F0           MOVX    @DPTR,A
+    193            GenericApp_DstAddr.addr.shortAddr = 0x0000;  //shortAddr of Coordinator is always 0000
+   \   00002B   90....       MOV     DPTR,#GenericApp_DstAddr
+   \   00002E   E4           CLR     A
+   \   00002F   F0           MOVX    @DPTR,A
+   \   000030   A3           INC     DPTR
+   \   000031   F0           MOVX    @DPTR,A
+    194            // Fill out the endpoint description.
+    195            GenericApp_epDesc.endPoint = GENERICAPP_ENDPOINT;
+   \   000032   7401         MOV     A,#0x1
+   \   000034   90....       MOV     DPTR,#GenericApp_epDesc
+   \   000037   F0           MOVX    @DPTR,A
+    196            GenericApp_epDesc.task_id = &GenericApp_TaskID;
+   \   000038   90....       MOV     DPTR,#(GenericApp_epDesc + 1)
+   \   00003B   74..         MOV     A,#(GenericApp_TaskID & 0xff)
+   \   00003D   F0           MOVX    @DPTR,A
+   \   00003E   A3           INC     DPTR
+   \   00003F   74..         MOV     A,#((GenericApp_TaskID >> 8) & 0xff)
+   \   000041   F0           MOVX    @DPTR,A
+    197            GenericApp_epDesc.simpleDesc
+    198                      = (SimpleDescriptionFormat_t *)&GenericApp_SimpleDesc;
+   \   000042   90....       MOV     DPTR,#(GenericApp_epDesc + 3)
+   \   000045   74..         MOV     A,#(GenericApp_SimpleDesc & 0xff)
+   \   000047   F0           MOVX    @DPTR,A
+   \   000048   A3           INC     DPTR
+   \   000049   74..         MOV     A,#((GenericApp_SimpleDesc >> 8) & 0xff)
+   \   00004B   F0           MOVX    @DPTR,A
+    199            GenericApp_epDesc.latencyReq = noLatencyReqs;
+   \   00004C   E4           CLR     A
+   \   00004D   90....       MOV     DPTR,#(GenericApp_epDesc + 5)
+   \   000050   F0           MOVX    @DPTR,A
+    200          
+    201            // Register the endpoint description with the AF
+    202            afRegister( &GenericApp_epDesc );
+   \   000051                ; Setup parameters for call to function afRegister
+   \   000051   7A..         MOV     R2,#(GenericApp_epDesc & 0xff)
+   \   000053   7B..         MOV     R3,#((GenericApp_epDesc >> 8) & 0xff)
+   \   000055   12....       LCALL   ??afRegister?relay
+    203          
+    204            // Register for all key events - This app will handle all key events
+    205            RegisterForKeys( GenericApp_TaskID );
+   \   000058                ; Setup parameters for call to function RegisterForKeys
+   \   000058   90....       MOV     DPTR,#GenericApp_TaskID
+   \   00005B   E0           MOVX    A,@DPTR
+   \   00005C   F9           MOV     R1,A
+   \   00005D   12....       LCALL   ??RegisterForKeys?relay
+    206          
+    207            // Update the display
+    208          #if defined ( LCD_SUPPORTED )
+    209              HalLcdWriteString( "GenericApp", HAL_LCD_LINE_1 );
+    210          #endif
+    211              
+    212            //ZDO_RegisterForZDOMsg( GenericApp_TaskID, End_Device_Bind_rsp );
+    213            //ZDO_RegisterForZDOMsg( GenericApp_TaskID, Match_Desc_rsp );
+    214            printf("\r\nGenericApp init complete!\r\n");
+   \   000060                ; Setup parameters for call to function printf
+   \   000060   7A..         MOV     R2,#(`?<Constant "\\r\\nGenericApp init com...">` & 0xff)
+   \   000062   7B..         MOV     R3,#((`?<Constant "\\r\\nGenericApp init com...">` >> 8) & 0xff)
+   \   000064   12....       LCALL   ??printf?relay
+    215          }
+   \   000067   7F01         MOV     R7,#0x1
+   \   000069   02....       LJMP    ?BANKED_LEAVE_XDATA
+    216          
+    217          /*********************************************************************
+    218           * @fn      GenericApp_ProcessEvent
+    219           *
+    220           * @brief   Generic Application Task event processor.  This function
+    221           *          is called to process all events for the task.  Events
+    222           *          include timers, messages and any other user defined events.
+    223           *
+    224           * @param   task_id  - The OSAL assigned task ID.
+    225           * @param   events - events to process.  This is a bit map and can
+    226           *                   contain more than one event.
+    227           *
+    228           * @return  none
+    229           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    230          UINT16 GenericApp_ProcessEvent( byte task_id, UINT16 events )
+   \                     GenericApp_ProcessEvent:
+    231          {
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+   \   000007   EB           MOV     A,R3
+   \   000008   FF           MOV     R7,A
+    232            afIncomingMSGPacket_t *MSGpkt;
+    233            afDataConfirm_t *afDataConfirm;
+    234          
+    235            // Data Confirmation message fields
+    236            byte sentEP;
+    237            ZStatus_t sentStatus;
+    238            byte sentTransID;       // This should match the value sent
+    239            (void)task_id;  // Intentionally unreferenced parameter
+    240            printf("\r\nEvent Processing!");
+   \   000009                ; Setup parameters for call to function printf
+   \   000009   7A..         MOV     R2,#(`?<Constant "\\r\\nEvent Processing!">` & 0xff)
+   \   00000B   7B..         MOV     R3,#((`?<Constant "\\r\\nEvent Processing!">` >> 8) & 0xff)
+   \   00000D   12....       LCALL   ??printf?relay
+    241            if ( events & SYS_EVENT_MSG )
+   \   000010   7480         MOV     A,#-0x80
+   \   000012   5F           ANL     A,R7
+   \   000013   F9           MOV     R1,A
+   \   000014   E4           CLR     A
+   \   000015   7001         JNZ     ??GenericApp_ProcessEvent_0
+   \   000017   E9           MOV     A,R1
+   \                     ??GenericApp_ProcessEvent_0:
+   \   000018   7003         JNZ     $+5
+   \   00001A   02....       LJMP    ??GenericApp_ProcessEvent_1 & 0xFFFF
+    242            {
+    243              MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( GenericApp_TaskID );
+   \   00001D                ; Setup parameters for call to function osal_msg_receive
+   \   00001D   800E         SJMP    ??GenericApp_ProcessEvent_2
+    244              while ( MSGpkt )
+    245              {
+    246                switch ( MSGpkt->hdr.event )
+    247                {
+    248                  case ZDO_CB_MSG:
+    249                    GenericApp_ProcessZDOMsgs( (zdoIncomingMsg_t *)MSGpkt );
+   \                     ??GenericApp_ProcessEvent_3:
+   \   00001F                ; Setup parameters for call to function GenericApp_ProcessZDOMsgs
+   \   00001F   AA..         MOV     R2,?V0 + 0
+   \   000021   AB..         MOV     R3,?V0 + 1
+   \   000023   12....       LCALL   ??GenericApp_ProcessZDOMsgs?relay
+    250                    break;
+    251          
+    252                  case AF_DATA_CONFIRM_CMD:
+    253                    // This message is received as a confirmation of a data packet sent.
+    254                    // The status is of ZStatus_t type [defined in ZComDef.h]
+    255                    // The message fields are defined in AF.h
+    256                    afDataConfirm = (afDataConfirm_t *)MSGpkt;
+    257                    sentEP = afDataConfirm->endpoint;
+    258                    sentStatus = afDataConfirm->hdr.status;
+    259                    sentTransID = afDataConfirm->transID;
+    260                    (void)sentEP;
+    261                    (void)sentTransID;
+    262          
+    263                    // Action taken when confirmation is received.
+    264                    if ( sentStatus != ZSuccess )
+    265                    {
+    266                      // The data wasn't delivered -- Do something
+    267                      printf("\r\n Data not sent");
+    268          
+    269                    }
+    270                    break;
+    271          
+    272                  case AF_INCOMING_MSG_CMD:
+    273                    printf("\r\n Msg Coming");
+    274                    GenericApp_MessageMSGCB( MSGpkt );
+    275                    break;
+    276          
+    277                  case ZDO_STATE_CHANGE:
+    278                    printf("\r\n State Changed");
+    279                    GenericApp_NwkState = (devStates_t)(MSGpkt->hdr.status);
+    280                    if ( (GenericApp_NwkState == DEV_ZB_COORD)
+    281                        || (GenericApp_NwkState == DEV_ROUTER)
+    282                        || (GenericApp_NwkState == DEV_END_DEVICE) )
+    283                    {
+    284                      // Start sending "the" message in a regular interval.
+    285                      osal_start_timerEx( GenericApp_TaskID,
+    286                                          GENERICAPP_SEND_MSG_EVT,
+    287                                        GENERICAPP_SEND_MSG_TIMEOUT );
+    288                    }
+    289                    break;
+    290                    
+    291                  default:
+    292                    break;
+    293                }
+    294          
+    295                // Release the memory
+    296                osal_msg_deallocate( (uint8 *)MSGpkt );
+   \                     ??GenericApp_ProcessEvent_4:
+   \   000026                ; Setup parameters for call to function osal_msg_deallocate
+   \   000026   AA..         MOV     R2,?V0 + 0
+   \   000028   AB..         MOV     R3,?V0 + 1
+   \   00002A   12....       LCALL   ??osal_msg_deallocate?relay
+    297          
+    298                // Next
+    299                MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( GenericApp_TaskID );
+   \   00002D                ; Setup parameters for call to function osal_msg_receive
+   \                     ??GenericApp_ProcessEvent_2:
+   \   00002D   90....       MOV     DPTR,#GenericApp_TaskID
+   \   000030   E0           MOVX    A,@DPTR
+   \   000031   F9           MOV     R1,A
+   \   000032   12....       LCALL   ??osal_msg_receive?relay
+   \   000035   8A..         MOV     ?V0 + 0,R2
+   \   000037   8B..         MOV     ?V0 + 1,R3
+   \   000039   E5..         MOV     A,?V0 + 0
+   \   00003B   7002         JNZ     ??GenericApp_ProcessEvent_5
+   \   00003D   E5..         MOV     A,?V0 + 1
+   \                     ??GenericApp_ProcessEvent_5:
+   \   00003F   606E         JZ      ??GenericApp_ProcessEvent_6
+   \   000041   85..82       MOV     DPL,?V0 + 0
+   \   000044   85..83       MOV     DPH,?V0 + 1
+   \   000047   E0           MOVX    A,@DPTR
+   \   000048   12....       LCALL   ?UC_SWITCH_SPARSE
+   \                     `?<Jumptable for GenericApp_ProcessEvent>_0`:
+   \   00004B   00           DB        0
+   \   00004C   04           DB        4
+   \   00004D   1A           DB        26
+   \   00004E   ....         DW        ??GenericApp_ProcessEvent_7
+   \   000050   D1           DB        209
+   \   000051   ....         DW        ??GenericApp_ProcessEvent_8
+   \   000053   D3           DB        211
+   \   000054   ....         DW        ??GenericApp_ProcessEvent_3
+   \   000056   FD           DB        253
+   \   000057   ....         DW        ??GenericApp_ProcessEvent_9
+   \   000059   ....         DW        ??GenericApp_ProcessEvent_4
+   \                     ??GenericApp_ProcessEvent_9:
+   \   00005B   85..82       MOV     DPL,?V0 + 0
+   \   00005E   85..83       MOV     DPH,?V0 + 1
+   \   000061   A3           INC     DPTR
+   \   000062   E0           MOVX    A,@DPTR
+   \   000063   60C1         JZ      ??GenericApp_ProcessEvent_4
+   \   000065                ; Setup parameters for call to function printf
+   \   000065   7A..         MOV     R2,#(`?<Constant "\\r\\n Data not sent">` & 0xff)
+   \   000067   7B..         MOV     R3,#((`?<Constant "\\r\\n Data not sent">` >> 8) & 0xff)
+   \                     ??GenericApp_ProcessEvent_10:
+   \   000069   12....       LCALL   ??printf?relay
+   \   00006C   80B8         SJMP    ??GenericApp_ProcessEvent_4
+   \                     ??GenericApp_ProcessEvent_7:
+   \   00006E                ; Setup parameters for call to function printf
+   \   00006E   7A..         MOV     R2,#(`?<Constant "\\r\\n Msg Coming">` & 0xff)
+   \   000070   7B..         MOV     R3,#((`?<Constant "\\r\\n Msg Coming">` >> 8) & 0xff)
+   \   000072   12....       LCALL   ??printf?relay
+   \   000075                ; Setup parameters for call to function printf
+   \   000075   7A..         MOV     R2,#(`?<Constant "\\r\\n  GenericApp_Messag...">` & 0xff)
+   \   000077   7B..         MOV     R3,#((`?<Constant "\\r\\n  GenericApp_Messag...">` >> 8) & 0xff)
+   \   000079   80EE         SJMP    ??GenericApp_ProcessEvent_10
+   \                     ??GenericApp_ProcessEvent_8:
+   \   00007B                ; Setup parameters for call to function printf
+   \   00007B   7A..         MOV     R2,#(`?<Constant "\\r\\n State Changed">` & 0xff)
+   \   00007D   7B..         MOV     R3,#((`?<Constant "\\r\\n State Changed">` >> 8) & 0xff)
+   \   00007F   12....       LCALL   ??printf?relay
+   \   000082   85..82       MOV     DPL,?V0 + 0
+   \   000085   85..83       MOV     DPH,?V0 + 1
+   \   000088   A3           INC     DPTR
+   \   000089   E0           MOVX    A,@DPTR
+   \   00008A   90....       MOV     DPTR,#GenericApp_NwkState
+   \   00008D   F0           MOVX    @DPTR,A
+   \   00008E   6409         XRL     A,#0x9
+   \   000090   600A         JZ      ??GenericApp_ProcessEvent_11
+   \   000092   E0           MOVX    A,@DPTR
+   \   000093   6407         XRL     A,#0x7
+   \   000095   6005         JZ      ??GenericApp_ProcessEvent_11
+   \   000097   E0           MOVX    A,@DPTR
+   \   000098   6406         XRL     A,#0x6
+   \   00009A   708A         JNZ     ??GenericApp_ProcessEvent_4
+   \                     ??GenericApp_ProcessEvent_11:
+   \   00009C                ; Setup parameters for call to function osal_start_timerEx
+   \   00009C   7C10         MOV     R4,#0x10
+   \   00009E   7D27         MOV     R5,#0x27
+   \   0000A0   7A01         MOV     R2,#0x1
+   \   0000A2   7B00         MOV     R3,#0x0
+   \   0000A4   90....       MOV     DPTR,#GenericApp_TaskID
+   \   0000A7   E0           MOVX    A,@DPTR
+   \   0000A8   F9           MOV     R1,A
+   \   0000A9   12....       LCALL   ??osal_start_timerEx?relay
+   \   0000AC   02....       LJMP    ??GenericApp_ProcessEvent_4 & 0xFFFF
+    300              }
+    301          
+    302              // return unprocessed events
+    303              return (events ^ SYS_EVENT_MSG);
+   \                     ??GenericApp_ProcessEvent_6:
+   \   0000AF   EE           MOV     A,R6
+   \   0000B0   FA           MOV     R2,A
+   \   0000B1   7480         MOV     A,#-0x80
+   \   0000B3   6F           XRL     A,R7
+   \                     ??GenericApp_ProcessEvent_12:
+   \   0000B4   FB           MOV     R3,A
+   \   0000B5   8023         SJMP    ??GenericApp_ProcessEvent_13
+    304            }
+    305          
+    306            // Send a message out - This event is generated by a timer
+    307            //  (setup in GenericApp_Init()).
+    308            if ( events & GENERICAPP_SEND_MSG_EVT )
+   \                     ??GenericApp_ProcessEvent_1:
+   \   0000B7   EE           MOV     A,R6
+   \   0000B8   A2E0         MOV     C,0xE0 /* A   */.0
+   \   0000BA   501A         JNC     ??GenericApp_ProcessEvent_14
+    309            {
+    310              // Send "the" message
+    311              GenericApp_SendTheMessage();
+   \   0000BC                ; Setup parameters for call to function GenericApp_SendTheMessage
+   \   0000BC   12....       LCALL   ??GenericApp_SendTheMessage?relay
+    312          
+    313              // Setup to send message again
+    314              osal_start_timerEx( GenericApp_TaskID,
+    315                                  GENERICAPP_SEND_MSG_EVT,
+    316                                GENERICAPP_SEND_MSG_TIMEOUT );
+   \   0000BF                ; Setup parameters for call to function osal_start_timerEx
+   \   0000BF   7C10         MOV     R4,#0x10
+   \   0000C1   7D27         MOV     R5,#0x27
+   \   0000C3   7A01         MOV     R2,#0x1
+   \   0000C5   7B00         MOV     R3,#0x0
+   \   0000C7   90....       MOV     DPTR,#GenericApp_TaskID
+   \   0000CA   E0           MOVX    A,@DPTR
+   \   0000CB   F9           MOV     R1,A
+   \   0000CC   12....       LCALL   ??osal_start_timerEx?relay
+    317          
+    318              // return unprocessed events
+    319              return (events ^ GENERICAPP_SEND_MSG_EVT);
+   \   0000CF   7401         MOV     A,#0x1
+   \   0000D1   6E           XRL     A,R6
+   \   0000D2   FA           MOV     R2,A
+   \   0000D3   EF           MOV     A,R7
+   \   0000D4   80DE         SJMP    ??GenericApp_ProcessEvent_12
+    320            }
+    321          
+    322            // Discard unknown events
+    323            return 0;
+   \                     ??GenericApp_ProcessEvent_14:
+   \   0000D6   7A00         MOV     R2,#0x0
+   \   0000D8   7B00         MOV     R3,#0x0
+   \                     ??GenericApp_ProcessEvent_13:
+   \   0000DA   7F04         MOV     R7,#0x4
+   \   0000DC   02....       LJMP    ?BANKED_LEAVE_XDATA
+    324          }
+    325          
+    326          /*********************************************************************
+    327           * Event Generation Functions
+    328           */
+    329          
+    330          /*********************************************************************
+    331           * @fn      GenericApp_ProcessZDOMsgs()
+    332           *
+    333           * @brief   Process response messages
+    334           *
+    335           * @param   none
+    336           *
+    337           * @return  none
+    338           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    339          void GenericApp_ProcessZDOMsgs( zdoIncomingMsg_t *inMsg )
+   \                     GenericApp_ProcessZDOMsgs:
+    340          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+    341            switch ( inMsg->clusterID )
+   \   000005   EA           MOV     A,R2
+   \   000006   240C         ADD     A,#0xc
+   \   000008   F582         MOV     DPL,A
+   \   00000A   EB           MOV     A,R3
+   \   00000B   3400         ADDC    A,#0x0
+   \   00000D   F583         MOV     DPH,A
+   \   00000F   E0           MOVX    A,@DPTR
+   \   000010   F5..         MOV     ?V0 + 0,A
+   \   000012   A3           INC     DPTR
+   \   000013   E0           MOVX    A,@DPTR
+   \   000014   F5..         MOV     ?V0 + 1,A
+   \   000016   78..         MOV     R0,#?V0 + 0
+   \   000018   12....       LCALL   ?US_SWITCH_SPARSE
+   \                     `?<Jumptable for GenericApp_ProcessZDOMsgs>_0`:
+   \   00001B   0000         DW        0
+   \   00001D   0200         DW        2
+   \   00001F   0680         DW        32774
+   \   000021   ....         DW        ??GenericApp_ProcessZDOMsgs_0
+   \   000023   2080         DW        32800
+   \   000025   ....         DW        ??GenericApp_ProcessZDOMsgs_1
+   \   000027   ....         DW        ??GenericApp_ProcessZDOMsgs_2
+    342            {
+    343              case End_Device_Bind_rsp:
+    344                if ( ZDO_ParseBindRsp( inMsg ) == ZSuccess )
+   \                     ??GenericApp_ProcessZDOMsgs_1:
+   \   000029   EA           MOV     A,R2
+   \   00002A   2413         ADD     A,#0x13
+   \   00002C   F582         MOV     DPL,A
+   \   00002E   EB           MOV     A,R3
+   \   00002F   3400         ADDC    A,#0x0
+   \   000031   F583         MOV     DPH,A
+   \   000033   E0           MOVX    A,@DPTR
+   \   000034   F8           MOV     R0,A
+   \   000035   A3           INC     DPTR
+   \   000036   E0           MOVX    A,@DPTR
+   \   000037   F583         MOV     DPH,A
+   \   000039   8882         MOV     DPL,R0
+   \   00003B   E0           MOVX    A,@DPTR
+   \   00003C   7009         JNZ     ??GenericApp_ProcessZDOMsgs_3
+    345                {
+    346                  // Light LED
+    347                  HalLedSet( HAL_LED_4, HAL_LED_MODE_ON );
+   \   00003E                ; Setup parameters for call to function HalLedSet
+   \   00003E   7A01         MOV     R2,#0x1
+   \                     ??GenericApp_ProcessZDOMsgs_4:
+   \   000040   7908         MOV     R1,#0x8
+   \   000042   12....       LCALL   ??HalLedSet?relay
+   \   000045   8055         SJMP    ??GenericApp_ProcessZDOMsgs_2
+    348                }
+    349          #if defined(BLINK_LEDS)
+    350                else
+    351                {
+    352                  // Flash LED to show failure
+    353                  HalLedSet ( HAL_LED_4, HAL_LED_MODE_FLASH );
+   \                     ??GenericApp_ProcessZDOMsgs_3:
+   \   000047                ; Setup parameters for call to function HalLedSet
+   \   000047   7A04         MOV     R2,#0x4
+   \   000049   80F5         SJMP    ??GenericApp_ProcessZDOMsgs_4
+    354                }
+    355          #endif
+    356                break;
+    357          
+    358              case Match_Desc_rsp:
+    359                {
+    360                  ZDO_ActiveEndpointRsp_t *pRsp = ZDO_ParseEPListRsp( inMsg );
+   \                     ??GenericApp_ProcessZDOMsgs_0:
+   \   00004B                ; Setup parameters for call to function ZDO_ParseEPListRsp
+   \   00004B   12....       LCALL   ??ZDO_ParseEPListRsp?relay
+   \   00004E   8A..         MOV     ?V0 + 0,R2
+   \   000050   8B..         MOV     ?V0 + 1,R3
+   \   000052   AE..         MOV     R6,?V0 + 0
+   \   000054   AF..         MOV     R7,?V0 + 1
+    361                  if ( pRsp )
+   \   000056   EE           MOV     A,R6
+   \   000057   7001         JNZ     ??GenericApp_ProcessZDOMsgs_5
+   \   000059   EF           MOV     A,R7
+   \                     ??GenericApp_ProcessZDOMsgs_5:
+   \   00005A   6040         JZ      ??GenericApp_ProcessZDOMsgs_2
+    362                  {
+    363                    if ( pRsp->status == ZSuccess && pRsp->cnt )
+   \   00005C   8E82         MOV     DPL,R6
+   \   00005E   8F83         MOV     DPH,R7
+   \   000060   E0           MOVX    A,@DPTR
+   \   000061   7032         JNZ     ??GenericApp_ProcessZDOMsgs_6
+   \   000063   A3           INC     DPTR
+   \   000064   A3           INC     DPTR
+   \   000065   A3           INC     DPTR
+   \   000066   E0           MOVX    A,@DPTR
+   \   000067   602C         JZ      ??GenericApp_ProcessZDOMsgs_6
+    364                    {
+    365                      GenericApp_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;
+   \   000069   7402         MOV     A,#0x2
+   \   00006B   90....       MOV     DPTR,#(GenericApp_DstAddr + 8)
+   \   00006E   F0           MOVX    @DPTR,A
+    366                      GenericApp_DstAddr.addr.shortAddr = pRsp->nwkAddr;
+   \   00006F   8E82         MOV     DPL,R6
+   \   000071   8F83         MOV     DPH,R7
+   \   000073   A3           INC     DPTR
+   \   000074   E0           MOVX    A,@DPTR
+   \   000075   F8           MOV     R0,A
+   \   000076   A3           INC     DPTR
+   \   000077   E0           MOVX    A,@DPTR
+   \   000078   F9           MOV     R1,A
+   \   000079   90....       MOV     DPTR,#GenericApp_DstAddr
+   \   00007C   E8           MOV     A,R0
+   \   00007D   F0           MOVX    @DPTR,A
+   \   00007E   A3           INC     DPTR
+   \   00007F   E9           MOV     A,R1
+   \   000080   F0           MOVX    @DPTR,A
+    367                      // Take the first endpoint, Can be changed to search through endpoints
+    368                      GenericApp_DstAddr.endPoint = pRsp->epList[0];
+   \   000081   8E82         MOV     DPL,R6
+   \   000083   8F83         MOV     DPH,R7
+   \   000085   A3           INC     DPTR
+   \   000086   A3           INC     DPTR
+   \   000087   A3           INC     DPTR
+   \   000088   A3           INC     DPTR
+   \   000089   E0           MOVX    A,@DPTR
+   \   00008A   90....       MOV     DPTR,#(GenericApp_DstAddr + 9)
+   \   00008D   F0           MOVX    @DPTR,A
+    369          
+    370                      // Light LED
+    371                      HalLedSet( HAL_LED_4, HAL_LED_MODE_ON );
+   \   00008E                ; Setup parameters for call to function HalLedSet
+   \   00008E   7A01         MOV     R2,#0x1
+   \   000090   7908         MOV     R1,#0x8
+   \   000092   12....       LCALL   ??HalLedSet?relay
+    372                    }
+    373                    osal_mem_free( pRsp );
+   \                     ??GenericApp_ProcessZDOMsgs_6:
+   \   000095                ; Setup parameters for call to function osal_mem_free
+   \   000095   EE           MOV     A,R6
+   \   000096   FA           MOV     R2,A
+   \   000097   EF           MOV     A,R7
+   \   000098   FB           MOV     R3,A
+   \   000099   12....       LCALL   ??osal_mem_free?relay
+    374                  }
+    375                }
+    376                break;
+    377            }
+    378          }
+   \                     ??GenericApp_ProcessZDOMsgs_2:
+   \   00009C                REQUIRE ?Subroutine0
+   \   00009C                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7F02         MOV     R7,#0x2
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+    379          
+    380          
+    381          /*********************************************************************
+    382           * LOCAL FUNCTIONS
+    383           */
+    384          
+    385          /*********************************************************************
+    386           * @fn      GenericApp_MessageMSGCB
+    387           *
+    388           * @brief   Data message processor callback.  This function processes
+    389           *          any incoming data - probably from other devices.  So, based
+    390           *          on cluster ID, perform the intended action.
+    391           *
+    392           * @param   none
+    393           *
+    394           * @return  none
+    395           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    396          void GenericApp_MessageMSGCB( afIncomingMSGPacket_t *pkt )
+   \                     GenericApp_MessageMSGCB:
+    397          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    398            printf("\r\n  GenericApp_MessageMSGCB");
+   \   000004                ; Setup parameters for call to function printf
+   \   000004   7A..         MOV     R2,#(`?<Constant "\\r\\n  GenericApp_Messag...">` & 0xff)
+   \   000006   7B..         MOV     R3,#((`?<Constant "\\r\\n  GenericApp_Messag...">` >> 8) & 0xff)
+   \   000008   12....       LCALL   ??printf?relay
+    399            switch ( pkt->clusterId )
+    400            {
+    401              case GENERICAPP_CLUSTERID:
+    402                // "the" message
+    403          #if defined( LCD_SUPPORTED )
+    404                HalLcdWriteScreen( (char*)pkt->cmd.Data, "rcvd" );
+    405          #elif defined( WIN32 )
+    406                WPRINTSTR( pkt->cmd.Data );
+    407          #endif
+    408                break;
+    409            }
+    410          }
+   \   00000B   D083         POP     DPH
+   \   00000D   D082         POP     DPL
+   \   00000F   02....       LJMP    ?BRET
+    411          
+    412          /*********************************************************************
+    413           * @fn      GenericApp_SendTheMessage
+    414           *
+    415           * @brief   Send "the" message.
+    416           *
+    417           * @param   none
+    418           *
+    419           * @return  none
+    420           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    421          void GenericApp_SendTheMessage( void )
+   \                     GenericApp_SendTheMessage:
+    422          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 5
+   \   000005   74FB         MOV     A,#-0x5
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+    423            char theMessageData[5] = "";
+   \   00000A   85..82       MOV     DPL,?XSP + 0
+   \   00000D   85..83       MOV     DPH,?XSP + 1
+   \   000010   AC82         MOV     R4,DPL
+   \   000012   AD83         MOV     R5,DPH
+   \   000014   7583..       MOV     DPH,#((`?<Constant "">` >> 8) & 0xff)
+   \   000017   7582..       MOV     DPL,#(`?<Constant "">` & 0xff)
+   \   00001A   7405         MOV     A,#0x5
+   \   00001C   12....       LCALL   ?MOVE_LONG8_XDATA_XDATA
+    424            unsigned int temp_data = 0;
+    425            unsigned int sensor_data = 0;
+    426            //address or device info in theMessageData
+    427            //first byte of theMessageData:
+    428            //high 3 bits are the address of coordinator, low 5 bits are the address of end divice
+    429            theMessageData[0] = 0x21; //coordinator 001b, end device 00001b
+   \   00001F   7421         MOV     A,#0x21
+   \   000021   85..82       MOV     DPL,?XSP + 0
+   \   000024   85..83       MOV     DPH,?XSP + 1
+   \   000027   F0           MOVX    @DPTR,A
+    430            theMessageData[1] = 0xCC; //2nd and 3rd byte of theMessageData is reserved or as check code
+   \   000028   7401         MOV     A,#0x1
+   \   00002A   12....       LCALL   ?XSTACK_DISP0_8
+   \   00002D   74CC         MOV     A,#-0x34
+   \   00002F   F0           MOVX    @DPTR,A
+    431            theMessageData[2] = 0xFF; //2nd and 3rd byte of theMessageData is reserved or as check code
+   \   000030   7402         MOV     A,#0x2
+   \   000032   12....       LCALL   ?XSTACK_DISP0_8
+   \   000035   74FF         MOV     A,#-0x1
+   \   000037   F0           MOVX    @DPTR,A
+    432            sensor_data = ReadSensorTempData();
+   \   000038                ; Setup parameters for call to function ReadSensorTempData
+   \   000038   12....       LCALL   ??ReadSensorTempData?relay
+   \   00003B   8A..         MOV     ?V0 + 0,R2
+   \   00003D   8B..         MOV     ?V0 + 1,R3
+   \   00003F   AE..         MOV     R6,?V0 + 0
+   \   000041   AF..         MOV     R7,?V0 + 1
+    433            osal_buffer_uint16(&theMessageData[3], sensor_data); //4,5th byte of theMessageData store the temp
+                                      ^
+Warning[Pe167]: argument of type "char *" is incompatible with parameter of
+          type "unsigned char *"
+   \   000043                ; Setup parameters for call to function osal_buffer_uint16
+   \   000043   EE           MOV     A,R6
+   \   000044   FC           MOV     R4,A
+   \   000045   EF           MOV     A,R7
+   \   000046   FD           MOV     R5,A
+   \   000047   7403         MOV     A,#0x3
+   \   000049   12....       LCALL   ?XSTACK_DISP0_8
+   \   00004C   AA82         MOV     R2,DPL
+   \   00004E   AB83         MOV     R3,DPH
+   \   000050   12....       LCALL   ??osal_buffer_uint16?relay
+    434            printf("Temperture:%d.%d¡æ\r\n ",sensor_data/100,sensor_data%100); 
+   \   000053                ; Setup parameters for call to function printf
+   \   000053   EE           MOV     A,R6
+   \   000054   F8           MOV     R0,A
+   \   000055   EF           MOV     A,R7
+   \   000056   F9           MOV     R1,A
+   \   000057   7A64         MOV     R2,#0x64
+   \   000059   7B00         MOV     R3,#0x0
+   \   00005B   12....       LCALL   ?US_DIV_MOD
+   \   00005E   8A..         MOV     ?V0 + 0,R2
+   \   000060   8B..         MOV     ?V0 + 1,R3
+   \   000062   78..         MOV     R0,#?V0 + 0
+   \   000064   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000067   EE           MOV     A,R6
+   \   000068   F8           MOV     R0,A
+   \   000069   EF           MOV     A,R7
+   \   00006A   F9           MOV     R1,A
+   \   00006B   7A64         MOV     R2,#0x64
+   \   00006D   7B00         MOV     R3,#0x0
+   \   00006F   12....       LCALL   ?US_DIV_MOD
+   \   000072   88..         MOV     ?V0 + 0,R0
+   \   000074   89..         MOV     ?V0 + 1,R1
+   \   000076   78..         MOV     R0,#?V0 + 0
+   \   000078   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   00007B   7A..         MOV     R2,#(`?<Constant "Temperture:%d.%d\\241\\346\\r\\n ">` & 0xff)
+   \   00007D   7B..         MOV     R3,#((`?<Constant "Temperture:%d.%d\\241\\346\\r\\n ">` >> 8) & 0xff)
+   \   00007F   12....       LCALL   ??printf?relay
+   \   000082   7404         MOV     A,#0x4
+   \   000084   12....       LCALL   ?DEALLOC_XSTACK8
+    435            temp_data = HalAdcRead(HAL_ADC_CHN_AIN0,HAL_ADC_RESOLUTION_14);
+    436            printf("ADC:%d", temp_data);
+   \   000087                ; Setup parameters for call to function printf
+   \   000087                ; Setup parameters for call to function HalAdcRead
+   \   000087   7A04         MOV     R2,#0x4
+   \   000089   7900         MOV     R1,#0x0
+   \   00008B   12....       LCALL   ??HalAdcRead?relay
+   \   00008E   8A..         MOV     ?V0 + 0,R2
+   \   000090   8B..         MOV     ?V0 + 1,R3
+   \   000092   78..         MOV     R0,#?V0 + 0
+   \   000094   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000097   7A..         MOV     R2,#(`?<Constant "ADC:%d">` & 0xff)
+   \   000099   7B..         MOV     R3,#((`?<Constant "ADC:%d">` >> 8) & 0xff)
+   \   00009B   12....       LCALL   ??printf?relay
+   \   00009E   7402         MOV     A,#0x2
+   \   0000A0   12....       LCALL   ?DEALLOC_XSTACK8
+    437            if ( AF_DataRequest( &GenericApp_DstAddr, &GenericApp_epDesc,
+    438                                 GENERICAPP_CLUSTERID,
+    439                                 5,//(byte)osal_strlen( theMessageData ) + 1
+    440                                 (byte *)&theMessageData,
+    441                                 &GenericApp_TransID,
+    442                                 AF_DISCV_ROUTE, AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+   \   0000A3                ; Setup parameters for call to function AF_DataRequest
+   \   0000A3   75..1E       MOV     ?V0 + 0,#0x1e
+   \   0000A6   78..         MOV     R0,#?V0 + 0
+   \   0000A8   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   0000AB   75....       MOV     ?V0 + 0,#(GenericApp_TransID & 0xff)
+   \   0000AE   75....       MOV     ?V0 + 1,#((GenericApp_TransID >> 8) & 0xff)
+   \   0000B1   78..         MOV     R0,#?V0 + 0
+   \   0000B3   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000B6   7403         MOV     A,#0x3
+   \   0000B8   12....       LCALL   ?XSTACK_DISP0_8
+   \   0000BB   8582..       MOV     ?V0 + 0,DPL
+   \   0000BE   8583..       MOV     ?V0 + 1,DPH
+   \   0000C1   78..         MOV     R0,#?V0 + 0
+   \   0000C3   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000C6   75..05       MOV     ?V0 + 0,#0x5
+   \   0000C9   75..00       MOV     ?V0 + 1,#0x0
+   \   0000CC   78..         MOV     R0,#?V0 + 0
+   \   0000CE   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000D1   75..01       MOV     ?V0 + 0,#0x1
+   \   0000D4   78..         MOV     R0,#?V0 + 0
+   \   0000D6   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000D9   7920         MOV     R1,#0x20
+   \   0000DB   7C..         MOV     R4,#(GenericApp_epDesc & 0xff)
+   \   0000DD   7D..         MOV     R5,#((GenericApp_epDesc >> 8) & 0xff)
+   \   0000DF   7A..         MOV     R2,#(GenericApp_DstAddr & 0xff)
+   \   0000E1   7B..         MOV     R3,#((GenericApp_DstAddr >> 8) & 0xff)
+   \   0000E3   12....       LCALL   ??AF_DataRequest?relay
+   \   0000E6   7409         MOV     A,#0x9
+   \   0000E8   12....       LCALL   ?DEALLOC_XSTACK8
+   \   0000EB   E9           MOV     A,R1
+   \   0000EC   7006         JNZ     ??GenericApp_SendTheMessage_0
+    443            {
+    444              // Successfully requested to be sent.
+    445              printf("\r\n  Hello World sent!\r\n");
+   \   0000EE                ; Setup parameters for call to function printf
+   \   0000EE   7A..         MOV     R2,#(`?<Constant "\\r\\n  Hello World sent!\\r\\n">` & 0xff)
+   \   0000F0   7B..         MOV     R3,#((`?<Constant "\\r\\n  Hello World sent!\\r\\n">` >> 8) & 0xff)
+   \   0000F2   8017         SJMP    ??GenericApp_SendTheMessage_1
+    446            }
+    447            else
+    448            {
+    449              // Error occurred in request to send.
+    450              printf("\r\n  Hello World not sent!\r\n");
+   \                     ??GenericApp_SendTheMessage_0:
+   \   0000F4                ; Setup parameters for call to function printf
+   \   0000F4   7A..         MOV     R2,#(`?<Constant "\\r\\n  Hello World not s...">` & 0xff)
+   \   0000F6   7B..         MOV     R3,#((`?<Constant "\\r\\n  Hello World not s...">` >> 8) & 0xff)
+   \   0000F8   12....       LCALL   ??printf?relay
+    451              err_count++;
+   \   0000FB   90....       MOV     DPTR,#err_count
+   \   0000FE   E0           MOVX    A,@DPTR
+   \   0000FF   04           INC     A
+   \   000100   F0           MOVX    @DPTR,A
+    452              if (err_count == 3) {
+   \   000101   6403         XRL     A,#0x3
+   \   000103   7009         JNZ     ??GenericApp_SendTheMessage_2
+    453                err_count =0;
+   \   000105   E4           CLR     A
+   \   000106   F0           MOVX    @DPTR,A
+    454                printf("\r\n Reseting Device!");
+   \   000107                ; Setup parameters for call to function printf
+   \   000107   7A..         MOV     R2,#(`?<Constant "\\r\\n Reseting Device!">` & 0xff)
+   \   000109   7B..         MOV     R3,#((`?<Constant "\\r\\n Reseting Device!">` >> 8) & 0xff)
+   \                     ??GenericApp_SendTheMessage_1:
+   \   00010B   12....       LCALL   ??printf?relay
+    455                //asm("LJMP 0x0");
+    456                //osal_set_event(ZDAppTaskID, ZDO_DEVICE_RESET);
+    457              }
+    458            }
+    459          }
+   \                     ??GenericApp_SendTheMessage_2:
+   \   00010E   7405         MOV     A,#0x5
+   \   000110   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000113   02....       LJMP    ?Subroutine0 & 0xFFFF
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??GenericApp_Init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    GenericApp_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??GenericApp_ProcessEvent?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    GenericApp_ProcessEvent
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??GenericApp_ProcessZDOMsgs?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    GenericApp_ProcessZDOMsgs
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??GenericApp_MessageMSGCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    GenericApp_MessageMSGCB
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??GenericApp_SendTheMessage?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    GenericApp_SendTheMessage
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "\\r\\n Device Init!\\r\\n">`:
+   \   000000   0D0A2044     DB "\015\012 Device Init!\015\012"
+   \            65766963
+   \            6520496E
+   \            6974210D
+   \            0A00    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "\\r\\nGenericApp init com...">`:
+   \   000000   0D0A4765     DB "\015\012GenericApp init complete!\015\012"
+   \            6E657269
+   \            63417070
+   \            20696E69
+   \            7420636F
+   \            6D706C65
+   \            7465210D
+   \            0A00    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "\\r\\nEvent Processing!">`:
+   \   000000   0D0A4576     DB "\015\012Event Processing!"
+   \            656E7420
+   \            50726F63
+   \            65737369
+   \            6E672100
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "\\r\\n Data not sent">`:
+   \   000000   0D0A2044     DB "\015\012 Data not sent"
+   \            61746120
+   \            6E6F7420
+   \            73656E74
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "\\r\\n Msg Coming">`:
+   \   000000   0D0A204D     DB "\015\012 Msg Coming"
+   \            73672043
+   \            6F6D696E
+   \            6700    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "\\r\\n State Changed">`:
+   \   000000   0D0A2053     DB "\015\012 State Changed"
+   \            74617465
+   \            20436861
+   \            6E676564
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "\\r\\n  GenericApp_Messag...">`:
+   \   000000   0D0A2020     DB "\015\012  GenericApp_MessageMSGCB"
+   \            47656E65
+   \            72696341
+   \            70705F4D
+   \            65737361
+   \            67654D53
+   \            47434200
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "">`:
+   \   000000   00           DB ""
+   \   000001   00000000     DB 0, 0, 0, 0
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "Temperture:%d.%d\\241\\346\\r\\n ">`:
+   \   000000   54656D70     DB "Temperture:%d.%d\241\346\015\012 "
+   \            65727475
+   \            72653A25
+   \            642E2564
+   \            A1E60D0A
+   \            2000    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "ADC:%d">`:
+   \   000000   4144433A     DB "ADC:%d"
+   \            256400  
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "\\r\\n  Hello World sent!\\r\\n">`:
+   \   000000   0D0A2020     DB "\015\012  Hello World sent!\015\012"
+   \            48656C6C
+   \            6F20576F
+   \            726C6420
+   \            73656E74
+   \            210D0A00
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "\\r\\n  Hello World not s...">`:
+   \   000000   0D0A2020     DB "\015\012  Hello World not sent!\015\012"
+   \            48656C6C
+   \            6F20576F
+   \            726C6420
+   \            6E6F7420
+   \            73656E74
+   \            210D0A00
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "\\r\\n Reseting Device!">`:
+   \   000000   0D0A2052     DB "\015\012 Reseting Device!"
+   \            65736574
+   \            696E6720
+   \            44657669
+   \            63652100
+    460          
+    461          /*********************************************************************
+    462          *********************************************************************/
+
+   Maximum stack usage in bytes:
+
+     Function                       ISTACK PSTACK XSTACK
+     --------                       ------ ------ ------
+     GenericApp_Init                    0      0      9
+       -> HalUARTInit                   0      0     18
+       -> printf                        0      0     18
+       -> afRegister                    0      0     18
+       -> RegisterForKeys               0      0     18
+       -> printf                        0      0     18
+     GenericApp_MessageMSGCB            2      0      0
+       -> printf                        4      0      0
+     GenericApp_ProcessEvent            0      0     12
+       -> printf                        0      0     24
+       -> osal_msg_receive              0      0     24
+       -> GenericApp_ProcessZDOMsgs     0      0     24
+       -> osal_msg_deallocate           0      0     24
+       -> osal_msg_receive              0      0     24
+       -> printf                        0      0     24
+       -> printf                        0      0     24
+       -> printf                        0      0     24
+       -> printf                        0      0     24
+       -> osal_start_timerEx            0      0     24
+       -> GenericApp_SendTheMessage     0      0     24
+       -> osal_start_timerEx            0      0     24
+     GenericApp_ProcessZDOMsgs          0      0     22
+       -> HalLedSet                     0      0     20
+       -> HalLedSet                     0      0     20
+       -> ZDO_ParseEPListRsp            0      0     20
+       -> HalLedSet                     0      0     20
+       -> osal_mem_free                 0      0     20
+     GenericApp_SendTheMessage          2      0     36
+       -> ReadSensorTempData            0      0     30
+       -> osal_buffer_uint16            0      0     30
+       -> printf                        0      0     38
+       -> HalAdcRead                    0      0     30
+       -> printf                        0      0     34
+       -> AF_DataRequest                0      0     48
+       -> printf                        0      0     30
+       -> printf                        0      0     30
+       -> printf                        0      0     30
+
+
+   Segment part sizes:
+
+     Function/Label                              Bytes
+     --------------                              -----
+     err_count                                      1
+     GenericApp_ClusterList                         2
+     GenericApp_SimpleDesc                         12
+     GenericApp_epDesc                              6
+     GenericApp_TaskID                              1
+     GenericApp_NwkState                            1
+     GenericApp_TransID                             1
+     GenericApp_DstAddr                            12
+     GenericApp_Init                              108
+     GenericApp_ProcessEvent                      223
+     GenericApp_ProcessZDOMsgs                    156
+     ?Subroutine0                                   5
+     GenericApp_MessageMSGCB                       18
+     GenericApp_SendTheMessage                    278
+     ??GenericApp_Init?relay                        6
+     ??GenericApp_ProcessEvent?relay                6
+     ??GenericApp_ProcessZDOMsgs?relay              6
+     ??GenericApp_MessageMSGCB?relay                6
+     ??GenericApp_SendTheMessage?relay              6
+     ?<Constant "\r\n Device Init!\r\n">           18
+     ?<Constant "\r\nGenericApp init com...">      30
+     ?<Constant "\r\nEvent Processing!">           20
+     ?<Constant "\r\n Data not sent">              17
+     ?<Constant "\r\n Msg Coming">                 14
+     ?<Constant "\r\n State Changed">              17
+     ?<Constant "\r\n  GenericApp_Messag...">      28
+     ?<Constant "">                                 5
+     ?<Constant "Temperture:%d.%d\241\346\r\n ">   22
+     ?<Constant "ADC:%d">                           7
+     ?<Constant "\r\n  Hello World sent!\r\n">     24
+     ?<Constant "\r\n  Hello World not s...">      28
+     ?<Constant "\r\n Reseting Device!">           20
+
+ 
+ 788 bytes in segment BANKED_CODE
+  30 bytes in segment BANK_RELAYS
+ 264 bytes in segment XDATA_ROM_C
+  22 bytes in segment XDATA_Z
+ 
+ 818 bytes of CODE  memory
+ 264 bytes of CONST memory
+  22 bytes of XDATA memory
+
+Errors: none
+Warnings: 1

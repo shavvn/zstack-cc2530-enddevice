@@ -1,0 +1,607 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V7.60.1.40026 for 8051             12/Apr/2014  09:44:26 #
+# Copyright (C) 2004-2010 IAR Systems AB.                                     #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Components\hal\target\CC2530EB\hal_ds18b20.c #
+#    Command line       =  -f C:\Users\John\Dropbox\grad_proj\zstack-cc2530-e #
+#                          nddevice\Projects\zstack\Samples\GenericApp\CC2530 #
+#                          DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg            #
+#                          (-DCPU32MHZ -DROOT=__near_func                     #
+#                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6         #
+#                          -DMAC_CFG_RX_MAX=3) -f C:\Users\John\Dropbox\grad_ #
+#                          proj\zstack-cc2530-enddevice\Projects\zstack\Sampl #
+#                          es\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8w #
+#                          Config.cfg (-DZIGBEEPRO -DSECURE=0                 #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0x1111                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 C:\Users\John\Dropbox\grad_ #
+#                          proj\zstack-cc2530-enddevice\Components\hal\target #
+#                          \CC2530EB\hal_ds18b20.c -D HAL_ADC -D              #
+#                          NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D            #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D xPOWER_SAVING -lC    #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          EndDeviceEB\List\ -lA C:\Users\John\Dropbox\grad_p #
+#                          roj\zstack-cc2530-enddevice\Projects\zstack\Sample #
+#                          s\GenericApp\CC2530DB\EndDeviceEB\List\            #
+#                          --diag_suppress Pe001,Pa010 -o                     #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          EndDeviceEB\Obj\ -e --require_prototypes           #
+#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I C:\Users\John\Dropbox\grad_proj\zstack-cc2530-e #
+#                          nddevice\Projects\zstack\Samples\GenericApp\CC2530 #
+#                          DB\ -I C:\Users\John\Dropbox\grad_proj\zstack-cc25 #
+#                          30-enddevice\Projects\zstack\Samples\GenericApp\CC #
+#                          2530DB\..\Source\ -I C:\Users\John\Dropbox\grad_pr #
+#                          oj\zstack-cc2530-enddevice\Projects\zstack\Samples #
+#                          \GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I   #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\hal\include\ -I          #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\hal\target\CC2530EB\ -I  #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\mac\include\ -I          #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\mac\high_level\ -I       #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\mac\low_level\srf04\ -I  #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\mac\low_level\srf04\sing #
+#                          le_chip\ -I C:\Users\John\Dropbox\grad_proj\zstack #
+#                          -cc2530-enddevice\Projects\zstack\Samples\GenericA #
+#                          pp\CC2530DB\..\..\..\..\..\Components\mt\ -I       #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\osal\include\ -I         #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\osal\mcu\ccsoc\ -I       #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\services\saddr\ -I       #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\services\sdata\ -I       #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\stack\af\ -I             #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\stack\nwk\ -I            #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\stack\sapi\ -I           #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\stack\sec\ -I            #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\stack\sys\ -I            #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\stack\zdo\ -I            #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\zmac\ -I                 #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\zmac\f8w\ -I             #
+#                          "C:\Program Files (x86)\IAR Systems\Embedded       #
+#                          Workbench 5.4\8051\INC\" -I "C:\Program Files      #
+#                          (x86)\IAR Systems\Embedded Workbench               #
+#                          5.4\8051\INC\CLIB\" -Ohz                           #
+#    List file          =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          EndDeviceEB\List\hal_ds18b20.lst                   #
+#    Object file        =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          EndDeviceEB\Obj\hal_ds18b20.r51                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\target\CC2530EB\hal_ds18b20.c
+      1          /****************************************
+      2          * File Name          : ds18b20.c
+      3          * Author             : Shang LI
+      4          * Version            : V1.0.0
+      5          * Date               : 03/04/2014
+      6          * Description        : external sensor DS18B20
+      7          ******************************************/
+      8          #include "hal_ds18b20.h"
+
+   \                                 In  segment SFR_AN, at 0xa0
+   \   union <unnamed> volatile __sfr _A_P2
+   \                     _A_P2:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xff
+   \   unsigned char volatile __sfr P2DIR
+   \                     P2DIR:
+   \   000000                DS 1
+      9          
+     10          #define HAL_DS_SET_DQ() P2_0 = 1;	 
+     11          #define HAL_DS_CLR_DQ() P2_0 = 0;	
+     12          #define HAL_DS_OUT_DQ() P2DIR |= (1<<0); 
+     13          #define HAL_DS_IN_DQ()  P2DIR &= ~(1<<0);
+     14          #define HAL_DS_GET_DQ() P2_0
+     15          
+     16          //LOCAL FUNCTIONS
+     17          void delay_us(unsigned int timeout);
+     18          void ResetOneWire(void);
+     19          unsigned char ReadOneWire(void);
+     20          void WriteOneWire(unsigned char data);
+     21          unsigned char* ReadSensorID(void);
+     22          unsigned int ReadSensorTempData(void);
+     23          //@fn: delay_us(uint16)
+     24          //@para: timeout
+     25          //@note: assume main f = 32MHz
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     26          void delay_us(unsigned int timeout) {
+   \                     delay_us:
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+   \   000000   8003         SJMP    ??delay_us_0
+     27              while (timeout--)
+     28              {
+     29                  asm("NOP");
+   \                     ??delay_us_1:
+   \   000002   00           NOP
+     30                  asm("NOP");
+   \   000003   00           NOP
+     31                  asm("NOP");
+   \   000004   00           NOP
+     32              }
+   \                     ??delay_us_0:
+   \   000005   EA           MOV     A,R2
+   \   000006   F8           MOV     R0,A
+   \   000007   EB           MOV     A,R3
+   \   000008   F9           MOV     R1,A
+   \   000009   74FF         MOV     A,#-0x1
+   \   00000B   28           ADD     A,R0
+   \   00000C   1A           DEC     R2
+   \   00000D   74FF         MOV     A,#-0x1
+   \   00000F   39           ADDC    A,R1
+   \   000010   FB           MOV     R3,A
+   \   000011   E8           MOV     A,R0
+   \   000012   7001         JNZ     ??delay_us_2
+   \   000014   E9           MOV     A,R1
+   \                     ??delay_us_2:
+   \   000015   70EB         JNZ     ??delay_us_1
+     33          }
+   \   000017   02....       LJMP    ?BRET
+     34          
+     35          //@fn: ResetOneWire()
+     36          //@para: 
+     37          //@note: reset the sensor
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     38          void ResetOneWire(void) {
+   \                     ResetOneWire:
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     39            HAL_DS_OUT_DQ(); 
+   \   000004   43FF01       ORL     0xff,#0x1
+     40            HAL_DS_CLR_DQ();
+   \   000007   C2A0         CLR     0xa0.0
+     41            delay_us(450);
+   \   000009                ; Setup parameters for call to function delay_us
+   \   000009   7AC2         MOV     R2,#-0x3e
+   \   00000B   7B01         MOV     R3,#0x1
+   \   00000D   12....       LCALL   ??delay_us?relay
+     42            HAL_DS_SET_DQ();
+   \   000010   D2A0         SETB    0xa0.0
+     43            delay_us(60);
+   \   000012                ; Setup parameters for call to function delay_us
+   \   000012   7A3C         MOV     R2,#0x3c
+   \   000014   7B00         MOV     R3,#0x0
+   \   000016   12....       LCALL   ??delay_us?relay
+     44            HAL_DS_IN_DQ();
+   \   000019   53FFFE       ANL     0xff,#0xfe
+     45            delay_us(10);
+   \   00001C                ; Setup parameters for call to function delay_us
+   \   00001C   7A0A         MOV     R2,#0xa
+   \   00001E   7B00         MOV     R3,#0x0
+   \   000020   12....       LCALL   ??delay_us?relay
+     46            while(!(HAL_DS_GET_DQ()));
+   \                     ??ResetOneWire_0:
+   \   000023   A2A0         MOV     C,0xa0.0
+   \   000025   50FC         JNC     ??ResetOneWire_0
+     47            HAL_DS_OUT_DQ();
+   \   000027   43FF01       ORL     0xff,#0x1
+     48            HAL_DS_SET_DQ();
+   \   00002A   D2A0         SETB    0xa0.0
+     49          }
+   \   00002C   D083         POP     DPH
+   \   00002E   D082         POP     DPL
+   \   000030   02....       LJMP    ?BRET
+   \   000033                REQUIRE _A_P2
+   \   000033                REQUIRE P2DIR
+     50          
+     51          //@fn: ReadOneWire()
+     52          //@para: void
+     53          //@return: uchar data, a byte once
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     54          unsigned char ReadOneWire(void) {
+   \                     ReadOneWire:
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+     55            unsigned data = 0, i = 0;
+   \   000005   7E00         MOV     R6,#0x0
+     56            for (i = 0; i < 8; i++) {
+   \   000007   75..08       MOV     ?V0 + 0,#0x8
+     57              HAL_DS_OUT_DQ();
+   \                     ??ReadOneWire_0:
+   \   00000A   43FF01       ORL     0xff,#0x1
+     58              HAL_DS_CLR_DQ();
+   \   00000D   C2A0         CLR     0xa0.0
+     59              data=data>>1;
+   \   00000F   C3           CLR     C
+   \   000010   EE           MOV     A,R6
+   \   000011   13           RRC     A
+   \   000012   FE           MOV     R6,A
+     60              HAL_DS_SET_DQ();
+   \   000013   D2A0         SETB    0xa0.0
+     61              HAL_DS_IN_DQ();
+   \   000015   53FFFE       ANL     0xff,#0xfe
+     62              delay_us(8);
+   \   000018                ; Setup parameters for call to function delay_us
+   \   000018   7A08         MOV     R2,#0x8
+   \   00001A   7B00         MOV     R3,#0x0
+   \   00001C   12....       LCALL   ??delay_us?relay
+     63              if(HAL_DS_GET_DQ())data|=0x80;
+   \   00001F   A2A0         MOV     C,0xa0.0
+   \   000021   5004         JNC     ??ReadOneWire_1
+   \   000023   7480         MOV     A,#-0x80
+   \   000025   4E           ORL     A,R6
+   \   000026   FE           MOV     R6,A
+     64              HAL_DS_OUT_DQ();
+   \                     ??ReadOneWire_1:
+   \   000027   43FF01       ORL     0xff,#0x1
+     65              HAL_DS_SET_DQ();
+   \   00002A   D2A0         SETB    0xa0.0
+     66              delay_us(60);
+   \   00002C                ; Setup parameters for call to function delay_us
+   \   00002C   7A3C         MOV     R2,#0x3c
+   \   00002E   7B00         MOV     R3,#0x0
+   \   000030   12....       LCALL   ??delay_us?relay
+     67            }
+   \   000033   15..         DEC     ?V0 + 0
+   \   000035   E5..         MOV     A,?V0 + 0
+   \   000037   70D1         JNZ     ??ReadOneWire_0
+     68            return data;
+   \   000039   EE           MOV     A,R6
+   \   00003A   F9           MOV     R1,A
+   \   00003B                REQUIRE ?Subroutine0
+   \   00003B                REQUIRE _A_P2
+   \   00003B                REQUIRE P2DIR
+   \   00003B                ; // Fall through to label ?Subroutine0
+     69          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7F01         MOV     R7,#0x1
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+     70          
+     71          //@fn: WriteOneWire(unsigned char data)
+     72          //@para: unsigned char data
+     73          //@brief: write one byte to the bus
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     74          void WriteOneWire(unsigned char data) {
+   \                     WriteOneWire:
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+   \   000006   FF           MOV     R7,A
+     75            unsigned char i=0;
+     76            HAL_DS_OUT_DQ();
+   \   000007   43FF01       ORL     0xff,#0x1
+     77            HAL_DS_SET_DQ();
+   \   00000A   D2A0         SETB    0xa0.0
+     78            delay_us(16);
+   \   00000C                ; Setup parameters for call to function delay_us
+   \   00000C   7A10         MOV     R2,#0x10
+   \   00000E   7B00         MOV     R3,#0x0
+   \   000010   12....       LCALL   ??delay_us?relay
+     79            for(i=0;i<8;i++) {
+   \   000013   7E08         MOV     R6,#0x8
+     80              HAL_DS_CLR_DQ();
+   \                     ??WriteOneWire_0:
+   \   000015   C2A0         CLR     0xa0.0
+     81              if(data&0x01) {
+   \   000017   EF           MOV     A,R7
+   \   000018   A2E0         MOV     C,0xE0 /* A   */.0
+   \   00001A   5004         JNC     ??WriteOneWire_1
+     82                HAL_DS_SET_DQ();
+   \   00001C   D2A0         SETB    0xa0.0
+   \   00001E   8002         SJMP    ??WriteOneWire_2
+     83              } else {
+     84                HAL_DS_CLR_DQ();
+   \                     ??WriteOneWire_1:
+   \   000020   C2A0         CLR     0xa0.0
+     85              }
+     86              data=data>>1;
+   \                     ??WriteOneWire_2:
+   \   000022   C3           CLR     C
+   \   000023   13           RRC     A
+   \   000024   FF           MOV     R7,A
+     87              delay_us(40);
+   \   000025                ; Setup parameters for call to function delay_us
+   \   000025   7A28         MOV     R2,#0x28
+   \   000027   7B00         MOV     R3,#0x0
+   \   000029   12....       LCALL   ??delay_us?relay
+     88              HAL_DS_SET_DQ();
+   \   00002C   D2A0         SETB    0xa0.0
+     89            }
+   \   00002E   1E           DEC     R6
+   \   00002F   EE           MOV     A,R6
+   \   000030   70E3         JNZ     ??WriteOneWire_0
+     90          }
+   \   000032   80..         SJMP    ?Subroutine0
+   \   000034                REQUIRE _A_P2
+   \   000034                REQUIRE P2DIR
+     91          
+     92          //@fn: ReadSensorID(void)
+     93          //@para: void
+     94          //@return: uchar* data, return to a pointer pointing the ID
+     95          //@note: this might cause memory overflow, be care to use this func
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     96          unsigned char* ReadSensorID(void) { 
+   \                     ReadSensorID:
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 8
+   \   000005   74F8         MOV     A,#-0x8
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+     97              unsigned char ID[8],i,*ptr;
+     98              ResetOneWire(); 
+   \   00000A                ; Setup parameters for call to function ResetOneWire
+   \   00000A   12....       LCALL   ??ResetOneWire?relay
+     99              WriteOneWire(0x33);
+   \   00000D                ; Setup parameters for call to function WriteOneWire
+   \   00000D   7933         MOV     R1,#0x33
+   \   00000F   12....       LCALL   ??WriteOneWire?relay
+    100              for (i=0;i<8;i++) {
+   \   000012   7E08         MOV     R6,#0x8
+    101                ID[i]=ReadOneWire();
+   \                     ??ReadSensorID_0:
+   \   000014                ; Setup parameters for call to function ReadOneWire
+   \   000014   12....       LCALL   ??ReadOneWire?relay
+    102              }
+   \   000017   1E           DEC     R6
+   \   000018   EE           MOV     A,R6
+   \   000019   70F9         JNZ     ??ReadSensorID_0
+    103              ptr=ID;
+    104              return ptr;
+   \   00001B   85..82       MOV     DPL,?XSP + 0
+   \   00001E   85..83       MOV     DPH,?XSP + 1
+   \   000021   AA82         MOV     R2,DPL
+   \   000023   AB83         MOV     R3,DPH
+   \   000025   7408         MOV     A,#0x8
+   \   000027   12....       LCALL   ?DEALLOC_XSTACK8
+   \   00002A   80..         SJMP    ?Subroutine0
+    105          }
+    106          
+    107          //@fn: ReadSensorTempData(void)
+    108          //@para: void
+    109          //@return: int value of temperature, see comments below
+    110          //@brief: start a conversion
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    111          unsigned int ReadSensorTempData(void) {
+   \                     ReadSensorTempData:
+   \   000000   74F0         MOV     A,#-0x10
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 16
+   \   000005                ; Auto size: 0
+    112            unsigned char temp_low, temp_high;
+    113            unsigned int temp_data;
+    114            //start a conversion first
+    115            ResetOneWire(); 
+   \   000005                ; Setup parameters for call to function ResetOneWire
+   \   000005   12....       LCALL   ?Subroutine1 & 0xFFFF
+    116            WriteOneWire(0xCC); //skip ROM cmd
+    117            WriteOneWire(0x44);
+   \                     ??CrossCallReturnLabel_0:
+   \   000008                ; Setup parameters for call to function WriteOneWire
+   \   000008   7944         MOV     R1,#0x44
+   \   00000A   12....       LCALL   ??WriteOneWire?relay
+    118            //then read temp data
+    119            ResetOneWire();
+   \   00000D                ; Setup parameters for call to function ResetOneWire
+   \   00000D   12....       LCALL   ?Subroutine1 & 0xFFFF
+    120            WriteOneWire(0xCC); //skip ROM cmd
+    121            WriteOneWire(0xBE);
+   \                     ??CrossCallReturnLabel_1:
+   \   000010                ; Setup parameters for call to function WriteOneWire
+   \   000010   79BE         MOV     R1,#-0x42
+   \   000012   12....       LCALL   ??WriteOneWire?relay
+    122            temp_low = ReadOneWire();
+   \   000015                ; Setup parameters for call to function ReadOneWire
+   \   000015   12....       LCALL   ??ReadOneWire?relay
+   \   000018   E9           MOV     A,R1
+   \   000019   F5..         MOV     ?V0 + 0,A
+    123            temp_high = ReadOneWire();
+    124            temp_data = (unsigned int)((temp_high<<8|temp_low)*6.25);//e.g. return 2550 if real temp is 25.50 C 
+    125            return temp_data;
+   \   00001B                ; Setup parameters for call to function ReadOneWire
+   \   00001B   12....       LCALL   ??ReadOneWire?relay
+   \   00001E   E9           MOV     A,R1
+   \   00001F   F5..         MOV     ?V0 + 1,A
+   \   000021   33           RLC     A
+   \   000022   95E0         SUBB    A,0xE0 /* A   */
+   \   000024   F5..         MOV     ?V0 + 2,A
+   \   000026   F5..         MOV     ?V0 + 3,A
+   \   000028   78..         MOV     R0,#?V0 + 0
+   \   00002A   12....       LCALL   ?L_TO_FLT
+   \   00002D   90....       MOV     DPTR,#__Constant_40c80000
+   \   000030   78..         MOV     R0,#?V0 + 4
+   \   000032   12....       LCALL   ?L_MOV_X
+   \   000035   78..         MOV     R0,#?V0 + 0
+   \   000037   79..         MOV     R1,#?V0 + 4
+   \   000039   12....       LCALL   ?FLT_MUL
+   \   00003C   78..         MOV     R0,#?V0 + 0
+   \   00003E   12....       LCALL   ?FLT_TO_L
+   \   000041   AA..         MOV     R2,?V0 + 0
+   \   000043   AB..         MOV     R3,?V0 + 1
+   \   000045   7F08         MOV     R7,#0x8
+   \   000047   02....       LJMP    ?BANKED_LEAVE_XDATA
+    126          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   12....       LCALL   ??ResetOneWire?relay
+   \   000003                ; Setup parameters for call to function WriteOneWire
+   \   000003                ; Setup parameters for call to function WriteOneWire
+   \   000003   79CC         MOV     R1,#-0x34
+   \   000005   12....       LCALL   ??WriteOneWire?relay
+   \   000008   22           RET
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_40c80000:
+   \   000000   0000C840     DD 40C80000H
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??delay_us?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    delay_us
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??ResetOneWire?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    ResetOneWire
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??ReadOneWire?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    ReadOneWire
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??WriteOneWire?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    WriteOneWire
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??ReadSensorID?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    ReadSensorID
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??ReadSensorTempData?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    ReadSensorTempData
+    127          
+
+   Maximum stack usage in bytes:
+
+     Function           ISTACK PSTACK XSTACK
+     --------           ------ ------ ------
+     ReadOneWire            0      0     26
+       -> delay_us          0      0     18
+       -> delay_us          0      0     18
+     ReadSensorID           0      0     17
+       -> ResetOneWire      0      0     34
+       -> WriteOneWire      0      0     34
+       -> ReadOneWire       0      0     34
+     ReadSensorTempData     0      0     16
+       -> ResetOneWire      0      0     32
+       -> WriteOneWire      0      0     32
+       -> WriteOneWire      0      0     32
+       -> ResetOneWire      0      0     32
+       -> WriteOneWire      0      0     32
+       -> WriteOneWire      0      0     32
+       -> ReadOneWire       0      0     32
+       -> ReadOneWire       0      0     32
+     ResetOneWire           2      0     17
+       -> delay_us          4      0      0
+       -> delay_us          4      0      0
+       -> delay_us          4      0      0
+     WriteOneWire           0      0     26
+       -> delay_us          0      0     18
+       -> delay_us          0      0     18
+     delay_us               0      0      9
+
+
+   Segment part sizes:
+
+     Function/Label             Bytes
+     --------------             -----
+     _A_P2                         1
+     P2DIR                         1
+     delay_us                     26
+     ResetOneWire                 51
+     ReadOneWire                  59
+     ?Subroutine0                  5
+     WriteOneWire                 52
+     ReadSensorID                 44
+     ReadSensorTempData           74
+     ?Subroutine1                  9
+     __Constant_40c80000           4
+     ??delay_us?relay              6
+     ??ResetOneWire?relay          6
+     ??ReadOneWire?relay           6
+     ??WriteOneWire?relay          6
+     ??ReadSensorID?relay          6
+     ??ReadSensorTempData?relay    6
+
+ 
+ 320 bytes in segment BANKED_CODE
+  36 bytes in segment BANK_RELAYS
+   2 bytes in segment SFR_AN
+   4 bytes in segment XDATA_ROM_C
+ 
+ 356 bytes of CODE  memory
+   0 bytes of CONST memory (+ 4 bytes shared)
+   0 bytes of DATA  memory (+ 2 bytes shared)
+
+Errors: none
+Warnings: none
