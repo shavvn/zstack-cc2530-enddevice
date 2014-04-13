@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR C/C++ Compiler V7.60.1.40026 for 8051            13/Apr/2014  19:30:17 /
+// IAR C/C++ Compiler V7.60.1.40026 for 8051            13/Apr/2014  20:06:23 /
 // Copyright (C) 2004-2010 IAR Systems AB.                                    /
 //                                                                            /
 //    Core               =  plain                                             /
@@ -1266,8 +1266,8 @@ GenericApp_ProcessEvent:
 //  311                         GENERICAPP_SEND_MSG_EVT,
 //  312                       GENERICAPP_SEND_MSG_TIMEOUT );
         ; Setup parameters for call to function osal_start_timerEx
-        MOV     R4,#0x10
-        MOV     R5,#0x27
+        MOV     R4,#-0x68
+        MOV     R5,#0x3a
         MOV     R2,#0x1
         MOV     R3,#0x0
         MOV     DPTR,#GenericApp_TaskID

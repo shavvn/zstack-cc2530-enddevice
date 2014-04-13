@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR C/C++ Compiler V7.60.1.40026 for 8051             13/Apr/2014  19:30:17 #
+# IAR C/C++ Compiler V7.60.1.40026 for 8051             13/Apr/2014  20:06:23 #
 # Copyright (C) 2004-2010 IAR Systems AB.                                     #
 #                                                                             #
 #    Core               =  plain                                              #
@@ -664,8 +664,8 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Projects\zstack\Samples\GenericApp\
     311                                  GENERICAPP_SEND_MSG_EVT,
     312                                GENERICAPP_SEND_MSG_TIMEOUT );
    \   000092                ; Setup parameters for call to function osal_start_timerEx
-   \   000092   7C10         MOV     R4,#0x10
-   \   000094   7D27         MOV     R5,#0x27
+   \   000092   7C98         MOV     R4,#-0x68
+   \   000094   7D3A         MOV     R5,#0x3a
    \   000096   7A01         MOV     R2,#0x1
    \   000098   7B00         MOV     R3,#0x0
    \   00009A   90....       MOV     DPTR,#GenericApp_TaskID

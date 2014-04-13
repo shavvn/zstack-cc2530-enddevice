@@ -67,7 +67,7 @@ extern "C"
 #define GENERICAPP_CLUSTERID          1
 
 // Send Message Timeout
-#define GENERICAPP_SEND_MSG_TIMEOUT   10000     // Every 10 seconds
+#define GENERICAPP_SEND_MSG_TIMEOUT   15000     // Every 15 seconds
 
 // Application Events (OSAL) - These are bit weighted definitions.
 #define GENERICAPP_SEND_MSG_EVT       0x0001
