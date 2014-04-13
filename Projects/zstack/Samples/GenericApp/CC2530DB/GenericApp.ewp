@@ -2373,6 +2373,7 @@
           <state>MT_SYS_FUNC</state>
           <state>MT_ZDO_FUNC</state>
           <state>POWER_SAVING</state>
+          <state>NV_STORE</state>
         </option>
         <option>
           <name>CCPreprocFile</name>

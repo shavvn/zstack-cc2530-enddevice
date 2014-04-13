@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR C/C++ Compiler V7.60.1.40026 for 8051             13/Apr/2014  17:20:12 #
+# IAR C/C++ Compiler V7.60.1.40026 for 8051             13/Apr/2014  19:30:54 #
 # Copyright (C) 2004-2010 IAR Systems AB.                                     #
 #                                                                             #
 #    Core               =  plain                                              #
@@ -39,20 +39,19 @@
 #                          -DMAC_MAX_FRAME_SIZE=116                           #
 #                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
 #                          __code" -DGENERIC=__generic                        #
-#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=10000       #
-#                          -DQUEUED_POLL_RATE=10000                           #
-#                          -DRESPONSE_POLL_RATE=10000)                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=8000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
 #                          -DREJOIN_POLL_RATE=440 E:\Dropbox\grad_proj\zstack #
 #                          -cc2530-enddevice\Components\mac\low_level\srf04\s #
 #                          ingle_chip\mac_mcu.c -D HAL_ADC -D HAL_KEY=FALSE   #
 #                          -D HAL_LCD=FALSE -D NWK_AUTO_POLL -D ZTOOL_P1 -D   #
 #                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D           #
-#                          POWER_SAVING -lC E:\Dropbox\grad_proj\zstack-cc253 #
-#                          0-enddevice\Projects\zstack\Samples\GenericApp\CC2 #
-#                          530DB\EndDeviceEB\List\ -lA                        #
+#                          POWER_SAVING -D NV_STORE -lC                       #
 #                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
 #                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
-#                          \List\ --diag_suppress Pe001,Pa010 -o              #
+#                          \List\ -lA E:\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          EndDeviceEB\List\ --diag_suppress Pe001,Pa010 -o   #
 #                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
 #                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
 #                          \Obj\ -e --require_prototypes --no_code_motion     #
@@ -825,17 +824,17 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   00015D   12....       LCALL   ?DEALLOC_XSTACK8
    \   000160   7F02         MOV     R7,#0x2
    \   000162   02....       LJMP    ?BANKED_LEAVE_XDATA
-   \   000165                REQUIRE T2CTRL
-   \   000165                REQUIRE T2M0
    \   000165                REQUIRE IEN2
-   \   000165                REQUIRE T2M1
-   \   000165                REQUIRE CLKCONSTA
-   \   000165                REQUIRE _A_IEN0
    \   000165                REQUIRE IP0
+   \   000165                REQUIRE T2M1
+   \   000165                REQUIRE T2CTRL
+   \   000165                REQUIRE _A_IEN0
+   \   000165                REQUIRE CLKCONSTA
+   \   000165                REQUIRE T2M0
    \   000165                REQUIRE RNDL
-   \   000165                REQUIRE _A_IEN1
    \   000165                REQUIRE T2MSEL
    \   000165                REQUIRE IP1
+   \   000165                REQUIRE _A_IEN1
     329          
     330          
     331          /**************************************************************************************************
@@ -957,9 +956,9 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   000011   92AF         MOV     0xa8.7,C
     398          }
    \   000013   02....       LJMP    ?BRET
-   \   000016                REQUIRE T2M0
    \   000016                REQUIRE T2M1
    \   000016                REQUIRE _A_IEN0
+   \   000016                REQUIRE T2M0
    \   000016                REQUIRE T2MSEL
     399          
     400          /**************************************************************************************************
@@ -1005,9 +1004,9 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   000016   AA..         MOV     R2,?V0 + 0
    \   000018   D0..         POP     ?V0 + 0
    \   00001A   02....       LJMP    ?BRET
-   \   00001D                REQUIRE T2M0
    \   00001D                REQUIRE T2M1
    \   00001D                REQUIRE _A_IEN0
+   \   00001D                REQUIRE T2M0
    \   00001D                REQUIRE T2MSEL
     423          }
     424          
@@ -1053,11 +1052,11 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   000012   E5A2         MOV     A,0xa2
     451            ((uint8 *)&overflowCount)[UINT32_NDX0] = T2MOVF0;
    \   000014   02....       LJMP    ?Subroutine1 & 0xFFFF
+   \   000017                REQUIRE T2MOVF1
    \   000017                REQUIRE T2MOVF0
    \   000017                REQUIRE T2MOVF2
-   \   000017                REQUIRE T2M0
-   \   000017                REQUIRE T2MOVF1
    \   000017                REQUIRE _A_IEN0
+   \   000017                REQUIRE T2M0
    \   000017                REQUIRE T2MSEL
     452            ((uint8 *)&overflowCount)[UINT32_NDX1] = T2MOVF1;
     453            ((uint8 *)&overflowCount)[UINT32_NDX2] = T2MOVF2;
@@ -1161,9 +1160,9 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   00000F   75C310       MOV     0xc3,#0x10
     480            ((uint8 *)&overflowCapture)[UINT32_NDX0] = T2MOVF0;
    \   000012   02....       LJMP    ?Subroutine1 & 0xFFFF
+   \   000015                REQUIRE T2MOVF1
    \   000015                REQUIRE T2MOVF0
    \   000015                REQUIRE T2MOVF2
-   \   000015                REQUIRE T2MOVF1
    \   000015                REQUIRE _A_IEN0
    \   000015                REQUIRE T2MSEL
     481            ((uint8 *)&overflowCapture)[UINT32_NDX1] = T2MOVF1;
@@ -1271,9 +1270,9 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   00007C   EA           MOV     A,R2
    \   00007D   A2E7         MOV     C,0xE0 /* A   */.7
    \   00007F                REQUIRE ?Subroutine3
+   \   00007F                REQUIRE T2MOVF1
    \   00007F                REQUIRE T2MOVF0
    \   00007F                REQUIRE T2MOVF2
-   \   00007F                REQUIRE T2MOVF1
    \   00007F                REQUIRE _A_IEN0
    \   00007F                REQUIRE T2MSEL
    \   00007F                ; // Fall through to label ?Subroutine3
@@ -1420,10 +1419,10 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   00006E   EA           MOV     A,R2
    \   00006F   A2E0         MOV     C,0xE0 /* A   */.0
    \   000071   02....       LJMP    ?Subroutine3 & 0xFFFF
+   \   000074                REQUIRE T2MOVF1
    \   000074                REQUIRE T2IRQF
    \   000074                REQUIRE T2MOVF0
    \   000074                REQUIRE T2MOVF2
-   \   000074                REQUIRE T2MOVF1
    \   000074                REQUIRE T2IRQM
    \   000074                REQUIRE _A_IEN0
    \   000074                REQUIRE T2MSEL
@@ -1665,9 +1664,9 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   00005F   02....       LJMP    ??Subroutine8_0 & 0xFFFF
    \   000062                REQUIRE T2IRQF
    \   000062                REQUIRE T2IRQM
+   \   000062                REQUIRE T2MOVF1
    \   000062                REQUIRE T2MOVF0
    \   000062                REQUIRE T2MOVF2
-   \   000062                REQUIRE T2MOVF1
    \   000062                REQUIRE _A_IEN0
    \   000062                REQUIRE T2MSEL
     687          
@@ -1755,11 +1754,11 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   00005A   78..         MOV     R0,#?V0 + 0
    \   00005C   12....       LCALL   ?L_ADD_X
    \   00005F   02....       LJMP    ??Subroutine7_0 & 0xFFFF
+   \   000062                REQUIRE T2MOVF1
    \   000062                REQUIRE T2MOVF0
    \   000062                REQUIRE T2MOVF2
-   \   000062                REQUIRE T2M0
-   \   000062                REQUIRE T2MOVF1
    \   000062                REQUIRE _A_IEN0
+   \   000062                REQUIRE T2M0
    \   000062                REQUIRE T2MSEL
     724          }
     725          

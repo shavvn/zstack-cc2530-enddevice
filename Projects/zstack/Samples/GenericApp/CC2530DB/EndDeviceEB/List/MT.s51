@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR C/C++ Compiler V7.60.1.40026 for 8051            13/Apr/2014  17:19:40 /
+// IAR C/C++ Compiler V7.60.1.40026 for 8051            13/Apr/2014  19:30:20 /
 // Copyright (C) 2004-2010 IAR Systems AB.                                    /
 //                                                                            /
 //    Core               =  plain                                             /
@@ -39,29 +39,28 @@
 //                          0x0A, 0x0C, 0x0D}" -DMAC_MAX_FRAME_SIZE=116       /
 //                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const    /
 //                          __code" -DGENERIC=__generic                       /
-//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=10000      /
-//                          -DQUEUED_POLL_RATE=10000                          /
-//                          -DRESPONSE_POLL_RATE=10000)                       /
+//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=8000       /
+//                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
 //                          -DREJOIN_POLL_RATE=440 E:\Dropbox\grad_proj\zstac /
 //                          k-cc2530-enddevice\Components\mt\MT.c -D HAL_ADC  /
 //                          -D HAL_KEY=FALSE -D HAL_LCD=FALSE -D              /
 //                          NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D           /
-//                          MT_SYS_FUNC -D MT_ZDO_FUNC -D POWER_SAVING -lC    /
+//                          MT_SYS_FUNC -D MT_ZDO_FUNC -D POWER_SAVING -D     /
+//                          NV_STORE -lC E:\Dropbox\grad_proj\zstack-cc2530-e /
+//                          nddevice\Projects\zstack\Samples\GenericApp\CC253 /
+//                          0DB\EndDeviceEB\List\ -lA                         /
 //                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
 //                          ects\zstack\Samples\GenericApp\CC2530DB\EndDevice /
-//                          EB\List\ -lA E:\Dropbox\grad_proj\zstack-cc2530-e /
-//                          nddevice\Projects\zstack\Samples\GenericApp\CC253 /
-//                          0DB\EndDeviceEB\List\ --diag_suppress             /
-//                          Pe001,Pa010 -o E:\Dropbox\grad_proj\zstack-cc2530 /
-//                          -enddevice\Projects\zstack\Samples\GenericApp\CC2 /
-//                          530DB\EndDeviceEB\Obj\ -e --require_prototypes    /
-//                          --no_code_motion --debug --core=plain             /
-//                          --dptr=16,1 --data_model=large                    /
-//                          --code_model=banked --calling_convention=xdata_re /
-//                          entrant --place_constants=data_rom                /
-//                          --nr_virtual_regs 16 -I                           /
+//                          EB\List\ --diag_suppress Pe001,Pa010 -o           /
 //                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\ -I       /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\EndDevice /
+//                          EB\Obj\ -e --require_prototypes --no_code_motion  /
+//                          --debug --core=plain --dptr=16,1                  /
+//                          --data_model=large --code_model=banked            /
+//                          --calling_convention=xdata_reentrant              /
+//                          --place_constants=data_rom --nr_virtual_regs 16   /
+//                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\P /
+//                          rojects\zstack\Samples\GenericApp\CC2530DB\ -I    /
 //                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
 //                          ects\zstack\Samples\GenericApp\CC2530DB\..\Source /
 //                          \ -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice /

@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR C/C++ Compiler V7.60.1.40026 for 8051             13/Apr/2014  17:20:08 #
+# IAR C/C++ Compiler V7.60.1.40026 for 8051             13/Apr/2014  19:30:50 #
 # Copyright (C) 2004-2010 IAR Systems AB.                                     #
 #                                                                             #
 #    Core               =  plain                                              #
@@ -39,20 +39,19 @@
 #                          -DMAC_MAX_FRAME_SIZE=116                           #
 #                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
 #                          __code" -DGENERIC=__generic                        #
-#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=10000       #
-#                          -DQUEUED_POLL_RATE=10000                           #
-#                          -DRESPONSE_POLL_RATE=10000)                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=8000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
 #                          -DREJOIN_POLL_RATE=440 E:\Dropbox\grad_proj\zstack #
 #                          -cc2530-enddevice\Components\hal\target\CC2530EB\h #
 #                          al_sleep.c -D HAL_ADC -D HAL_KEY=FALSE -D          #
 #                          HAL_LCD=FALSE -D NWK_AUTO_POLL -D ZTOOL_P1 -D      #
 #                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D           #
-#                          POWER_SAVING -lC E:\Dropbox\grad_proj\zstack-cc253 #
-#                          0-enddevice\Projects\zstack\Samples\GenericApp\CC2 #
-#                          530DB\EndDeviceEB\List\ -lA                        #
+#                          POWER_SAVING -D NV_STORE -lC                       #
 #                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
 #                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
-#                          \List\ --diag_suppress Pe001,Pa010 -o              #
+#                          \List\ -lA E:\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          EndDeviceEB\List\ --diag_suppress Pe001,Pa010 -o   #
 #                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
 #                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
 #                          \Obj\ -e --require_prototypes --no_code_motion     #
@@ -820,12 +819,12 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\target\CC2530EB\hal_
     432          }
    \                     ??halSleep_9:
    \   000160                REQUIRE ?Subroutine0
-   \   000160                REQUIRE _A_IEN0
    \   000160                REQUIRE IEN2
+   \   000160                REQUIRE _A_IEN0
    \   000160                REQUIRE STLOAD
-   \   000160                REQUIRE _A_IEN1
-   \   000160                REQUIRE SLEEPCMD
    \   000160                REQUIRE _A_IRCON
+   \   000160                REQUIRE SLEEPCMD
+   \   000160                REQUIRE _A_IEN1
    \   000160                ; // Fall through to label ?Subroutine0
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
@@ -941,8 +940,8 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\target\CC2530EB\hal_
    \   00007E   12....       LCALL   ?DEALLOC_XSTACK8
    \   000081   02....       LJMP    ?Subroutine0 & 0xFFFF
    \   000084                REQUIRE ST1
-   \   000084                REQUIRE ST2
    \   000084                REQUIRE ST0
+   \   000084                REQUIRE ST2
     477          
     478          /**************************************************************************************************
     479           * @fn          halSleepEnterIdleMode
@@ -1025,8 +1024,8 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\target\CC2530EB\hal_
     515          }
    \   00004C   02....       LJMP    ?Subroutine0 & 0xFFFF
    \   00004F                REQUIRE _A_IEN0
-   \   00004F                REQUIRE SLEEPCMD
    \   00004F                REQUIRE _A_IRCON
+   \   00004F                REQUIRE SLEEPCMD
     516          
     517          /**************************************************************************************************
     518           * @fn          TimerElapsed

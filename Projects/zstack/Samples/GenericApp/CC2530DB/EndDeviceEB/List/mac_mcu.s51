@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR C/C++ Compiler V7.60.1.40026 for 8051            13/Apr/2014  17:20:12 /
+// IAR C/C++ Compiler V7.60.1.40026 for 8051            13/Apr/2014  19:30:54 /
 // Copyright (C) 2004-2010 IAR Systems AB.                                    /
 //                                                                            /
 //    Core               =  plain                                             /
@@ -39,15 +39,14 @@
 //                          0x0A, 0x0C, 0x0D}" -DMAC_MAX_FRAME_SIZE=116       /
 //                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const    /
 //                          __code" -DGENERIC=__generic                       /
-//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=10000      /
-//                          -DQUEUED_POLL_RATE=10000                          /
-//                          -DRESPONSE_POLL_RATE=10000)                       /
+//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=8000       /
+//                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
 //                          -DREJOIN_POLL_RATE=440 E:\Dropbox\grad_proj\zstac /
 //                          k-cc2530-enddevice\Components\mac\low_level\srf04 /
 //                          \single_chip\mac_mcu.c -D HAL_ADC -D              /
 //                          HAL_KEY=FALSE -D HAL_LCD=FALSE -D NWK_AUTO_POLL   /
 //                          -D ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D          /
-//                          MT_ZDO_FUNC -D POWER_SAVING -lC                   /
+//                          MT_ZDO_FUNC -D POWER_SAVING -D NV_STORE -lC       /
 //                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
 //                          ects\zstack\Samples\GenericApp\CC2530DB\EndDevice /
 //                          EB\List\ -lA E:\Dropbox\grad_proj\zstack-cc2530-e /
@@ -1346,17 +1345,17 @@ macMcuInit:
         MOV     R7,#0x2
         LJMP    ?BANKED_LEAVE_XDATA
         CFI EndBlock cfiBlock2
-        REQUIRE T2CTRL
-        REQUIRE T2M0
         REQUIRE IEN2
-        REQUIRE T2M1
-        REQUIRE CLKCONSTA
-        REQUIRE _A_IEN0
         REQUIRE IP0
+        REQUIRE T2M1
+        REQUIRE T2CTRL
+        REQUIRE _A_IEN0
+        REQUIRE CLKCONSTA
+        REQUIRE T2M0
         REQUIRE RNDL
-        REQUIRE _A_IEN1
         REQUIRE T2MSEL
         REQUIRE IP1
+        REQUIRE _A_IEN1
 //  329 
 //  330 
 //  331 /**************************************************************************************************
@@ -1487,9 +1486,9 @@ macMcuTimerForceDelay:
 //  398 }
         LJMP    ?BRET
         CFI EndBlock cfiBlock5
-        REQUIRE T2M0
         REQUIRE T2M1
         REQUIRE _A_IEN0
+        REQUIRE T2M0
         REQUIRE T2MSEL
 //  399 
 //  400 /**************************************************************************************************
@@ -1542,9 +1541,9 @@ macMcuTimerCapture:
         CFI CFA_SP SP+-3
         LJMP    ?BRET
         CFI EndBlock cfiBlock6
-        REQUIRE T2M0
         REQUIRE T2M1
         REQUIRE _A_IEN0
+        REQUIRE T2M0
         REQUIRE T2MSEL
 //  423 }
 //  424 
@@ -1608,11 +1607,11 @@ macMcuOverflowCount:
 //  451   ((uint8 *)&overflowCount)[UINT32_NDX0] = T2MOVF0;
         LJMP    ?Subroutine1 & 0xFFFF
         CFI EndBlock cfiBlock7
+        REQUIRE T2MOVF1
         REQUIRE T2MOVF0
         REQUIRE T2MOVF2
-        REQUIRE T2M0
-        REQUIRE T2MOVF1
         REQUIRE _A_IEN0
+        REQUIRE T2M0
         REQUIRE T2MSEL
 //  452   ((uint8 *)&overflowCount)[UINT32_NDX1] = T2MOVF1;
 //  453   ((uint8 *)&overflowCount)[UINT32_NDX2] = T2MOVF2;
@@ -1675,9 +1674,9 @@ macMcuOverflowCapture:
 //  480   ((uint8 *)&overflowCapture)[UINT32_NDX0] = T2MOVF0;
         LJMP    ?Subroutine1 & 0xFFFF
         CFI EndBlock cfiBlock8
+        REQUIRE T2MOVF1
         REQUIRE T2MOVF0
         REQUIRE T2MOVF2
-        REQUIRE T2MOVF1
         REQUIRE _A_IEN0
         REQUIRE T2MSEL
 //  481   ((uint8 *)&overflowCapture)[UINT32_NDX1] = T2MOVF1;
@@ -1833,9 +1832,9 @@ macMcuOverflowSetCount:
         MOV     C,0xE0 /* A   */.7
         CFI EndBlock cfiBlock9
         REQUIRE ?Subroutine3
+        REQUIRE T2MOVF1
         REQUIRE T2MOVF0
         REQUIRE T2MOVF2
-        REQUIRE T2MOVF1
         REQUIRE _A_IEN0
         REQUIRE T2MSEL
         ; // Fall through to label ?Subroutine3
@@ -2255,10 +2254,10 @@ macMcuOverflowSetCompare:
         MOV     C,0xE0 /* A   */.0
         LJMP    ?Subroutine3 & 0xFFFF
         CFI EndBlock cfiBlock23
+        REQUIRE T2MOVF1
         REQUIRE T2IRQF
         REQUIRE T2MOVF0
         REQUIRE T2MOVF2
-        REQUIRE T2MOVF1
         REQUIRE T2IRQM
         REQUIRE _A_IEN0
         REQUIRE T2MSEL
@@ -2658,9 +2657,9 @@ macMcuTimer2OverflowWorkaround:
         CFI EndBlock cfiBlock29
         REQUIRE T2IRQF
         REQUIRE T2IRQM
+        REQUIRE T2MOVF1
         REQUIRE T2MOVF0
         REQUIRE T2MOVF2
-        REQUIRE T2MOVF1
         REQUIRE _A_IEN0
         REQUIRE T2MSEL
 
@@ -2823,11 +2822,11 @@ macMcuPrecisionCount:
         LCALL   ?L_ADD_X
         LJMP    ??Subroutine7_0 & 0xFFFF
         CFI EndBlock cfiBlock33
+        REQUIRE T2MOVF1
         REQUIRE T2MOVF0
         REQUIRE T2MOVF2
-        REQUIRE T2M0
-        REQUIRE T2MOVF1
         REQUIRE _A_IEN0
+        REQUIRE T2M0
         REQUIRE T2MSEL
 //  724 }
 //  725 
