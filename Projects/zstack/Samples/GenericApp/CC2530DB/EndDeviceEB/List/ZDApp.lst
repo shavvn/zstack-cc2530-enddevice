@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR C/C++ Compiler V7.60.1.40026 for 8051             12/Apr/2014  09:44:35 #
+# IAR C/C++ Compiler V7.60.1.40026 for 8051             13/Apr/2014  17:19:55 #
 # Copyright (C) 2004-2010 IAR Systems AB.                                     #
 #                                                                             #
 #    Core               =  plain                                              #
@@ -9,18 +9,17 @@
 #    Calling convention =  xdata reentrant                                    #
 #    Constant location  =  data_rom                                           #
 #    Dptr setup         =  1,16                                               #
-#    Source file        =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Components\stack\zdo\ZDApp.c                 #
-#    Command line       =  -f C:\Users\John\Dropbox\grad_proj\zstack-cc2530-e #
-#                          nddevice\Projects\zstack\Samples\GenericApp\CC2530 #
-#                          DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg            #
-#                          (-DCPU32MHZ -DROOT=__near_func                     #
-#                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6         #
-#                          -DMAC_CFG_RX_MAX=3) -f C:\Users\John\Dropbox\grad_ #
-#                          proj\zstack-cc2530-enddevice\Projects\zstack\Sampl #
-#                          es\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8w #
-#                          Config.cfg (-DZIGBEEPRO -DSECURE=0                 #
-#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#    Source file        =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Compo #
+#                          nents\stack\zdo\ZDApp.c                            #
+#    Command line       =  -f E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \Tools\CC2530DB\f8wEndev.cfg (-DCPU32MHZ           #
+#                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3         #
+#                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f          #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\To #
+#                          ols\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO            #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
 #                          -DDEFAULT_CHANLIST=0x00000800                      #
 #                          -DZDAPP_CONFIG_PAN_ID=0x1111                       #
 #                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
@@ -40,104 +39,103 @@
 #                          -DMAC_MAX_FRAME_SIZE=116                           #
 #                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
 #                          __code" -DGENERIC=__generic                        #
-#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
-#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
-#                          -DREJOIN_POLL_RATE=440 C:\Users\John\Dropbox\grad_ #
-#                          proj\zstack-cc2530-enddevice\Components\stack\zdo\ #
-#                          ZDApp.c -D HAL_ADC -D NWK_AUTO_POLL -D ZTOOL_P1    #
-#                          -D MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D        #
-#                          xPOWER_SAVING -lC C:\Users\John\Dropbox\grad_proj\ #
-#                          zstack-cc2530-enddevice\Projects\zstack\Samples\Ge #
-#                          nericApp\CC2530DB\EndDeviceEB\List\ -lA            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=10000       #
+#                          -DQUEUED_POLL_RATE=10000                           #
+#                          -DRESPONSE_POLL_RATE=10000)                        #
+#                          -DREJOIN_POLL_RATE=440 E:\Dropbox\grad_proj\zstack #
+#                          -cc2530-enddevice\Components\stack\zdo\ZDApp.c -D  #
+#                          HAL_ADC -D HAL_KEY=FALSE -D HAL_LCD=FALSE -D       #
+#                          NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D            #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D POWER_SAVING -lC     #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \List\ -lA E:\Dropbox\grad_proj\zstack-cc2530-endd #
 #                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
 #                          EndDeviceEB\List\ --diag_suppress Pe001,Pa010 -o   #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          EndDeviceEB\Obj\ -e --require_prototypes           #
-#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \Obj\ -e --require_prototypes --no_code_motion     #
+#                          --debug --core=plain --dptr=16,1                   #
 #                          --data_model=large --code_model=banked             #
 #                          --calling_convention=xdata_reentrant               #
 #                          --place_constants=data_rom --nr_virtual_regs 16    #
-#                          -I C:\Users\John\Dropbox\grad_proj\zstack-cc2530-e #
-#                          nddevice\Projects\zstack\Samples\GenericApp\CC2530 #
-#                          DB\ -I C:\Users\John\Dropbox\grad_proj\zstack-cc25 #
-#                          30-enddevice\Projects\zstack\Samples\GenericApp\CC #
-#                          2530DB\..\Source\ -I C:\Users\John\Dropbox\grad_pr #
-#                          oj\zstack-cc2530-enddevice\Projects\zstack\Samples #
-#                          \GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I   #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\hal\include\ -I          #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\hal\target\CC2530EB\ -I  #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\mac\include\ -I          #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\mac\high_level\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\mac\low_level\srf04\ -I  #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\mac\low_level\srf04\sing #
-#                          le_chip\ -I C:\Users\John\Dropbox\grad_proj\zstack #
-#                          -cc2530-enddevice\Projects\zstack\Samples\GenericA #
-#                          pp\CC2530DB\..\..\..\..\..\Components\mt\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\osal\include\ -I         #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\osal\mcu\ccsoc\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\services\saddr\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\services\sdata\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\af\ -I             #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\nwk\ -I            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\sapi\ -I           #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\sec\ -I            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\sys\ -I            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\zdo\ -I            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\zmac\ -I                 #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\zmac\f8w\ -I             #
-#                          "C:\Program Files (x86)\IAR Systems\Embedded       #
-#                          Workbench 5.4\8051\INC\" -I "C:\Program Files      #
-#                          (x86)\IAR Systems\Embedded Workbench               #
-#                          5.4\8051\INC\CLIB\" -Ohz                           #
-#    List file          =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          EndDeviceEB\List\ZDApp.lst                         #
-#    Object file        =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          EndDeviceEB\Obj\ZDApp.r51                          #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\ -I      #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\Source\  #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \ZMain\TI2530DB\ -I E:\Dropbox\grad_proj\zstack-cc #
+#                          2530-enddevice\Projects\zstack\Samples\GenericApp\ #
+#                          CC2530DB\..\..\..\..\..\Components\hal\include\    #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\hal\target\CC2530EB\ -I          #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\include\ -I                     #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\high_level\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\ -I             #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\single_chip\    #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\mt\ -I                           #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\osal\include\ -I                    #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\osal\mcu\ccsoc\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\saddr\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\sdata\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\af\ -I                        #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\nwk\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sapi\ -I                      #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sec\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sys\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\zdo\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\zmac\ -I E:\Dropbox\grad_proj\zstac #
+#                          k-cc2530-enddevice\Projects\zstack\Samples\Generic #
+#                          App\CC2530DB\..\..\..\..\..\Components\zmac\f8w\   #
+#                          -I "C:\Program Files\IAR Systems\Embedded          #
+#                          Workbench 5.4\8051\INC\" -I "C:\Program Files\IAR  #
+#                          Systems\Embedded Workbench 5.4\8051\INC\CLIB\"     #
+#                          -Ohz                                               #
+#    List file          =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \List\ZDApp.lst                                    #
+#    Object file        =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \Obj\ZDApp.r51                                     #
 #                                                                             #
 #                                                                             #
 ###############################################################################
 
-C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDApp.c
+E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDApp.c
       1          /**************************************************************************************************
       2            Filename:       ZDApp.c
       3            Revised:        $Date: 2010-09-17 16:25:30 -0700 (Fri, 17 Sep 2010) $
@@ -537,72 +535,70 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
     266          
     267            // Check for manual "Hold Auto Start"
     268            ZDAppCheckForHoldKey();
-   \   00001D                ; Setup parameters for call to function ZDAppCheckForHoldKey
-   \   00001D   12....       LCALL   ??ZDAppCheckForHoldKey?relay
     269          
     270            // Initialize ZDO items and setup the device - type of device to create.
     271            ZDO_Init();
-   \   000020                ; Setup parameters for call to function ZDO_Init
-   \   000020   12....       LCALL   ??ZDO_Init?relay
+   \   00001D                ; Setup parameters for call to function ZDO_Init
+   \   00001D   12....       LCALL   ??ZDO_Init?relay
     272          
     273            // Register the endpoint description with the AF
     274            // This task doesn't have a Simple description, but we still need
     275            // to register the endpoint.
     276            afRegister( (endPointDesc_t *)&ZDApp_epDesc );
-   \   000023                ; Setup parameters for call to function afRegister
-   \   000023   7A..         MOV     R2,#(ZDApp_epDesc & 0xff)
-   \   000025   7B..         MOV     R3,#((ZDApp_epDesc >> 8) & 0xff)
-   \   000027   12....       LCALL   ??afRegister?relay
+   \   000020                ; Setup parameters for call to function afRegister
+   \   000020   7A..         MOV     R2,#(ZDApp_epDesc & 0xff)
+   \   000022   7B..         MOV     R3,#((ZDApp_epDesc >> 8) & 0xff)
+   \   000024   12....       LCALL   ??afRegister?relay
     277          
     278          #if defined( ZDO_USERDESC_RESPONSE )
     279            ZDApp_InitUserDesc();
-   \   00002A                ; Setup parameters for call to function ZDApp_InitUserDesc
-   \   00002A   12....       LCALL   ??ZDApp_InitUserDesc?relay
+   \   000027                ; Setup parameters for call to function ZDApp_InitUserDesc
+   \   000027   12....       LCALL   ??ZDApp_InitUserDesc?relay
     280          #endif // ZDO_USERDESC_RESPONSE
     281          
     282            // Start the device?
     283            if ( devState != DEV_HOLD )
-   \   00002D   90....       MOV     DPTR,#devState
-   \   000030   E0           MOVX    A,@DPTR
-   \   000031   6009         JZ      ??ZDApp_Init_0
+   \   00002A   90....       MOV     DPTR,#devState
+   \   00002D   E0           MOVX    A,@DPTR
+   \   00002E   6009         JZ      ??ZDApp_Init_0
     284            {
     285              ZDOInitDevice( 0 );
-   \   000033                ; Setup parameters for call to function ZDOInitDevice
-   \   000033   7A00         MOV     R2,#0x0
-   \   000035   7B00         MOV     R3,#0x0
-   \   000037   12....       LCALL   ??ZDOInitDevice?relay
-   \   00003A   8014         SJMP    ??ZDApp_Init_1
+   \   000030                ; Setup parameters for call to function ZDOInitDevice
+   \   000030   7A00         MOV     R2,#0x0
+   \   000032   7B00         MOV     R3,#0x0
+   \   000034   12....       LCALL   ??ZDOInitDevice?relay
+   \   000037   8014         SJMP    ??ZDApp_Init_1
     286            }
     287            else
     288            {
     289              ZDOInitDevice( ZDO_INIT_HOLD_NWK_START );
    \                     ??ZDApp_Init_0:
-   \   00003C                ; Setup parameters for call to function ZDOInitDevice
-   \   00003C   7AFF         MOV     R2,#-0x1
-   \   00003E   7BFF         MOV     R3,#-0x1
-   \   000040   12....       LCALL   ??ZDOInitDevice?relay
+   \   000039                ; Setup parameters for call to function ZDOInitDevice
+   \   000039   7AFF         MOV     R2,#-0x1
+   \   00003B   7BFF         MOV     R3,#-0x1
+   \   00003D   12....       LCALL   ??ZDOInitDevice?relay
     290              // Blink LED to indicate HOLD_START
     291              HalLedBlink ( HAL_LED_4, 0, 50, 500 );
-   \   000043                ; Setup parameters for call to function HalLedBlink
-   \   000043   7CF4         MOV     R4,#-0xc
-   \   000045   7D01         MOV     R5,#0x1
-   \   000047   7B32         MOV     R3,#0x32
-   \   000049   7A00         MOV     R2,#0x0
-   \   00004B   7908         MOV     R1,#0x8
-   \   00004D   12....       LCALL   ??HalLedBlink?relay
+   \   000040                ; Setup parameters for call to function HalLedBlink
+   \   000040   7CF4         MOV     R4,#-0xc
+   \   000042   7D01         MOV     R5,#0x1
+   \   000044   7B32         MOV     R3,#0x32
+   \   000046   7A00         MOV     R2,#0x0
+   \   000048   7908         MOV     R1,#0x8
+   \   00004A   12....       LCALL   ??HalLedBlink?relay
     292            }
     293            
     294            // Initialize the ZDO callback function pointers zdoCBFunc[]
     295            ZDApp_InitZdoCBFunc();
    \                     ??ZDApp_Init_1:
-   \   000050                ; Setup parameters for call to function ZDApp_InitZdoCBFunc
-   \   000050   12....       LCALL   ??ZDApp_InitZdoCBFunc?relay
+   \   00004D                ; Setup parameters for call to function ZDApp_InitZdoCBFunc
+   \   00004D   12....       LCALL   ??ZDApp_InitZdoCBFunc?relay
     296            
     297            ZDApp_RegisterCBs();
-   \   000053                ; Setup parameters for call to function ZDApp_RegisterCBs
-   \   000053   12....       LCALL   ??ZDApp_RegisterCBs?relay
+   \   000050                ; Setup parameters for call to function ZDApp_RegisterCBs
+   \   000050   12....       LCALL   ??ZDApp_RegisterCBs?relay
     298          } /* ZDApp_Init() */
-   \   000056   02....       LJMP    ??Subroutine48_0 & 0xFFFF
+   \   000053   02....       LJMP    ??Subroutine48_0 & 0xFFFF
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
    \                     ??Subroutine48_0:
@@ -1719,7 +1715,11 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
    \   00000D   E0           MOVX    A,@DPTR
    \   00000E   F9           MOV     R1,A
    \   00000F   12....       LCALL   ??osal_set_event?relay
-   \   000012   22           RET
+   \   000012                ; Setup parameters for call to function osal_pwrmgr_device
+   \   000012                ; Setup parameters for call to function osal_pwrmgr_device
+   \   000012   7901         MOV     R1,#0x1
+   \   000014   12....       LCALL   ??osal_pwrmgr_device?relay
+   \   000017   22           RET
     838          
     839          /*********************************************************************
     840           * @fn      ZDApp_SaveNetworkStateEvt()
@@ -1995,31 +1995,20 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
     975          void ZDAppCheckForHoldKey( void )
    \                     ZDAppCheckForHoldKey:
     976          {
-   \   000000   C082         PUSH    DPL
-   \   000002   C083         PUSH    DPH
-   \   000004                ; Saved register size: 2
-   \   000004                ; Auto size: 0
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
     977          #if (defined HAL_KEY) && (HAL_KEY == TRUE)
     978            // Get Keypad directly to see if a HOLD_START is needed.
     979            // Hold down the SW_BYPASS_START key (see OnBoard.h)
     980            // while booting to avoid starting up the device.
     981            if ( HalKeyRead () == SW_BYPASS_START)
-   \   000004                ; Setup parameters for call to function HalKeyRead
-   \   000004   12....       LCALL   ??HalKeyRead?relay
-   \   000007   E9           MOV     A,R1
-   \   000008   6401         XRL     A,#0x1
-   \   00000A   7005         JNZ     ??ZDAppCheckForHoldKey_0
     982            {
     983              // Change the device state to HOLD on start up
     984              devState = DEV_HOLD;
-   \   00000C   E4           CLR     A
-   \   00000D   90....       MOV     DPTR,#devState
-   \   000010   F0           MOVX    @DPTR,A
     985            }
     986          #endif // HAL_KEY
     987          }
-   \                     ??ZDAppCheckForHoldKey_0:
-   \   000011   02....       LJMP    ?Subroutine2 & 0xFFFF
+   \   000000   02....       LJMP    ?BRET
     988          
     989          /*********************************************************************
     990           * @fn      ZDApp_ProcessOSALMsg()
@@ -2974,7 +2963,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
    \                     ??ZDApp_ProcessNetworkJoin_0:
    \   000027   90....       MOV     DPTR,#nwkStatus
    \   00002A   E0           MOVX    A,@DPTR
-   \   00002B   7017         JNZ     ??ZDApp_ProcessNetworkJoin_3
+   \   00002B   701C         JNZ     ??ZDApp_ProcessNetworkJoin_3
    1358              {
    1359                osal_set_event( ZDAppTaskID, ZDO_STATE_CHANGE_EVT );
    \   00002D                ; Setup parameters for call to function osal_set_event
@@ -2982,6 +2971,10 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
    1360          
    1361          #if defined ( POWER_SAVING )
    1362                osal_pwrmgr_device( PWRMGR_BATTERY );
+   \                     ??CrossCallReturnLabel_52:
+   \   000030                ; Setup parameters for call to function osal_pwrmgr_device
+   \   000030   7901         MOV     R1,#0x1
+   \   000032   12....       LCALL   ??osal_pwrmgr_device?relay
    1363          #endif
    1364          
    1365                if ( ZG_SECURE_ENABLED && ( ZDApp_RestoreNwkKey() == false ) )
@@ -3005,24 +2998,23 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
    1383                  }
    1384                          
    1385                  if ( devState == DEV_NWK_JOINING )
-   \                     ??CrossCallReturnLabel_52:
-   \   000030   90....       MOV     DPTR,#devState
-   \   000033   E0           MOVX    A,@DPTR
-   \   000034   6403         XRL     A,#0x3
-   \   000036   7003         JNZ     ??ZDApp_ProcessNetworkJoin_4
+   \   000035   90....       MOV     DPTR,#devState
+   \   000038   E0           MOVX    A,@DPTR
+   \   000039   6403         XRL     A,#0x3
+   \   00003B   7003         JNZ     ??ZDApp_ProcessNetworkJoin_4
    1386                  {
    1387                    ZDApp_AnnounceNewAddress();
-   \   000038                ; Setup parameters for call to function ZDApp_AnnounceNewAddress
-   \   000038   12....       LCALL   ??ZDApp_AnnounceNewAddress?relay
+   \   00003D                ; Setup parameters for call to function ZDApp_AnnounceNewAddress
+   \   00003D   12....       LCALL   ??ZDApp_AnnounceNewAddress?relay
    1388                  }
    1389                  
    1390                  devState = DEV_END_DEVICE;
    \                     ??ZDApp_ProcessNetworkJoin_4:
-   \   00003B   7406         MOV     A,#0x6
-   \   00003D   90....       MOV     DPTR,#devState
-   \   000040   F0           MOVX    @DPTR,A
+   \   000040   7406         MOV     A,#0x6
+   \   000042   90....       MOV     DPTR,#devState
+   \   000045   F0           MOVX    @DPTR,A
    1391                  if ( ZSTACK_ROUTER_BUILD )
-   \   000041   02....       LJMP    ??CrossCallReturnLabel_53 & 0xFFFF
+   \   000046   02....       LJMP    ??CrossCallReturnLabel_53 & 0xFFFF
    1392                  {
    1393                    // NOTE: first two parameters are not used, see NLMEDE.h for details
    1394                    if ( ZDO_Config_Node_Descriptor.LogicalType != NODETYPE_DEVICE )
@@ -3036,143 +3028,143 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
    1402              {
    1403                if ( (devStartMode == MODE_RESUME) && (++retryCnt >= MAX_RESUME_RETRY) )
    \                     ??ZDApp_ProcessNetworkJoin_3:
-   \   000044   90....       MOV     DPTR,#devStartMode
-   \   000047   E0           MOVX    A,@DPTR
-   \   000048   6401         XRL     A,#0x1
-   \   00004A   7039         JNZ     ??ZDApp_ProcessNetworkJoin_5
-   \   00004C   90....       MOV     DPTR,#retryCnt
-   \   00004F   E0           MOVX    A,@DPTR
-   \   000050   04           INC     A
-   \   000051   F0           MOVX    @DPTR,A
-   \   000052   C3           CLR     C
-   \   000053   9403         SUBB    A,#0x3
-   \   000055   402E         JC      ??ZDApp_ProcessNetworkJoin_5
+   \   000049   90....       MOV     DPTR,#devStartMode
+   \   00004C   E0           MOVX    A,@DPTR
+   \   00004D   6401         XRL     A,#0x1
+   \   00004F   7039         JNZ     ??ZDApp_ProcessNetworkJoin_5
+   \   000051   90....       MOV     DPTR,#retryCnt
+   \   000054   E0           MOVX    A,@DPTR
+   \   000055   04           INC     A
+   \   000056   F0           MOVX    @DPTR,A
+   \   000057   C3           CLR     C
+   \   000058   9403         SUBB    A,#0x3
+   \   00005A   402E         JC      ??ZDApp_ProcessNetworkJoin_5
    1404                {
    1405                  if ( _NIB.nwkPanId == 0xFFFF || _NIB.nwkPanId == INVALID_PAN_ID )
-   \   000057   90....       MOV     DPTR,#(_NIB + 33)
-   \   00005A   E0           MOVX    A,@DPTR
-   \   00005B   64FF         XRL     A,#0xff
-   \   00005D   7004         JNZ     ??ZDApp_ProcessNetworkJoin_6
-   \   00005F   A3           INC     DPTR
-   \   000060   E0           MOVX    A,@DPTR
-   \   000061   64FF         XRL     A,#0xff
+   \   00005C   90....       MOV     DPTR,#(_NIB + 33)
+   \   00005F   E0           MOVX    A,@DPTR
+   \   000060   64FF         XRL     A,#0xff
+   \   000062   7004         JNZ     ??ZDApp_ProcessNetworkJoin_6
+   \   000064   A3           INC     DPTR
+   \   000065   E0           MOVX    A,@DPTR
+   \   000066   64FF         XRL     A,#0xff
    \                     ??ZDApp_ProcessNetworkJoin_6:
-   \   000063   600E         JZ      ??ZDApp_ProcessNetworkJoin_7
-   \   000065   90....       MOV     DPTR,#(_NIB + 33)
-   \   000068   E0           MOVX    A,@DPTR
-   \   000069   64FE         XRL     A,#0xfe
-   \   00006B   7004         JNZ     ??ZDApp_ProcessNetworkJoin_8
-   \   00006D   A3           INC     DPTR
-   \   00006E   E0           MOVX    A,@DPTR
-   \   00006F   64FF         XRL     A,#0xff
+   \   000068   600E         JZ      ??ZDApp_ProcessNetworkJoin_7
+   \   00006A   90....       MOV     DPTR,#(_NIB + 33)
+   \   00006D   E0           MOVX    A,@DPTR
+   \   00006E   64FE         XRL     A,#0xfe
+   \   000070   7004         JNZ     ??ZDApp_ProcessNetworkJoin_8
+   \   000072   A3           INC     DPTR
+   \   000073   E0           MOVX    A,@DPTR
+   \   000074   64FF         XRL     A,#0xff
    \                     ??ZDApp_ProcessNetworkJoin_8:
-   \   000071   7006         JNZ     ??ZDApp_ProcessNetworkJoin_9
+   \   000076   7006         JNZ     ??ZDApp_ProcessNetworkJoin_9
    1406                    devStartMode = MODE_JOIN;
    \                     ??ZDApp_ProcessNetworkJoin_7:
-   \   000073   E4           CLR     A
-   \   000074   90....       MOV     DPTR,#devStartMode
-   \   000077   800B         SJMP    ??ZDApp_ProcessNetworkJoin_10
+   \   000078   E4           CLR     A
+   \   000079   90....       MOV     DPTR,#devStartMode
+   \   00007C   800B         SJMP    ??ZDApp_ProcessNetworkJoin_10
    1407                  else
    1408                  {
    1409                    devStartMode = MODE_REJOIN;
    \                     ??ZDApp_ProcessNetworkJoin_9:
-   \   000079   7403         MOV     A,#0x3
-   \   00007B   90....       MOV     DPTR,#devStartMode
-   \   00007E   F0           MOVX    @DPTR,A
+   \   00007E   7403         MOV     A,#0x3
+   \   000080   90....       MOV     DPTR,#devStartMode
+   \   000083   F0           MOVX    @DPTR,A
    1410                    _tmpRejoinState = true;
-   \   00007F   7401         MOV     A,#0x1
-   \   000081   90....       MOV     DPTR,#_tmpRejoinState
+   \   000084   7401         MOV     A,#0x1
+   \   000086   90....       MOV     DPTR,#_tmpRejoinState
    \                     ??ZDApp_ProcessNetworkJoin_10:
-   \   000084   F0           MOVX    @DPTR,A
+   \   000089   F0           MOVX    @DPTR,A
    1411                  }
    1412                }
    1413          
    1414                if ( (NLME_GetShortAddr() != INVALID_NODE_ADDR) ||
    1415                     (_NIB.nwkDevAddress != INVALID_NODE_ADDR) )
    \                     ??ZDApp_ProcessNetworkJoin_5:
-   \   000085                ; Setup parameters for call to function NLME_GetShortAddr
-   \   000085   12....       LCALL   ??NLME_GetShortAddr?relay
-   \   000088   8A..         MOV     ?V0 + 0,R2
-   \   00008A   8B..         MOV     ?V0 + 1,R3
-   \   00008C   74FE         MOV     A,#-0x2
-   \   00008E   65..         XRL     A,?V0 + 0
-   \   000090   7004         JNZ     ??ZDApp_ProcessNetworkJoin_11
-   \   000092   74FF         MOV     A,#-0x1
-   \   000094   65..         XRL     A,?V0 + 1
+   \   00008A                ; Setup parameters for call to function NLME_GetShortAddr
+   \   00008A   12....       LCALL   ??NLME_GetShortAddr?relay
+   \   00008D   8A..         MOV     ?V0 + 0,R2
+   \   00008F   8B..         MOV     ?V0 + 1,R3
+   \   000091   74FE         MOV     A,#-0x2
+   \   000093   65..         XRL     A,?V0 + 0
+   \   000095   7004         JNZ     ??ZDApp_ProcessNetworkJoin_11
+   \   000097   74FF         MOV     A,#-0x1
+   \   000099   65..         XRL     A,?V0 + 1
    \                     ??ZDApp_ProcessNetworkJoin_11:
-   \   000096   700E         JNZ     ??ZDApp_ProcessNetworkJoin_12
-   \   000098   90....       MOV     DPTR,#(_NIB + 20)
-   \   00009B   E0           MOVX    A,@DPTR
-   \   00009C   64FE         XRL     A,#0xfe
-   \   00009E   7004         JNZ     ??ZDApp_ProcessNetworkJoin_13
-   \   0000A0   A3           INC     DPTR
-   \   0000A1   E0           MOVX    A,@DPTR
-   \   0000A2   64FF         XRL     A,#0xff
+   \   00009B   700E         JNZ     ??ZDApp_ProcessNetworkJoin_12
+   \   00009D   90....       MOV     DPTR,#(_NIB + 20)
+   \   0000A0   E0           MOVX    A,@DPTR
+   \   0000A1   64FE         XRL     A,#0xfe
+   \   0000A3   7004         JNZ     ??ZDApp_ProcessNetworkJoin_13
+   \   0000A5   A3           INC     DPTR
+   \   0000A6   E0           MOVX    A,@DPTR
+   \   0000A7   64FF         XRL     A,#0xff
    \                     ??ZDApp_ProcessNetworkJoin_13:
-   \   0000A4   601E         JZ      ??ZDApp_ProcessNetworkJoin_14
+   \   0000A9   601E         JZ      ??ZDApp_ProcessNetworkJoin_14
    1416                {
    1417                  uint16 addr = INVALID_NODE_ADDR;
    \                     ??ZDApp_ProcessNetworkJoin_12:
-   \   0000A6   85..82       MOV     DPL,?XSP + 0
-   \   0000A9   85..83       MOV     DPH,?XSP + 1
-   \   0000AC   74FE         MOV     A,#-0x2
-   \   0000AE   F0           MOVX    @DPTR,A
-   \   0000AF   A3           INC     DPTR
-   \   0000B0   74FF         MOV     A,#-0x1
-   \   0000B2   F0           MOVX    @DPTR,A
+   \   0000AB   85..82       MOV     DPL,?XSP + 0
+   \   0000AE   85..83       MOV     DPH,?XSP + 1
+   \   0000B1   74FE         MOV     A,#-0x2
+   \   0000B3   F0           MOVX    @DPTR,A
+   \   0000B4   A3           INC     DPTR
+   \   0000B5   74FF         MOV     A,#-0x1
+   \   0000B7   F0           MOVX    @DPTR,A
    1418                  // Invalidate nwk addr so end device does not use in its data reqs.
    1419                  _NIB.nwkDevAddress = INVALID_NODE_ADDR;
-   \   0000B3   90....       MOV     DPTR,#(_NIB + 20)
-   \   0000B6   74FE         MOV     A,#-0x2
-   \   0000B8   F0           MOVX    @DPTR,A
-   \   0000B9   A3           INC     DPTR
-   \   0000BA   74FF         MOV     A,#-0x1
-   \   0000BC   12....       LCALL   ?Subroutine12 & 0xFFFF
+   \   0000B8   90....       MOV     DPTR,#(_NIB + 20)
+   \   0000BB   74FE         MOV     A,#-0x2
+   \   0000BD   F0           MOVX    @DPTR,A
+   \   0000BE   A3           INC     DPTR
+   \   0000BF   74FF         MOV     A,#-0x1
+   \   0000C1   12....       LCALL   ?Subroutine12 & 0xFFFF
    1420                  ZMacSetReq( ZMacShortAddress, (uint8 *)&addr );
    1421                }
    \                     ??CrossCallReturnLabel_8:
-   \   0000BF   7953         MOV     R1,#0x53
-   \   0000C1   12....       LCALL   ??ZMacSetReq?relay
+   \   0000C4   7953         MOV     R1,#0x53
+   \   0000C6   12....       LCALL   ??ZMacSetReq?relay
    1422          
    1423                // Clear the neighbor Table and network discovery tables.
    1424                nwkNeighborInitTable();
    \                     ??ZDApp_ProcessNetworkJoin_14:
-   \   0000C4                ; Setup parameters for call to function nwkNeighborInitTable
-   \   0000C4   12....       LCALL   ??nwkNeighborInitTable?relay
+   \   0000C9                ; Setup parameters for call to function nwkNeighborInitTable
+   \   0000C9   12....       LCALL   ??nwkNeighborInitTable?relay
    1425                NLME_NwkDiscTerm();
-   \   0000C7                ; Setup parameters for call to function NLME_NwkDiscTerm
-   \   0000C7   12....       LCALL   ??NLME_NwkDiscTerm?relay
+   \   0000CC                ; Setup parameters for call to function NLME_NwkDiscTerm
+   \   0000CC   12....       LCALL   ??NLME_NwkDiscTerm?relay
    1426          
    1427                zdoDiscCounter = 1;
-   \   0000CA   7401         MOV     A,#0x1
-   \   0000CC   90....       MOV     DPTR,#zdoDiscCounter
-   \   0000CF   F0           MOVX    @DPTR,A
+   \   0000CF   7401         MOV     A,#0x1
+   \   0000D1   90....       MOV     DPTR,#zdoDiscCounter
+   \   0000D4   F0           MOVX    @DPTR,A
    1428          
    1429          //      ZDApp_NetworkInit( (uint16)
    1430          //                         ((NWK_START_DELAY * (osal_rand() & 0x0F)) +
    1431          //                          (NWK_START_DELAY * 5)) );
    1432                ZDApp_NetworkInit( (uint16)(NWK_START_DELAY
    1433                     + ((uint16)(osal_rand()& EXTENDED_JOINING_RANDOM_MASK))) );
-   \   0000D0                ; Setup parameters for call to function ZDApp_NetworkInit
-   \   0000D0                ; Setup parameters for call to function osal_rand
+   \   0000D5                ; Setup parameters for call to function ZDApp_NetworkInit
+   \   0000D5                ; Setup parameters for call to function osal_rand
    1434              }
    1435            }
    \                     ??ZDApp_ProcessNetworkJoin_15:
-   \   0000D0   12....       LCALL   ?Subroutine25 & 0xFFFF
+   \   0000D5   12....       LCALL   ?Subroutine25 & 0xFFFF
    \                     ??CrossCallReturnLabel_28:
-   \   0000D3   807F         SJMP    ??CrossCallReturnLabel_53
+   \   0000D8   807F         SJMP    ??CrossCallReturnLabel_53
    1436            else if ( devState == DEV_NWK_ORPHAN || devState == DEV_NWK_REJOIN )
    \                     ??ZDApp_ProcessNetworkJoin_1:
-   \   0000D5   E0           MOVX    A,@DPTR
-   \   0000D6   6404         XRL     A,#0x4
-   \   0000D8   706C         JNZ     ??ZDApp_ProcessNetworkJoin_16
+   \   0000DA   E0           MOVX    A,@DPTR
+   \   0000DB   6404         XRL     A,#0x4
+   \   0000DD   706C         JNZ     ??ZDApp_ProcessNetworkJoin_16
    1437            {
    1438              // results of an orphaning attempt by this device
    1439              if (nwkStatus == ZSuccess)
    \                     ??ZDApp_ProcessNetworkJoin_2:
-   \   0000DA   90....       MOV     DPTR,#nwkStatus
-   \   0000DD   E0           MOVX    A,@DPTR
-   \   0000DE   7013         JNZ     ??ZDApp_ProcessNetworkJoin_17
+   \   0000DF   90....       MOV     DPTR,#nwkStatus
+   \   0000E2   E0           MOVX    A,@DPTR
+   \   0000E3   7013         JNZ     ??ZDApp_ProcessNetworkJoin_17
    1440              {
    1441                if ( ZG_SECURE_ENABLED )
    1442                {
@@ -3180,7 +3172,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
    1444                }
    1445                
    1446                devState = DEV_END_DEVICE;
-   \   0000E0   12....       LCALL   ?Subroutine8 & 0xFFFF
+   \   0000E5   12....       LCALL   ?Subroutine8 & 0xFFFF
    1447                osal_set_event( ZDAppTaskID, ZDO_STATE_CHANGE_EVT );
    1448                // setup Power Manager Device
    1449          #if defined ( POWER_SAVING )
@@ -3189,15 +3181,15 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
    1452          
    1453                if ( ZDO_Config_Node_Descriptor.CapabilityFlags & CAPINFO_RCVR_ON_IDLE )
    \                     ??CrossCallReturnLabel_1:
-   \   0000E3   90....       MOV     DPTR,#(ZDO_Config_Node_Descriptor + 2)
-   \   0000E6   E0           MOVX    A,@DPTR
-   \   0000E7   A2E3         MOV     C,0xE0 /* A   */.3
-   \   0000E9   5003         JNC     ??CrossCallReturnLabel_34
+   \   0000E8   90....       MOV     DPTR,#(ZDO_Config_Node_Descriptor + 2)
+   \   0000EB   E0           MOVX    A,@DPTR
+   \   0000EC   A2E3         MOV     C,0xE0 /* A   */.3
+   \   0000EE   5003         JNC     ??CrossCallReturnLabel_34
    1454                {
    1455                  // The receiver is on, turn network layer polling off.
    1456                  NLME_SetPollRate( 0 );
-   \   0000EB                ; Setup parameters for call to function NLME_SetPollRate
-   \   0000EB   12....       LCALL   ?Subroutine29 & 0xFFFF
+   \   0000F0                ; Setup parameters for call to function NLME_SetPollRate
+   \   0000F0   12....       LCALL   ?Subroutine29 & 0xFFFF
    1457                  NLME_SetQueuedPollRate( 0 );
    1458                  NLME_SetResponseRate( 0 );
    1459                }
@@ -3213,74 +3205,74 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
    1469                
    1470                ZDApp_AnnounceNewAddress();
    \                     ??CrossCallReturnLabel_34:
-   \   0000EE                ; Setup parameters for call to function ZDApp_AnnounceNewAddress
-   \   0000EE   12....       LCALL   ??ZDApp_AnnounceNewAddress?relay
-   \   0000F1   8061         SJMP    ??CrossCallReturnLabel_53
+   \   0000F3                ; Setup parameters for call to function ZDApp_AnnounceNewAddress
+   \   0000F3   12....       LCALL   ??ZDApp_AnnounceNewAddress?relay
+   \   0000F6   8061         SJMP    ??CrossCallReturnLabel_53
    1471              }
    1472              else
    1473              {
    1474                if ( devStartMode == MODE_RESUME )
    \                     ??ZDApp_ProcessNetworkJoin_17:
-   \   0000F3   90....       MOV     DPTR,#devStartMode
-   \   0000F6   E0           MOVX    A,@DPTR
-   \   0000F7   6401         XRL     A,#0x1
-   \   0000F9   7043         JNZ     ??ZDApp_ProcessNetworkJoin_18
+   \   0000F8   90....       MOV     DPTR,#devStartMode
+   \   0000FB   E0           MOVX    A,@DPTR
+   \   0000FC   6401         XRL     A,#0x1
+   \   0000FE   7043         JNZ     ??ZDApp_ProcessNetworkJoin_18
    1475                {
    1476                  if ( ++retryCnt <= MAX_RESUME_RETRY )
-   \   0000FB   90....       MOV     DPTR,#retryCnt
-   \   0000FE   E0           MOVX    A,@DPTR
-   \   0000FF   04           INC     A
-   \   000100   F0           MOVX    @DPTR,A
-   \   000101   C3           CLR     C
-   \   000102   9404         SUBB    A,#0x4
-   \   000104   5030         JNC     ??ZDApp_ProcessNetworkJoin_19
+   \   000100   90....       MOV     DPTR,#retryCnt
+   \   000103   E0           MOVX    A,@DPTR
+   \   000104   04           INC     A
+   \   000105   F0           MOVX    @DPTR,A
+   \   000106   C3           CLR     C
+   \   000107   9404         SUBB    A,#0x4
+   \   000109   5030         JNC     ??ZDApp_ProcessNetworkJoin_19
    1477                  {
    1478                    if ( _NIB.nwkPanId == 0xFFFF || _NIB.nwkPanId == INVALID_PAN_ID )
-   \   000106   90....       MOV     DPTR,#(_NIB + 33)
-   \   000109   E0           MOVX    A,@DPTR
-   \   00010A   64FF         XRL     A,#0xff
-   \   00010C   7004         JNZ     ??ZDApp_ProcessNetworkJoin_20
-   \   00010E   A3           INC     DPTR
-   \   00010F   E0           MOVX    A,@DPTR
-   \   000110   64FF         XRL     A,#0xff
+   \   00010B   90....       MOV     DPTR,#(_NIB + 33)
+   \   00010E   E0           MOVX    A,@DPTR
+   \   00010F   64FF         XRL     A,#0xff
+   \   000111   7004         JNZ     ??ZDApp_ProcessNetworkJoin_20
+   \   000113   A3           INC     DPTR
+   \   000114   E0           MOVX    A,@DPTR
+   \   000115   64FF         XRL     A,#0xff
    \                     ??ZDApp_ProcessNetworkJoin_20:
-   \   000112   600E         JZ      ??ZDApp_ProcessNetworkJoin_21
-   \   000114   90....       MOV     DPTR,#(_NIB + 33)
-   \   000117   E0           MOVX    A,@DPTR
-   \   000118   64FE         XRL     A,#0xfe
-   \   00011A   7004         JNZ     ??ZDApp_ProcessNetworkJoin_22
-   \   00011C   A3           INC     DPTR
-   \   00011D   E0           MOVX    A,@DPTR
-   \   00011E   64FF         XRL     A,#0xff
+   \   000117   600E         JZ      ??ZDApp_ProcessNetworkJoin_21
+   \   000119   90....       MOV     DPTR,#(_NIB + 33)
+   \   00011C   E0           MOVX    A,@DPTR
+   \   00011D   64FE         XRL     A,#0xfe
+   \   00011F   7004         JNZ     ??ZDApp_ProcessNetworkJoin_22
+   \   000121   A3           INC     DPTR
+   \   000122   E0           MOVX    A,@DPTR
+   \   000123   64FF         XRL     A,#0xff
    \                     ??ZDApp_ProcessNetworkJoin_22:
-   \   000120   7007         JNZ     ??ZDApp_ProcessNetworkJoin_23
+   \   000125   7007         JNZ     ??ZDApp_ProcessNetworkJoin_23
    1479                      devStartMode = MODE_JOIN;
    \                     ??ZDApp_ProcessNetworkJoin_21:
-   \   000122   E4           CLR     A
-   \   000123   90....       MOV     DPTR,#devStartMode
+   \   000127   E4           CLR     A
+   \   000128   90....       MOV     DPTR,#devStartMode
    \                     ??ZDApp_ProcessNetworkJoin_24:
-   \   000126   F0           MOVX    @DPTR,A
-   \   000127   8015         SJMP    ??ZDApp_ProcessNetworkJoin_18
+   \   00012B   F0           MOVX    @DPTR,A
+   \   00012C   8015         SJMP    ??ZDApp_ProcessNetworkJoin_18
    1480                    else
    1481                    {
    1482                      devStartMode = MODE_REJOIN;
    \                     ??ZDApp_ProcessNetworkJoin_23:
-   \   000129   7403         MOV     A,#0x3
-   \   00012B   90....       MOV     DPTR,#devStartMode
-   \   00012E   F0           MOVX    @DPTR,A
+   \   00012E   7403         MOV     A,#0x3
+   \   000130   90....       MOV     DPTR,#devStartMode
+   \   000133   F0           MOVX    @DPTR,A
    1483                      _tmpRejoinState = true;
-   \   00012F   7401         MOV     A,#0x1
-   \   000131   90....       MOV     DPTR,#_tmpRejoinState
-   \   000134   80F0         SJMP    ??ZDApp_ProcessNetworkJoin_24
+   \   000134   7401         MOV     A,#0x1
+   \   000136   90....       MOV     DPTR,#_tmpRejoinState
+   \   000139   80F0         SJMP    ??ZDApp_ProcessNetworkJoin_24
    1484                    }
    1485                  }
    1486                  // Do a normal join to the network after certain times of rejoin retries
    1487                  else if( AIB_apsUseInsecureJoin == true )
    \                     ??ZDApp_ProcessNetworkJoin_19:
-   \   000136   90....       MOV     DPTR,#AIB_apsUseInsecureJoin
-   \   000139   E0           MOVX    A,@DPTR
-   \   00013A   6401         XRL     A,#0x1
-   \   00013C   60E4         JZ      ??ZDApp_ProcessNetworkJoin_21
+   \   00013B   90....       MOV     DPTR,#AIB_apsUseInsecureJoin
+   \   00013E   E0           MOVX    A,@DPTR
+   \   00013F   6401         XRL     A,#0x1
+   \   000141   60E4         JZ      ??ZDApp_ProcessNetworkJoin_21
    1488                  {
    1489                    devStartMode = MODE_JOIN;
    1490                  }
@@ -3289,18 +3281,18 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
    1493                // Clear the neighbor Table and network discovery tables.
    1494                nwkNeighborInitTable();
    \                     ??ZDApp_ProcessNetworkJoin_18:
-   \   00013E                ; Setup parameters for call to function nwkNeighborInitTable
-   \   00013E   12....       LCALL   ??nwkNeighborInitTable?relay
+   \   000143                ; Setup parameters for call to function nwkNeighborInitTable
+   \   000143   12....       LCALL   ??nwkNeighborInitTable?relay
    1495                NLME_NwkDiscTerm();
-   \   000141                ; Setup parameters for call to function NLME_NwkDiscTerm
-   \   000141   12....       LCALL   ??NLME_NwkDiscTerm?relay
+   \   000146                ; Setup parameters for call to function NLME_NwkDiscTerm
+   \   000146   12....       LCALL   ??NLME_NwkDiscTerm?relay
    1496          
    1497                // setup a retry for later...
    1498                ZDApp_NetworkInit( (uint16)(NWK_START_DELAY
    1499                     + (osal_rand()& EXTENDED_JOINING_RANDOM_MASK)) );
-   \   000144                ; Setup parameters for call to function ZDApp_NetworkInit
-   \   000144                ; Setup parameters for call to function osal_rand
-   \   000144   808A         SJMP    ??ZDApp_ProcessNetworkJoin_15
+   \   000149                ; Setup parameters for call to function ZDApp_NetworkInit
+   \   000149                ; Setup parameters for call to function osal_rand
+   \   000149   808A         SJMP    ??ZDApp_ProcessNetworkJoin_15
    1500              }
    1501            }
    1502          #if defined ( ZIGBEE_STOCHASTIC_ADDRESSING )
@@ -3309,26 +3301,26 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
    1505              // Assume from address conflict
    1506              if ( _NIB.nwkAddrAlloc == NWK_ADDRESSING_STOCHASTIC )
    \                     ??ZDApp_ProcessNetworkJoin_16:
-   \   000146   90....       MOV     DPTR,#(_NIB + 96)
-   \   000149   E0           MOVX    A,@DPTR
-   \   00014A   6402         XRL     A,#0x2
-   \   00014C   7006         JNZ     ??CrossCallReturnLabel_53
+   \   00014B   90....       MOV     DPTR,#(_NIB + 96)
+   \   00014E   E0           MOVX    A,@DPTR
+   \   00014F   6402         XRL     A,#0x2
+   \   000151   7006         JNZ     ??CrossCallReturnLabel_53
    1507              {
    1508                // Notify the network
    1509                ZDApp_AnnounceNewAddress();
-   \   00014E                ; Setup parameters for call to function ZDApp_AnnounceNewAddress
-   \   00014E   12....       LCALL   ??ZDApp_AnnounceNewAddress?relay
+   \   000153                ; Setup parameters for call to function ZDApp_AnnounceNewAddress
+   \   000153   12....       LCALL   ??ZDApp_AnnounceNewAddress?relay
    1510                
    1511                // Notify apps
    1512                osal_set_event( ZDAppTaskID, ZDO_STATE_CHANGE_EVT );
-   \   000151                ; Setup parameters for call to function osal_set_event
-   \   000151   12....       LCALL   ?Subroutine17 & 0xFFFF
+   \   000156                ; Setup parameters for call to function osal_set_event
+   \   000156   12....       LCALL   ?Subroutine17 & 0xFFFF
    1513              }
    1514            }
    1515          #endif
    1516          }
    \                     ??CrossCallReturnLabel_53:
-   \   000154   02....       LJMP    ?Subroutine1 & 0xFFFF
+   \   000159   02....       LJMP    ?Subroutine1 & 0xFFFF
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
    \                     ?Subroutine12:
@@ -4352,8 +4344,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
    \   000047   7900         MOV     R1,#0x0
    \   000049   7403         MOV     A,#0x3
    \   00004B   12....       LCALL   ?DEALLOC_XSTACK8
-   \   00004E                REQUIRE ?Subroutine2
-   \   00004E                ; // Fall through to label ?Subroutine2
+   \   00004E   02....       LJMP    ?Subroutine2 & 0xFFFF
    1956          }  // ZDO_NetworkDiscoveryConfirmCB
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
@@ -5632,7 +5623,8 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
    \   000007                ; Setup parameters for call to function ZDApp_AnnounceNewAddress
    \   000007   12....       LCALL   ??ZDApp_AnnounceNewAddress?relay
    2385          }
-   \   00000A   02....       LJMP    ?Subroutine2 & 0xFFFF
+   \   00000A                REQUIRE ?Subroutine2
+   \   00000A                ; // Fall through to label ?Subroutine2
    2386          
    2387          /*********************************************************************
    2388           * @fn          ZDO_JoinIndicationCB
@@ -6842,7 +6834,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
 
    \                                 In  segment XDATA_ID, align 1, keep-with-next
    \                     `?<Initializer for ZDApp_SavedPollRate>`:
-   \   000000   E803         DW 1000
+   \   000000   1027         DW 10000
 
    \                                 In  segment XDATA_ROM_C, align 1
    \                     __Constant_1:
@@ -7179,8 +7171,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
      Function                       ISTACK PSTACK XSTACK
      --------                       ------ ------ ------
      AddrMgrWriteNVRequest              0      0      0
-     ZDAppCheckForHoldKey               2      0      9
-       -> HalKeyRead                    4      0      0
+     ZDAppCheckForHoldKey               0      0      0
      ZDAppDetermineDeviceType           2      0     12
        -> nwk_ExtPANIDValid             4      0      0
      ZDApp_AnnounceNewAddress           0      0     23
@@ -7197,6 +7188,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
      ZDApp_DeviceAuthEvt                2      0      9
        -> ZDApp_ResetTimerCancel        4      0      0
        -> osal_set_event                4      0      0
+       -> osal_pwrmgr_device            4      0      0
        -> ZDApp_SaveNwkKey              4      0      0
        -> ZDApp_AnnounceNewAddress      4      0      0
        -> NLME_SetPollRate              4      0      0
@@ -7204,7 +7196,6 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
        -> ZDP_GenericRsp                0      0     28
      ZDApp_Init                         0      0      9
        -> NLME_GetExtAddr               0      0     18
-       -> ZDAppCheckForHoldKey          0      0     18
        -> ZDO_Init                      0      0     18
        -> afRegister                    0      0     18
        -> ZDApp_InitUserDesc            0      0     18
@@ -7265,6 +7256,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
        -> ZDO_ProcessBindUnbindReq      0      0     62
      ZDApp_ProcessNetworkJoin           0      0     23
        -> osal_set_event                0      0     24
+       -> osal_pwrmgr_device            0      0     24
        -> ZDApp_AnnounceNewAddress      0      0     24
        -> NLME_GetShortAddr             0      0     24
        -> ZMacSetReq                    0      0     24
@@ -7273,6 +7265,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
        -> osal_rand                     0      0     24
        -> ZDApp_NetworkInit             0      0     24
        -> osal_set_event                0      0     24
+       -> osal_pwrmgr_device            0      0     24
        -> NLME_SetPollRate              0      0     24
        -> NLME_SetQueuedPollRate        0      0     24
        -> NLME_SetResponseRate          0      0     24
@@ -7444,7 +7437,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
      retryCnt                                       1
      ZDApp_epDesc                                   6
      ZDApp_SavedPollRate                            2
-     ZDApp_Init                                    89
+     ZDApp_Init                                    86
      ??Subroutine48_0                               5
      ZDApp_SecInit                                 11
      ZDApp_event_loop                             170
@@ -7464,13 +7457,13 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
      ?Subroutine2                                   7
      ZDApp_NetworkStartEvt                         81
      ZDApp_DeviceAuthEvt                           46
-     ?Subroutine8                                  19
+     ?Subroutine8                                  24
      ZDApp_SaveNetworkStateEvt                      3
      ZDApp_RestoreNetworkState                     67
      ?Subroutine10                                 13
      ZDApp_InitUserDesc                            93
      ?Subroutine30                                 32
-     ZDAppCheckForHoldKey                          20
+     ZDAppCheckForHoldKey                           3
      ZDApp_ProcessOSALMsg                         436
      ?Subroutine31                                  1
      ??Subroutine41_0                               9
@@ -7488,7 +7481,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
      ?Subroutine20                                  2
      ??Subroutine42_0                               9
      ZDApp_ProcessSecMsg                           71
-     ZDApp_ProcessNetworkJoin                     343
+     ZDApp_ProcessNetworkJoin                     348
      ?Subroutine12                                 12
      ZDApp_SaveNwkKey                              99
      ?Subroutine4                                   5
@@ -7513,7 +7506,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
      ZDApp_SendEventMsg                            16
      ?Subroutine21                                  9
      ZDApp_SendMsg                                 89
-     ZDO_NetworkDiscoveryConfirmCB                 78
+     ZDO_NetworkDiscoveryConfirmCB                 81
      ?Subroutine16                                  9
      ZDApp_NwkDescListProcessing                  270
      ?Subroutine22                                  6
@@ -7533,7 +7526,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
      ZDO_StartRouterConfirmCB                      34
      ZDO_JoinConfirmCB                            107
      ?Subroutine6                                   8
-     ZDO_AddrChangeIndicationCB                    13
+     ZDO_AddrChangeIndicationCB                    10
      ZDO_JoinIndicationCB                           0
      ?Subroutine3                                   5
      ZDO_ConcentratorIndicationCB                  62
@@ -7639,14 +7632,14 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\stack\zdo\ZDA
      ??ZDO_DeregisterForZdoCB?relay                 6
 
  
- 4 973 bytes in segment BANKED_CODE
+ 4 963 bytes in segment BANKED_CODE
    378 bytes in segment BANK_RELAYS
     11 bytes in segment XDATA_I
     11 bytes in segment XDATA_ID
     12 bytes in segment XDATA_ROM_C
     50 bytes in segment XDATA_Z
  
- 5 362 bytes of CODE  memory
+ 5 352 bytes of CODE  memory
      0 bytes of CONST memory (+ 12 bytes shared)
     61 bytes of XDATA memory
 

@@ -65,6 +65,7 @@
 #include "ZDApp.h"
 #include "ZDObject.h"
 #include "ZDProfile.h"
+#include "OSAL_PwrMgr.h"
 
 #include "GenericApp.h"
 #include "DebugTrace.h"
@@ -202,12 +203,7 @@ void GenericApp_Init( byte task_id )
 
   // Register for all key events - This app will handle all key events
   RegisterForKeys( GenericApp_TaskID );
-
-  // Update the display
-#if defined ( LCD_SUPPORTED )
-    HalLcdWriteString( "GenericApp", HAL_LCD_LINE_1 );
-#endif
-    
+  osal_pwrmgr_task_state(GenericApp_TaskID, PWRMGR_CONSERVE);
   //ZDO_RegisterForZDOMsg( GenericApp_TaskID, End_Device_Bind_rsp );
   //ZDO_RegisterForZDOMsg( GenericApp_TaskID, Match_Desc_rsp );
   //printf("\r\nGenericApp init complete!\r\n");
@@ -281,9 +277,10 @@ UINT16 GenericApp_ProcessEvent( byte task_id, UINT16 events )
               || (GenericApp_NwkState == DEV_END_DEVICE) )
           {
             // Start sending "the" message in a regular interval.
-            osal_start_timerEx( GenericApp_TaskID,
+            /*osal_start_timerEx( GenericApp_TaskID,
                                 GENERICAPP_SEND_MSG_EVT,
-                              GENERICAPP_SEND_MSG_TIMEOUT );
+                              GENERICAPP_SEND_MSG_TIMEOUT );*/
+            osal_set_event(GenericApp_TaskID,GENERICAPP_SEND_MSG_EVT);
           }
           break;
           

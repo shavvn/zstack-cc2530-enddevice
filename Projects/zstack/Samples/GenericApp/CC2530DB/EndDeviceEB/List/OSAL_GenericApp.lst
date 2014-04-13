@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR C/C++ Compiler V7.60.1.40026 for 8051             12/Apr/2014  13:11:04 #
+# IAR C/C++ Compiler V7.60.1.40026 for 8051             13/Apr/2014  17:19:51 #
 # Copyright (C) 2004-2010 IAR Systems AB.                                     #
 #                                                                             #
 #    Core               =  plain                                              #
@@ -40,13 +40,15 @@
 #                          -DMAC_MAX_FRAME_SIZE=116                           #
 #                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
 #                          __code" -DGENERIC=__generic                        #
-#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
-#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=10000       #
+#                          -DQUEUED_POLL_RATE=10000                           #
+#                          -DRESPONSE_POLL_RATE=10000)                        #
 #                          -DREJOIN_POLL_RATE=440 E:\Dropbox\grad_proj\zstack #
 #                          -cc2530-enddevice\Projects\zstack\Samples\GenericA #
 #                          pp\Source\OSAL_GenericApp.c -D HAL_ADC -D          #
-#                          NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D            #
-#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D xPOWER_SAVING -lC    #
+#                          HAL_KEY=FALSE -D HAL_LCD=FALSE -D NWK_AUTO_POLL    #
+#                          -D ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D           #
+#                          MT_ZDO_FUNC -D POWER_SAVING -lC                    #
 #                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
 #                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
 #                          \List\ -lA E:\Dropbox\grad_proj\zstack-cc2530-endd #

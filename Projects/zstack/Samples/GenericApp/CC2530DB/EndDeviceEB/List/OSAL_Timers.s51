@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR C/C++ Compiler V7.60.1.40026 for 8051            12/Apr/2014  09:44:34 /
+// IAR C/C++ Compiler V7.60.1.40026 for 8051            13/Apr/2014  17:19:38 /
 // Copyright (C) 2004-2010 IAR Systems AB.                                    /
 //                                                                            /
 //    Core               =  plain                                             /
@@ -9,18 +9,17 @@
 //    Calling convention =  xdata reentrant                                   /
 //    Constant location  =  data_rom                                          /
 //    Dptr setup         =  1,16                                              /
-//    Source file        =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Components\osal\common\OSAL_Timers.c       /
-//    Command line       =  -f C:\Users\John\Dropbox\grad_proj\zstack-cc2530- /
-//                          enddevice\Projects\zstack\Samples\GenericApp\CC25 /
-//                          30DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg         /
-//                          (-DCPU32MHZ -DROOT=__near_func                    /
-//                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6        /
-//                          -DMAC_CFG_RX_MAX=3) -f C:\Users\John\Dropbox\grad /
-//                          _proj\zstack-cc2530-enddevice\Projects\zstack\Sam /
-//                          ples\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\ /
-//                          f8wConfig.cfg (-DZIGBEEPRO -DSECURE=0             /
-//                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                 /
+//    Source file        =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Comp /
+//                          onents\osal\common\OSAL_Timers.c                  /
+//    Command line       =  -f E:\Dropbox\grad_proj\zstack-cc2530-enddevice\P /
+//                          rojects\zstack\Samples\GenericApp\CC2530DB\..\..\ /
+//                          ..\Tools\CC2530DB\f8wEndev.cfg (-DCPU32MHZ        /
+//                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3        /
+//                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f         /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          Tools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO         /
+//                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR      /
 //                          -DDEFAULT_CHANLIST=0x00000800                     /
 //                          -DZDAPP_CONFIG_PAN_ID=0x1111                      /
 //                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_M /
@@ -40,98 +39,98 @@
 //                          0x0A, 0x0C, 0x0D}" -DMAC_MAX_FRAME_SIZE=116       /
 //                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const    /
 //                          __code" -DGENERIC=__generic                       /
-//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000       /
-//                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
-//                          -DREJOIN_POLL_RATE=440 C:\Users\John\Dropbox\grad /
-//                          _proj\zstack-cc2530-enddevice\Components\osal\com /
-//                          mon\OSAL_Timers.c -D HAL_ADC -D NWK_AUTO_POLL -D  /
-//                          ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D             /
-//                          MT_ZDO_FUNC -D xPOWER_SAVING -lC                  /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\EndDeviceEB\List\ -lA                           /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\EndDeviceEB\List\ --diag_suppress Pe001,Pa010   /
-//                          -o C:\Users\John\Dropbox\grad_proj\zstack-cc2530- /
-//                          enddevice\Projects\zstack\Samples\GenericApp\CC25 /
-//                          30DB\EndDeviceEB\Obj\ -e --require_prototypes     /
-//                          --no_code_motion --debug --core=plain             /
-//                          --dptr=16,1 --data_model=large                    /
-//                          --code_model=banked --calling_convention=xdata_re /
-//                          entrant --place_constants=data_rom                /
-//                          --nr_virtual_regs 16 -I                           /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\ -I C:\Users\John\Dropbox\grad_proj\zstack-cc25 /
+//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=10000      /
+//                          -DQUEUED_POLL_RATE=10000                          /
+//                          -DRESPONSE_POLL_RATE=10000)                       /
+//                          -DREJOIN_POLL_RATE=440 E:\Dropbox\grad_proj\zstac /
+//                          k-cc2530-enddevice\Components\osal\common\OSAL_Ti /
+//                          mers.c -D HAL_ADC -D HAL_KEY=FALSE -D             /
+//                          HAL_LCD=FALSE -D NWK_AUTO_POLL -D ZTOOL_P1 -D     /
+//                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D          /
+//                          POWER_SAVING -lC E:\Dropbox\grad_proj\zstack-cc25 /
 //                          30-enddevice\Projects\zstack\Samples\GenericApp\C /
-//                          C2530DB\..\Source\ -I C:\Users\John\Dropbox\grad_ /
-//                          proj\zstack-cc2530-enddevice\Projects\zstack\Samp /
-//                          les\GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\  /
-//                          -I C:\Users\John\Dropbox\grad_proj\zstack-cc2530- /
-//                          enddevice\Projects\zstack\Samples\GenericApp\CC25 /
-//                          30DB\..\..\..\..\..\Components\hal\include\ -I    /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\..\..\..\..\..\Components\hal\target\CC2530EB\  /
-//                          -I C:\Users\John\Dropbox\grad_proj\zstack-cc2530- /
-//                          enddevice\Projects\zstack\Samples\GenericApp\CC25 /
-//                          30DB\..\..\..\..\..\Components\mac\include\ -I    /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\..\..\..\..\..\Components\mac\high_level\ -I    /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\..\..\..\..\..\Components\mac\low_level\srf04\  /
-//                          -I C:\Users\John\Dropbox\grad_proj\zstack-cc2530- /
-//                          enddevice\Projects\zstack\Samples\GenericApp\CC25 /
-//                          30DB\..\..\..\..\..\Components\mac\low_level\srf0 /
-//                          4\single_chip\ -I C:\Users\John\Dropbox\grad_proj /
-//                          \zstack-cc2530-enddevice\Projects\zstack\Samples\ /
-//                          GenericApp\CC2530DB\..\..\..\..\..\Components\mt\ /
-//                           -I C:\Users\John\Dropbox\grad_proj\zstack-cc2530 /
-//                          -enddevice\Projects\zstack\Samples\GenericApp\CC2 /
-//                          530DB\..\..\..\..\..\Components\osal\include\ -I  /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\..\..\..\..\..\Components\osal\mcu\ccsoc\ -I    /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\..\..\..\..\..\Components\services\saddr\ -I    /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\..\..\..\..\..\Components\services\sdata\ -I    /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\..\..\..\..\..\Components\stack\af\ -I          /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\..\..\..\..\..\Components\stack\nwk\ -I         /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\..\..\..\..\..\Components\stack\sapi\ -I        /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\..\..\..\..\..\Components\stack\sec\ -I         /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\..\..\..\..\..\Components\stack\sys\ -I         /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\..\..\..\..\..\Components\stack\zdo\ -I         /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\..\..\..\..\..\Components\zmac\ -I              /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\..\..\..\..\..\Components\zmac\f8w\ -I          /
-//                          "C:\Program Files (x86)\IAR Systems\Embedded      /
-//                          Workbench 5.4\8051\INC\" -I "C:\Program Files     /
-//                          (x86)\IAR Systems\Embedded Workbench              /
-//                          5.4\8051\INC\CLIB\" -Ohz                          /
-//    List file          =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\EndDeviceEB\List\OSAL_Timers.s51                /
+//                          C2530DB\EndDeviceEB\List\ -lA                     /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\EndDevice /
+//                          EB\List\ --diag_suppress Pe001,Pa010 -o           /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\EndDevice /
+//                          EB\Obj\ -e --require_prototypes --no_code_motion  /
+//                          --debug --core=plain --dptr=16,1                  /
+//                          --data_model=large --code_model=banked            /
+//                          --calling_convention=xdata_reentrant              /
+//                          --place_constants=data_rom --nr_virtual_regs 16   /
+//                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\P /
+//                          rojects\zstack\Samples\GenericApp\CC2530DB\ -I    /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\Source /
+//                          \ -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice /
+//                          \Projects\zstack\Samples\GenericApp\CC2530DB\..\. /
+//                          .\..\ZMain\TI2530DB\ -I                           /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\hal\include\ -I                  /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\hal\target\CC2530EB\ -I          /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\mac\include\ -I                  /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\mac\high_level\ -I               /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\mac\low_level\srf04\ -I          /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\mac\low_level\srf04\single_chip\ /
+//                           -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\ /
+//                          Projects\zstack\Samples\GenericApp\CC2530DB\..\.. /
+//                          \..\..\..\Components\mt\ -I                       /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\osal\include\ -I                 /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\osal\mcu\ccsoc\ -I               /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\services\saddr\ -I               /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\services\sdata\ -I               /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\stack\af\ -I                     /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\stack\nwk\ -I                    /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\stack\sapi\ -I                   /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\stack\sec\ -I                    /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\stack\sys\ -I                    /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\stack\zdo\ -I                    /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\zmac\ -I                         /
+//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\zmac\f8w\ -I "C:\Program         /
+//                          Files\IAR Systems\Embedded Workbench              /
+//                          5.4\8051\INC\" -I "C:\Program Files\IAR           /
+//                          Systems\Embedded Workbench 5.4\8051\INC\CLIB\"    /
+//                          -Ohz                                              /
+//    List file          =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
+//                          ects\zstack\Samples\GenericApp\CC2530DB\EndDevice /
+//                          EB\List\OSAL_Timers.s51                           /
 //                                                                            /
 //                                                                            /
 ///////////////////////////////////////////////////////////////////////////////
@@ -176,8 +175,12 @@
         FUNCTION ??osalTimerUpdate?relay,0203H
         PUBLIC ??osal_GetSystemClock?relay
         FUNCTION ??osal_GetSystemClock?relay,0203H
+        PUBLIC ??osal_adjust_timers?relay
+        FUNCTION ??osal_adjust_timers?relay,0203H
         PUBLIC ??osal_get_timeoutEx?relay
         FUNCTION ??osal_get_timeoutEx?relay,0203H
+        PUBLIC ??osal_next_timeout?relay
+        FUNCTION ??osal_next_timeout?relay,0203H
         PUBLIC ??osal_start_reload_timer?relay
         FUNCTION ??osal_start_reload_timer?relay,0203H
         PUBLIC ??osal_start_timerEx?relay
@@ -213,16 +216,26 @@
         LOCFRAME XSTACK, 12, STACK
         PUBLIC osalTimerUpdate
         FUNCTION osalTimerUpdate,021203H
-        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
         LOCFRAME XSTACK, 16, STACK
         PUBLIC osal_GetSystemClock
         FUNCTION osal_GetSystemClock,0203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        PUBLIC osal_adjust_timers
+        FUNCTION osal_adjust_timers,021203H
         ARGFRAME XSTACK, 0, STACK
         LOCFRAME XSTACK, 12, STACK
         PUBLIC osal_get_timeoutEx
         FUNCTION osal_get_timeoutEx,021203H
         ARGFRAME XSTACK, 0, STACK
         LOCFRAME XSTACK, 12, STACK
+        PUBLIC osal_next_timeout
+        FUNCTION osal_next_timeout,0203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
         PUBLIC osal_start_reload_timer
         FUNCTION osal_start_reload_timer,021203H
         ARGFRAME XSTACK, 0, STACK
@@ -399,6 +412,8 @@
 osal_mem_alloc      SYMBOL "osal_mem_alloc"
 osal_set_event      SYMBOL "osal_set_event"
 osal_mem_free       SYMBOL "osal_mem_free"
+TimerElapsed        SYMBOL "TimerElapsed"
+??TimerElapsed?relay SYMBOL "?relay", TimerElapsed
 ??osal_mem_alloc?relay SYMBOL "?relay", osal_mem_alloc
 ??osal_mem_free?relay SYMBOL "?relay", osal_mem_free
 ??osal_set_event?relay SYMBOL "?relay", osal_set_event
@@ -414,8 +429,12 @@ osalTimerUpdate     SYMBOL "osalTimerUpdate"
 ??osalTimerUpdate?relay SYMBOL "?relay", osalTimerUpdate
 osal_GetSystemClock SYMBOL "osal_GetSystemClock"
 ??osal_GetSystemClock?relay SYMBOL "?relay", osal_GetSystemClock
+osal_adjust_timers  SYMBOL "osal_adjust_timers"
+??osal_adjust_timers?relay SYMBOL "?relay", osal_adjust_timers
 osal_get_timeoutEx  SYMBOL "osal_get_timeoutEx"
 ??osal_get_timeoutEx?relay SYMBOL "?relay", osal_get_timeoutEx
+osal_next_timeout   SYMBOL "osal_next_timeout"
+??osal_next_timeout?relay SYMBOL "?relay", osal_next_timeout
 osal_start_reload_timer SYMBOL "osal_start_reload_timer"
 ??osal_start_reload_timer?relay SYMBOL "?relay", osal_start_reload_timer
 osal_start_timerEx  SYMBOL "osal_start_timerEx"
@@ -446,6 +465,15 @@ osal_timer_num_active SYMBOL "osal_timer_num_active"
         ARGFRAME XSTACK, 16, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN TimerElapsed
+        FUNCTION TimerElapsed,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN ??TimerElapsed?relay
+        FUNCTION ??TimerElapsed?relay,00H
         EXTERN ??osal_mem_alloc?relay
         FUNCTION ??osal_mem_alloc?relay,00H
         EXTERN ??osal_mem_free?relay
@@ -453,7 +481,7 @@ osal_timer_num_active SYMBOL "osal_timer_num_active"
         EXTERN ??osal_set_event?relay
         FUNCTION ??osal_set_event?relay,00H
 
-// C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\OSAL_Timers.c
+// E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\OSAL_Timers.c
 //    1 /**************************************************************************************************
 //    2   Filename:       OSAL_Timers.c
 //    3   Revised:        $Date: 2010-09-17 16:25:30 -0700 (Fri, 17 Sep 2010) $
@@ -804,7 +832,7 @@ osalAddTimer:
 //  168         while ( srchTimer->next )
 //  169           srchTimer = srchTimer->next;
 ??osalAddTimer_8:
-        LCALL   ??Subroutine4_0 & 0xFFFF
+        LCALL   ??Subroutine5_0 & 0xFFFF
 ??CrossCallReturnLabel_2:
         MOV     DPL,R0
         MOV     DPH,R1
@@ -1370,34 +1398,11 @@ osal_stop_timerEx:
         SJMP    ??osal_stop_timerEx_4
 ??osal_stop_timerEx_3:
         MOV     R1,#0x6
-        CFI EndBlock cfiBlock10
 ??osal_stop_timerEx_4:
-        REQUIRE ?Subroutine0
+        SJMP    ?Subroutine0
+        CFI EndBlock cfiBlock10
         REQUIRE _A_IEN0
-        ; // Fall through to label ?Subroutine0
 //  330 }
-
-        RSEG BANKED_CODE:CODE:NOROOT(0)
-?Subroutine0:
-        CFI Block cfiBlock11 Using cfiCommon0
-        CFI NoFunction
-        CFI CFA_SP SP+0
-        CFI CFA_XSP16 add(XSP16, 12)
-        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
-        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
-        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
-        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
-        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
-        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
-        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
-        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
-        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
-        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
-        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
-        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
-        MOV     R7,#0x4
-        LJMP    ?BANKED_LEAVE_XDATA
-        CFI EndBlock cfiBlock11
 //  331 
 //  332 /*********************************************************************
 //  333  * @fn      osal_get_timeoutEx
@@ -1413,7 +1418,7 @@ osal_stop_timerEx:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 //  342 uint16 osal_get_timeoutEx( uint8 task_id, uint16 event_id )
 osal_get_timeoutEx:
-        CFI Block cfiBlock12 Using cfiCommon0
+        CFI Block cfiBlock11 Using cfiCommon0
         CFI Function osal_get_timeoutEx
 //  343 {
         FUNCALL osal_get_timeoutEx, osalFindTimer
@@ -1492,10 +1497,33 @@ osal_get_timeoutEx:
         MOV     R2,A
         MOV     A,R7
         MOV     R3,A
-        SJMP    ?Subroutine0
-        CFI EndBlock cfiBlock12
+        CFI EndBlock cfiBlock11
+        REQUIRE ?Subroutine0
         REQUIRE _A_IEN0
+        ; // Fall through to label ?Subroutine0
 //  360 }
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine0:
+        CFI Block cfiBlock12 Using cfiCommon0
+        CFI NoFunction
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        MOV     R7,#0x4
+        LJMP    ?BANKED_LEAVE_XDATA
+        CFI EndBlock cfiBlock12
 //  361 
 //  362 /*********************************************************************
 //  363  * @fn      osal_timer_num_active
@@ -1545,15 +1573,12 @@ osal_timer_num_active:
 ??osal_timer_num_active_1:
         INC     R1
 //  386     srchTimer = srchTimer->next;
+//  387   }
 ??osal_timer_num_active_0:
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
+        LCALL   ??Subroutine7_0 & 0xFFFF
+??CrossCallReturnLabel_9:
         MOV     DPL,R2
         MOV     DPH,R3
-//  387   }
         MOV     A,DPL
         JNZ     ??osal_timer_num_active_2
         MOV     A,DPH
@@ -1708,7 +1733,7 @@ osalTimerUpdate:
         MOV     DPL,?V0 + 4
         MOV     DPH,?V0 + 5
         LCALL   ?Subroutine2 & 0xFFFF
-??CrossCallReturnLabel_5:
+??CrossCallReturnLabel_7:
         CLR     C
         MOV     A,?V0 + 2
         SUBB    A,R0
@@ -1793,15 +1818,8 @@ osalTimerUpdate:
         ; Setup parameters for call to function osal_set_event
         MOV     DPL,?V0 + 4
         MOV     DPH,?V0 + 5
-        INC     DPTR
-        INC     DPTR
-        INC     DPTR
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
+        LCALL   ?Subroutine4 & 0xFFFF
+??CrossCallReturnLabel_11:
         MOV     DPL,?V0 + 4
         MOV     DPH,?V0 + 5
         INC     DPTR
@@ -1825,7 +1843,7 @@ osalTimerUpdate:
         INC     DPTR
         LCALL   ?Subroutine2 & 0xFFFF
 //  445       }
-??CrossCallReturnLabel_6:
+??CrossCallReturnLabel_8:
         MOV     DPL,?V0 + 4
         MOV     DPH,?V0 + 5
         INC     DPTR
@@ -1873,14 +1891,14 @@ osalTimerUpdate:
         MOV     DPH,?V0 + 5
         JNZ     ??osalTimerUpdate_14
 //  452           timerHead = srchTimer->next;
-        LCALL   ??Subroutine4_0 & 0xFFFF
+        LCALL   ??Subroutine5_0 & 0xFFFF
 ??CrossCallReturnLabel_3:
         MOV     DPTR,#timerHead
         SJMP    ??osalTimerUpdate_15
 //  453         else
 //  454           prevTimer->next = srchTimer->next;
 ??osalTimerUpdate_14:
-        LCALL   ??Subroutine4_0 & 0xFFFF
+        LCALL   ??Subroutine5_0 & 0xFFFF
 ??CrossCallReturnLabel_4:
         MOV     DPL,?V0 + 0
         MOV     DPH,?V0 + 1
@@ -1950,15 +1968,9 @@ osalTimerUpdate:
         ; Setup parameters for call to function osal_set_event
         MOV     DPL,R6
         MOV     DPH,R7
-        INC     DPTR
-        INC     DPTR
-        INC     DPTR
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
+        LCALL   ?Subroutine4 & 0xFFFF
+//  476         }
+??CrossCallReturnLabel_12:
         MOV     DPL,R6
         MOV     DPH,R7
         INC     DPTR
@@ -1970,7 +1982,6 @@ osalTimerUpdate:
         MOVX    A,@DPTR
         MOV     R1,A
         LCALL   ??osal_set_event?relay
-//  476         }
 //  477         osal_mem_free( freeTimer );
 ??osalTimerUpdate_20:
         ; Setup parameters for call to function osal_mem_free
@@ -2000,7 +2011,7 @@ osalTimerUpdate:
 ?Subroutine2:
         CFI Block cfiCond15 Using cfiCommon0
         CFI NoFunction
-        CFI Conditional ??CrossCallReturnLabel_5
+        CFI Conditional ??CrossCallReturnLabel_7
         CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
         CFI VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
         CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
@@ -2021,7 +2032,7 @@ osalTimerUpdate:
         CFI CFA_XSP16 add(XSP16, 16)
         CFI Block cfiCond16 Using cfiCommon0
         CFI (cfiCond16) NoFunction
-        CFI (cfiCond16) Conditional ??CrossCallReturnLabel_6
+        CFI (cfiCond16) Conditional ??CrossCallReturnLabel_8
         CFI (cfiCond16) R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
         CFI (cfiCond16) VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
         CFI (cfiCond16) V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
@@ -2048,11 +2059,11 @@ osalTimerUpdate:
         CFI EndBlock cfiCond15
         CFI EndBlock cfiCond16
         CFI EndBlock cfiPicker17
-        REQUIRE ??Subroutine4_0
-        ; // Fall through to label ??Subroutine4_0
+        REQUIRE ??Subroutine5_0
+        ; // Fall through to label ??Subroutine5_0
 
         RSEG BANKED_CODE:CODE:NOROOT(0)
-??Subroutine4_0:
+??Subroutine5_0:
         CFI Block cfiCond18 Using cfiCommon0
         CFI NoFunction
         CFI Conditional ??CrossCallReturnLabel_2
@@ -2117,48 +2128,60 @@ osalTimerUpdate:
         CFI Block cfiCond21 Using cfiCommon0
         CFI (cfiCond21) NoFunction
         CFI (cfiCond21) Conditional ??CrossCallReturnLabel_5
-        CFI (cfiCond21) R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
-        CFI (cfiCond21) VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
-        CFI (cfiCond21) V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
-        CFI (cfiCond21) V1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
-        CFI (cfiCond21) V2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
-        CFI (cfiCond21) V3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
-        CFI (cfiCond21) V4 load(1, XDATA, add(CFA_XSP16, literal(-10)))
-        CFI (cfiCond21) V5 load(1, XDATA, add(CFA_XSP16, literal(-9)))
-        CFI (cfiCond21) V6 load(1, XDATA, add(CFA_XSP16, literal(-8)))
-        CFI (cfiCond21) V7 load(1, XDATA, add(CFA_XSP16, literal(-7)))
-        CFI (cfiCond21) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
-        CFI (cfiCond21) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
-        CFI (cfiCond21) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
-        CFI (cfiCond21) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
-        CFI (cfiCond21) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
-        CFI (cfiCond21) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
-        CFI (cfiCond21) CFA_SP SP+0
-        CFI (cfiCond21) CFA_XSP16 add(XSP16, 16)
+        CFI (cfiCond21) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond21) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond21) CFA_SP SP+-5
         CFI Block cfiCond22 Using cfiCommon0
         CFI (cfiCond22) NoFunction
         CFI (cfiCond22) Conditional ??CrossCallReturnLabel_6
-        CFI (cfiCond22) R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
-        CFI (cfiCond22) VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
-        CFI (cfiCond22) V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
-        CFI (cfiCond22) V1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
-        CFI (cfiCond22) V2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
-        CFI (cfiCond22) V3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
-        CFI (cfiCond22) V4 load(1, XDATA, add(CFA_XSP16, literal(-10)))
-        CFI (cfiCond22) V5 load(1, XDATA, add(CFA_XSP16, literal(-9)))
-        CFI (cfiCond22) V6 load(1, XDATA, add(CFA_XSP16, literal(-8)))
-        CFI (cfiCond22) V7 load(1, XDATA, add(CFA_XSP16, literal(-7)))
-        CFI (cfiCond22) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
-        CFI (cfiCond22) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
-        CFI (cfiCond22) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
-        CFI (cfiCond22) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
-        CFI (cfiCond22) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
-        CFI (cfiCond22) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
-        CFI (cfiCond22) CFA_SP SP+0
-        CFI (cfiCond22) CFA_XSP16 add(XSP16, 16)
-        CFI Block cfiPicker23 Using cfiCommon1
-        CFI (cfiPicker23) NoFunction
-        CFI (cfiPicker23) Picker
+        CFI (cfiCond22) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond22) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond22) CFA_SP SP+-5
+        CFI Block cfiCond23 Using cfiCommon0
+        CFI (cfiCond23) NoFunction
+        CFI (cfiCond23) Conditional ??CrossCallReturnLabel_7
+        CFI (cfiCond23) R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
+        CFI (cfiCond23) VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
+        CFI (cfiCond23) V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+        CFI (cfiCond23) V1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
+        CFI (cfiCond23) V2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond23) V3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond23) V4 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond23) V5 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond23) V6 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond23) V7 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond23) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond23) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond23) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond23) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond23) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond23) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond23) CFA_SP SP+0
+        CFI (cfiCond23) CFA_XSP16 add(XSP16, 16)
+        CFI Block cfiCond24 Using cfiCommon0
+        CFI (cfiCond24) NoFunction
+        CFI (cfiCond24) Conditional ??CrossCallReturnLabel_8
+        CFI (cfiCond24) R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
+        CFI (cfiCond24) VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
+        CFI (cfiCond24) V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+        CFI (cfiCond24) V1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
+        CFI (cfiCond24) V2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond24) V3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond24) V4 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond24) V5 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond24) V6 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond24) V7 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond24) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond24) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond24) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond24) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond24) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond24) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond24) CFA_SP SP+0
+        CFI (cfiCond24) CFA_XSP16 add(XSP16, 16)
+        CFI Block cfiPicker25 Using cfiCommon1
+        CFI (cfiPicker25) NoFunction
+        CFI (cfiPicker25) Picker
         MOVX    A,@DPTR
         MOV     R0,A
         INC     DPTR
@@ -2170,7 +2193,9 @@ osalTimerUpdate:
         CFI EndBlock cfiCond20
         CFI EndBlock cfiCond21
         CFI EndBlock cfiCond22
-        CFI EndBlock cfiPicker23
+        CFI EndBlock cfiCond23
+        CFI EndBlock cfiCond24
+        CFI EndBlock cfiPicker25
 //  482 
 //  483 #ifdef POWER_SAVING
 //  484 /*********************************************************************
@@ -2182,19 +2207,83 @@ osalTimerUpdate:
 //  490  *
 //  491  * @return  none
 //  492  *********************************************************************/
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
 //  493 void osal_adjust_timers( void )
+osal_adjust_timers:
+        CFI Block cfiBlock26 Using cfiCommon0
+        CFI Function osal_adjust_timers
 //  494 {
+        FUNCALL osal_adjust_timers, TimerElapsed
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL osal_adjust_timers, osalTimerUpdate
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0xc
+        LCALL   ?BANKED_ENTER_XDATA
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        ; Saved register size: 12
+        ; Auto size: 0
 //  495   uint16 eTime;
 //  496 
 //  497   if ( timerHead != NULL )
+        MOV     DPTR,#timerHead
+        MOVX    A,@DPTR
+        JNZ     ??osal_adjust_timers_0
+        INC     DPTR
+        MOVX    A,@DPTR
+??osal_adjust_timers_0:
+        JZ      ??osal_adjust_timers_1
 //  498   {
 //  499     // Compute elapsed time (msec)
 //  500     eTime = TimerElapsed() /  TICK_COUNT;
+        ; Setup parameters for call to function TimerElapsed
+        LCALL   ??TimerElapsed?relay
 //  501 
 //  502     if ( eTime )
+        MOV     A,R2
+        JNZ     ??osal_adjust_timers_2
+        MOV     A,R3
+??osal_adjust_timers_2:
+        JZ      ??osal_adjust_timers_1
 //  503       osalTimerUpdate( eTime );
+        ; Setup parameters for call to function osalTimerUpdate
+        LCALL   ??osalTimerUpdate?relay
 //  504   }
 //  505 }
+??osal_adjust_timers_1:
+        LJMP    ?Subroutine0 & 0xFFFF
+        CFI EndBlock cfiBlock26
 //  506 
 //  507 /*********************************************************************
 //  508  * @fn      osal_next_timeout
@@ -2208,36 +2297,281 @@ osalTimerUpdate:
 //  516  *
 //  517  * @return  none
 //  518  *********************************************************************/
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
 //  519 uint16 osal_next_timeout( void )
+osal_next_timeout:
+        CFI Block cfiBlock27 Using cfiCommon0
+        CFI Function osal_next_timeout
 //  520 {
+        PUSH    DPL
+        CFI DPL0 Frame(CFA_SP, 4)
+        CFI CFA_SP SP+-4
+        PUSH    DPH
+        CFI DPH0 Frame(CFA_SP, 5)
+        CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
 //  521   uint16 nextTimeout;
 //  522   osalTimerRec_t *srchTimer;
 //  523 
 //  524   if ( timerHead != NULL )
+        MOV     DPTR,#timerHead
+        MOVX    A,@DPTR
+        JNZ     ??osal_next_timeout_0
+        INC     DPTR
+        MOVX    A,@DPTR
+??osal_next_timeout_0:
+        JZ      ??osal_next_timeout_1
 //  525   {
 //  526     // Head of the timer list
 //  527     srchTimer = timerHead;
+        MOV     DPTR,#timerHead
+        LCALL   ??Subroutine5_0 & 0xFFFF
 //  528     nextTimeout = OSAL_TIMERS_MAX_TIMEOUT;
+??CrossCallReturnLabel_5:
+        MOV     R2,#-0x1
+        MOV     R3,#-0x1
 //  529 
 //  530     // Look for the next timeout timer
 //  531     while ( srchTimer != NULL )
 //  532     {
 //  533       if (srchTimer->timeout < nextTimeout)
+??osal_next_timeout_2:
+        MOV     DPL,R0
+        MOV     DPH,R1
+        INC     DPTR
+        INC     DPTR
+        CLR     C
+        MOVX    A,@DPTR
+        SUBB    A,R2
+        INC     DPTR
+        MOVX    A,@DPTR
+        SUBB    A,R3
+        JNC     ??CrossCallReturnLabel_10
 //  534       {
 //  535         nextTimeout = srchTimer->timeout;
+        MOV     DPL,R0
+        MOV     DPH,R1
+        LCALL   ??Subroutine6_0 & 0xFFFF
 //  536       }
 //  537       // Check next timer
 //  538       srchTimer = srchTimer->next;
+??CrossCallReturnLabel_10:
+        MOV     DPL,R0
+        MOV     DPH,R1
+        LCALL   ??Subroutine5_0 & 0xFFFF
 //  539     }
+??CrossCallReturnLabel_6:
+        MOV     A,R0
+        JNZ     ??osal_next_timeout_3
+        MOV     A,R1
+??osal_next_timeout_3:
+        JZ      ??osal_next_timeout_4
+        SJMP    ??osal_next_timeout_2
 //  540   }
 //  541   else
 //  542   {
 //  543     // No timers
 //  544     nextTimeout = 0;
+??osal_next_timeout_1:
+        MOV     R2,#0x0
+        MOV     R3,#0x0
 //  545   }
 //  546 
 //  547   return ( nextTimeout );
+??osal_next_timeout_4:
+        LJMP    ?Subroutine1 & 0xFFFF
+        CFI EndBlock cfiBlock27
 //  548 }
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine4:
+        CFI Block cfiCond28 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_11
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI V4 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI V5 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V6 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V7 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 16)
+        CFI Block cfiCond29 Using cfiCommon0
+        CFI (cfiCond29) NoFunction
+        CFI (cfiCond29) Conditional ??CrossCallReturnLabel_12
+        CFI (cfiCond29) R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
+        CFI (cfiCond29) VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
+        CFI (cfiCond29) V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+        CFI (cfiCond29) V1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
+        CFI (cfiCond29) V2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond29) V3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond29) V4 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond29) V5 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond29) V6 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond29) V7 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond29) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond29) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond29) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond29) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond29) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond29) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond29) CFA_SP SP+0
+        CFI (cfiCond29) CFA_XSP16 add(XSP16, 16)
+        CFI Block cfiPicker30 Using cfiCommon1
+        CFI (cfiPicker30) NoFunction
+        CFI (cfiPicker30) Picker
+        INC     DPTR
+        INC     DPTR
+        CFI EndBlock cfiCond28
+        CFI EndBlock cfiCond29
+        CFI EndBlock cfiPicker30
+        REQUIRE ??Subroutine6_0
+        ; // Fall through to label ??Subroutine6_0
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+??Subroutine6_0:
+        CFI Block cfiCond31 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_10
+        CFI DPL0 Frame(CFA_SP, 4)
+        CFI DPH0 Frame(CFA_SP, 5)
+        CFI CFA_SP SP+-5
+        CFI Block cfiCond32 Using cfiCommon0
+        CFI (cfiCond32) NoFunction
+        CFI (cfiCond32) Conditional ??CrossCallReturnLabel_11
+        CFI (cfiCond32) R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
+        CFI (cfiCond32) VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
+        CFI (cfiCond32) V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+        CFI (cfiCond32) V1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
+        CFI (cfiCond32) V2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond32) V3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond32) V4 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond32) V5 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond32) V6 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond32) V7 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond32) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond32) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond32) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond32) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond32) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond32) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond32) CFA_SP SP+0
+        CFI (cfiCond32) CFA_XSP16 add(XSP16, 16)
+        CFI Block cfiCond33 Using cfiCommon0
+        CFI (cfiCond33) NoFunction
+        CFI (cfiCond33) Conditional ??CrossCallReturnLabel_12
+        CFI (cfiCond33) R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
+        CFI (cfiCond33) VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
+        CFI (cfiCond33) V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+        CFI (cfiCond33) V1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
+        CFI (cfiCond33) V2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond33) V3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond33) V4 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond33) V5 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond33) V6 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond33) V7 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond33) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond33) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond33) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond33) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond33) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond33) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond33) CFA_SP SP+0
+        CFI (cfiCond33) CFA_XSP16 add(XSP16, 16)
+        CFI Block cfiPicker34 Using cfiCommon1
+        CFI (cfiPicker34) NoFunction
+        CFI (cfiPicker34) Picker
+        INC     DPTR
+        INC     DPTR
+        CFI EndBlock cfiCond31
+        CFI EndBlock cfiCond32
+        CFI EndBlock cfiCond33
+        CFI EndBlock cfiPicker34
+        REQUIRE ??Subroutine7_0
+        ; // Fall through to label ??Subroutine7_0
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+??Subroutine7_0:
+        CFI Block cfiCond35 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_9
+        CFI DPL0 Frame(CFA_SP, 4)
+        CFI DPH0 Frame(CFA_SP, 5)
+        CFI CFA_SP SP+-5
+        CFI Block cfiCond36 Using cfiCommon0
+        CFI (cfiCond36) NoFunction
+        CFI (cfiCond36) Conditional ??CrossCallReturnLabel_10
+        CFI (cfiCond36) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond36) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond36) CFA_SP SP+-5
+        CFI Block cfiCond37 Using cfiCommon0
+        CFI (cfiCond37) NoFunction
+        CFI (cfiCond37) Conditional ??CrossCallReturnLabel_11
+        CFI (cfiCond37) R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
+        CFI (cfiCond37) VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
+        CFI (cfiCond37) V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+        CFI (cfiCond37) V1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
+        CFI (cfiCond37) V2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond37) V3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond37) V4 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond37) V5 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond37) V6 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond37) V7 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond37) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond37) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond37) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond37) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond37) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond37) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond37) CFA_SP SP+0
+        CFI (cfiCond37) CFA_XSP16 add(XSP16, 16)
+        CFI Block cfiCond38 Using cfiCommon0
+        CFI (cfiCond38) NoFunction
+        CFI (cfiCond38) Conditional ??CrossCallReturnLabel_12
+        CFI (cfiCond38) R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
+        CFI (cfiCond38) VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
+        CFI (cfiCond38) V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+        CFI (cfiCond38) V1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
+        CFI (cfiCond38) V2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond38) V3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond38) V4 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond38) V5 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond38) V6 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond38) V7 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond38) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond38) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond38) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond38) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond38) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond38) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond38) CFA_SP SP+0
+        CFI (cfiCond38) CFA_XSP16 add(XSP16, 16)
+        CFI Block cfiPicker39 Using cfiCommon1
+        CFI (cfiPicker39) NoFunction
+        CFI (cfiPicker39) Picker
+        MOVX    A,@DPTR
+        MOV     R2,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R3,A
+        RET
+        CFI EndBlock cfiCond35
+        CFI EndBlock cfiCond36
+        CFI EndBlock cfiCond37
+        CFI EndBlock cfiCond38
+        CFI EndBlock cfiPicker39
 //  549 #endif // POWER_SAVING
 //  550 
 //  551 /*********************************************************************
@@ -2253,7 +2587,7 @@ osalTimerUpdate:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 //  560 uint32 osal_GetSystemClock( void )
 osal_GetSystemClock:
-        CFI Block cfiBlock24 Using cfiCommon0
+        CFI Block cfiBlock40 Using cfiCommon0
         CFI Function osal_GetSystemClock
 //  561 {
         MOV     A,#-0xc
@@ -2283,7 +2617,7 @@ osal_GetSystemClock:
         MOV     R4,?V0 + 2
         MOV     R5,?V0 + 3
         LJMP    ?Subroutine0 & 0xFFFF
-        CFI EndBlock cfiBlock24
+        CFI EndBlock cfiBlock40
 //  563 }
 
         RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
@@ -2352,6 +2686,18 @@ __Constant_0:
         DC24    osalTimerUpdate
 
         RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??osal_adjust_timers?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    osal_adjust_timers
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??osal_next_timeout?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    osal_next_timeout
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
 ??osal_GetSystemClock?relay:
         LCALL   ?BDISPATCH
         DATA
@@ -2362,13 +2708,13 @@ __Constant_0:
 //  565 /*********************************************************************
 //  566 *********************************************************************/
 // 
-// 983 bytes in segment BANKED_CODE
-//  66 bytes in segment BANK_RELAYS
-//   1 byte  in segment SFR_AN
-//   4 bytes in segment XDATA_ROM_C
-//   6 bytes in segment XDATA_Z
+// 1 076 bytes in segment BANKED_CODE
+//    78 bytes in segment BANK_RELAYS
+//     1 byte  in segment SFR_AN
+//     4 bytes in segment XDATA_ROM_C
+//     6 bytes in segment XDATA_Z
 // 
-// 1 049 bytes of CODE  memory
+// 1 154 bytes of CODE  memory
 //     0 bytes of CONST memory (+ 4 bytes shared)
 //     0 bytes of DATA  memory (+ 1 byte  shared)
 //     6 bytes of XDATA memory

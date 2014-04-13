@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR C/C++ Compiler V7.60.1.40026 for 8051             12/Apr/2014  09:44:33 #
+# IAR C/C++ Compiler V7.60.1.40026 for 8051             13/Apr/2014  17:19:50 #
 # Copyright (C) 2004-2010 IAR Systems AB.                                     #
 #                                                                             #
 #    Core               =  plain                                              #
@@ -9,18 +9,17 @@
 #    Calling convention =  xdata reentrant                                    #
 #    Constant location  =  data_rom                                           #
 #    Dptr setup         =  1,16                                               #
-#    Source file        =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Components\osal\common\OSAL.c                #
-#    Command line       =  -f C:\Users\John\Dropbox\grad_proj\zstack-cc2530-e #
-#                          nddevice\Projects\zstack\Samples\GenericApp\CC2530 #
-#                          DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg            #
-#                          (-DCPU32MHZ -DROOT=__near_func                     #
-#                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6         #
-#                          -DMAC_CFG_RX_MAX=3) -f C:\Users\John\Dropbox\grad_ #
-#                          proj\zstack-cc2530-enddevice\Projects\zstack\Sampl #
-#                          es\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8w #
-#                          Config.cfg (-DZIGBEEPRO -DSECURE=0                 #
-#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#    Source file        =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Compo #
+#                          nents\osal\common\OSAL.c                           #
+#    Command line       =  -f E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \Tools\CC2530DB\f8wEndev.cfg (-DCPU32MHZ           #
+#                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3         #
+#                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f          #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\To #
+#                          ols\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO            #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
 #                          -DDEFAULT_CHANLIST=0x00000800                      #
 #                          -DZDAPP_CONFIG_PAN_ID=0x1111                       #
 #                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
@@ -40,104 +39,103 @@
 #                          -DMAC_MAX_FRAME_SIZE=116                           #
 #                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
 #                          __code" -DGENERIC=__generic                        #
-#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
-#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
-#                          -DREJOIN_POLL_RATE=440 C:\Users\John\Dropbox\grad_ #
-#                          proj\zstack-cc2530-enddevice\Components\osal\commo #
-#                          n\OSAL.c -D HAL_ADC -D NWK_AUTO_POLL -D ZTOOL_P1   #
-#                          -D MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D        #
-#                          xPOWER_SAVING -lC C:\Users\John\Dropbox\grad_proj\ #
-#                          zstack-cc2530-enddevice\Projects\zstack\Samples\Ge #
-#                          nericApp\CC2530DB\EndDeviceEB\List\ -lA            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=10000       #
+#                          -DQUEUED_POLL_RATE=10000                           #
+#                          -DRESPONSE_POLL_RATE=10000)                        #
+#                          -DREJOIN_POLL_RATE=440 E:\Dropbox\grad_proj\zstack #
+#                          -cc2530-enddevice\Components\osal\common\OSAL.c    #
+#                          -D HAL_ADC -D HAL_KEY=FALSE -D HAL_LCD=FALSE -D    #
+#                          NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D            #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D POWER_SAVING -lC     #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \List\ -lA E:\Dropbox\grad_proj\zstack-cc2530-endd #
 #                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
 #                          EndDeviceEB\List\ --diag_suppress Pe001,Pa010 -o   #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          EndDeviceEB\Obj\ -e --require_prototypes           #
-#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \Obj\ -e --require_prototypes --no_code_motion     #
+#                          --debug --core=plain --dptr=16,1                   #
 #                          --data_model=large --code_model=banked             #
 #                          --calling_convention=xdata_reentrant               #
 #                          --place_constants=data_rom --nr_virtual_regs 16    #
-#                          -I C:\Users\John\Dropbox\grad_proj\zstack-cc2530-e #
-#                          nddevice\Projects\zstack\Samples\GenericApp\CC2530 #
-#                          DB\ -I C:\Users\John\Dropbox\grad_proj\zstack-cc25 #
-#                          30-enddevice\Projects\zstack\Samples\GenericApp\CC #
-#                          2530DB\..\Source\ -I C:\Users\John\Dropbox\grad_pr #
-#                          oj\zstack-cc2530-enddevice\Projects\zstack\Samples #
-#                          \GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I   #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\hal\include\ -I          #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\hal\target\CC2530EB\ -I  #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\mac\include\ -I          #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\mac\high_level\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\mac\low_level\srf04\ -I  #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\mac\low_level\srf04\sing #
-#                          le_chip\ -I C:\Users\John\Dropbox\grad_proj\zstack #
-#                          -cc2530-enddevice\Projects\zstack\Samples\GenericA #
-#                          pp\CC2530DB\..\..\..\..\..\Components\mt\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\osal\include\ -I         #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\osal\mcu\ccsoc\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\services\saddr\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\services\sdata\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\af\ -I             #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\nwk\ -I            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\sapi\ -I           #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\sec\ -I            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\sys\ -I            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\zdo\ -I            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\zmac\ -I                 #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\zmac\f8w\ -I             #
-#                          "C:\Program Files (x86)\IAR Systems\Embedded       #
-#                          Workbench 5.4\8051\INC\" -I "C:\Program Files      #
-#                          (x86)\IAR Systems\Embedded Workbench               #
-#                          5.4\8051\INC\CLIB\" -Ohz                           #
-#    List file          =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          EndDeviceEB\List\OSAL.lst                          #
-#    Object file        =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          EndDeviceEB\Obj\OSAL.r51                           #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\ -I      #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\Source\  #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \ZMain\TI2530DB\ -I E:\Dropbox\grad_proj\zstack-cc #
+#                          2530-enddevice\Projects\zstack\Samples\GenericApp\ #
+#                          CC2530DB\..\..\..\..\..\Components\hal\include\    #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\hal\target\CC2530EB\ -I          #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\include\ -I                     #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\high_level\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\ -I             #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\single_chip\    #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\mt\ -I                           #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\osal\include\ -I                    #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\osal\mcu\ccsoc\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\saddr\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\sdata\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\af\ -I                        #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\nwk\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sapi\ -I                      #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sec\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sys\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\zdo\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\zmac\ -I E:\Dropbox\grad_proj\zstac #
+#                          k-cc2530-enddevice\Projects\zstack\Samples\Generic #
+#                          App\CC2530DB\..\..\..\..\..\Components\zmac\f8w\   #
+#                          -I "C:\Program Files\IAR Systems\Embedded          #
+#                          Workbench 5.4\8051\INC\" -I "C:\Program Files\IAR  #
+#                          Systems\Embedded Workbench 5.4\8051\INC\CLIB\"     #
+#                          -Ohz                                               #
+#    List file          =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \List\OSAL.lst                                     #
+#    Object file        =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \Obj\OSAL.r51                                      #
 #                                                                             #
 #                                                                             #
 ###############################################################################
 
-C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\OSAL.c
+E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\OSAL.c
       1          /**************************************************************************************************
       2            Filename:       OSAL.c
       3            Revised:        $Date: 2010-09-20 14:09:47 -0700 (Mon, 20 Sep 2010) $
@@ -2979,7 +2977,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
    \   00002B   E5..         MOV     A,?V0 + 0
    \   00002D   C3           CLR     C
    \   00002E   9A           SUBB    A,R2
-   \   00002F   505B         JNC     ??osal_run_system_3
+   \   00002F   505D         JNC     ??osal_run_system_3
    1056            {
    1057              uint16 events;
    1058              halIntState_t intState;
@@ -3058,11 +3056,15 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
    \   000087   ED           MOV     A,R5
    \   000088   A2E7         MOV     C,0xE0 /* A   */.7
    \   00008A   92AF         MOV     0xa8.7,C
+   \   00008C   8003         SJMP    ??osal_run_system_4
    1070            }
    1071          #if defined( POWER_SAVING )
    1072            else  // Complete pass through all task events with no activity?
    1073            {
    1074              osal_pwrmgr_powerconserve();  // Put the processor/system into sleep
+   \                     ??osal_run_system_3:
+   \   00008E                ; Setup parameters for call to function osal_pwrmgr_powerconserve
+   \   00008E   12....       LCALL   ??osal_pwrmgr_powerconserve?relay
    1075            }
    1076          #endif
    1077          
@@ -3073,9 +3075,9 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
    1082            }
    1083          #endif
    1084          }
-   \                     ??osal_run_system_3:
-   \   00008C   02....       LJMP    ?Subroutine2 & 0xFFFF
-   \   00008F                REQUIRE _A_IEN0
+   \                     ??osal_run_system_4:
+   \   000091   02....       LJMP    ?Subroutine2 & 0xFFFF
+   \   000094                REQUIRE _A_IEN0
    1085          
    1086          /*********************************************************************
    1087           * @fn      osal_buffer_uint32
@@ -3500,79 +3502,80 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
 
    Maximum stack usage in bytes:
 
-     Function                 ISTACK PSTACK XSTACK
-     --------                 ------ ------ ------
-     _ltoa                        2      0     57
-       -> _itoa                   0      0    110
-       -> _itoa                   0      0    110
-       -> _itoa                   0      0    110
-       -> strcpy                  0      0    110
-       -> strcat                  0      0    110
-       -> strlen                  0      0    110
-       -> strcat                  0      0    110
-       -> strcat                  0      0    110
-       -> strlen                  0      0    110
-       -> strcat                  0      0    110
-       -> strcpy                  0      0    110
-       -> _itoa                   0      0    110
-       -> _itoa                   0      0    110
-       -> strcpy                  0      0    110
-       -> strcat                  0      0    110
-       -> strlen                  0      0    110
-       -> strcat                  0      0    110
-     osal_buffer_uint16           1      0      9
-     osal_buffer_uint24           1      0     20
-     osal_buffer_uint32           1      0     20
-     osal_build_uint16            0      0      9
-     osal_build_uint32            0      0     16
-     osal_clear_event             1      0     23
-     osal_init_system             2      0      0
-       -> osal_mem_init           4      0      0
-       -> osalTimerInit           4      0      0
-       -> osal_pwrmgr_init        4      0      0
-       -> osalInitTasks           4      0      0
-       -> osal_mem_kick           4      0      0
-     osal_int_disable             0      0      0
-     osal_int_enable              0      0      0
-     osal_isbufset                0      0     10
-     osal_isr_register            0      0      0
-     osal_memcmp                  0      0     22
-     osal_memcpy                  1      0     29
-     osal_memdup                  0      0     18
-       -> osal_mem_alloc          0      0     30
-       -> osal_memcpy             0      0     36
-     osal_memset                  0      0     12
-       -> memset                  0      0     24
-     osal_msg_allocate            1      0     10
-       -> osal_mem_alloc          0      0     20
-     osal_msg_deallocate          2      0      9
-       -> osal_mem_free           4      0      0
-     osal_msg_dequeue             1      0     10
-     osal_msg_enqueue             0      0     18
-     osal_msg_enqueue_max         0      0     10
-     osal_msg_extract             1      0     25
-     osal_msg_find                0      0      9
-     osal_msg_push                0      0      9
-     osal_msg_receive             0      0     16
-       -> osal_set_event          0      0     28
-       -> osal_clear_event        0      0     28
-       -> osal_msg_extract        0      0     32
-     osal_msg_send                1      0      9
-       -> osal_msg_deallocate     0      0     18
-       -> osal_msg_deallocate     0      0     18
-       -> osal_msg_enqueue        0      0     18
-       -> osal_set_event          0      0     18
-     osal_rand                    2      0      0
-       -> Onboard_rand            4      0      0
-     osal_revmemcpy               1      0     12
-     osal_run_system              1      0     10
-       -> osalTimeUpdate          0      0     20
-       -> Hal_ProcessPoll         0      0     20
-     osal_set_event               1      0     23
-     osal_start_system            2      0      0
-       -> osal_run_system         4      0      0
-     osal_strlen                  2      0      0
-       -> strlen                  4      0      0
+     Function                       ISTACK PSTACK XSTACK
+     --------                       ------ ------ ------
+     _ltoa                              2      0     57
+       -> _itoa                         0      0    110
+       -> _itoa                         0      0    110
+       -> _itoa                         0      0    110
+       -> strcpy                        0      0    110
+       -> strcat                        0      0    110
+       -> strlen                        0      0    110
+       -> strcat                        0      0    110
+       -> strcat                        0      0    110
+       -> strlen                        0      0    110
+       -> strcat                        0      0    110
+       -> strcpy                        0      0    110
+       -> _itoa                         0      0    110
+       -> _itoa                         0      0    110
+       -> strcpy                        0      0    110
+       -> strcat                        0      0    110
+       -> strlen                        0      0    110
+       -> strcat                        0      0    110
+     osal_buffer_uint16                 1      0      9
+     osal_buffer_uint24                 1      0     20
+     osal_buffer_uint32                 1      0     20
+     osal_build_uint16                  0      0      9
+     osal_build_uint32                  0      0     16
+     osal_clear_event                   1      0     23
+     osal_init_system                   2      0      0
+       -> osal_mem_init                 4      0      0
+       -> osalTimerInit                 4      0      0
+       -> osal_pwrmgr_init              4      0      0
+       -> osalInitTasks                 4      0      0
+       -> osal_mem_kick                 4      0      0
+     osal_int_disable                   0      0      0
+     osal_int_enable                    0      0      0
+     osal_isbufset                      0      0     10
+     osal_isr_register                  0      0      0
+     osal_memcmp                        0      0     22
+     osal_memcpy                        1      0     29
+     osal_memdup                        0      0     18
+       -> osal_mem_alloc                0      0     30
+       -> osal_memcpy                   0      0     36
+     osal_memset                        0      0     12
+       -> memset                        0      0     24
+     osal_msg_allocate                  1      0     10
+       -> osal_mem_alloc                0      0     20
+     osal_msg_deallocate                2      0      9
+       -> osal_mem_free                 4      0      0
+     osal_msg_dequeue                   1      0     10
+     osal_msg_enqueue                   0      0     18
+     osal_msg_enqueue_max               0      0     10
+     osal_msg_extract                   1      0     25
+     osal_msg_find                      0      0      9
+     osal_msg_push                      0      0      9
+     osal_msg_receive                   0      0     16
+       -> osal_set_event                0      0     28
+       -> osal_clear_event              0      0     28
+       -> osal_msg_extract              0      0     32
+     osal_msg_send                      1      0      9
+       -> osal_msg_deallocate           0      0     18
+       -> osal_msg_deallocate           0      0     18
+       -> osal_msg_enqueue              0      0     18
+       -> osal_set_event                0      0     18
+     osal_rand                          2      0      0
+       -> Onboard_rand                  4      0      0
+     osal_revmemcpy                     1      0     12
+     osal_run_system                    1      0     10
+       -> osalTimeUpdate                0      0     20
+       -> Hal_ProcessPoll               0      0     20
+       -> osal_pwrmgr_powerconserve     0      0     20
+     osal_set_event                     1      0     23
+     osal_start_system                  2      0      0
+       -> osal_run_system               4      0      0
+     osal_strlen                        2      0      0
+       -> strlen                        4      0      0
 
 
    Segment part sizes:
@@ -3637,7 +3640,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
      osal_int_disable               18
      osal_init_system               31
      osal_start_system               9
-     osal_run_system               143
+     osal_run_system               148
      osal_buffer_uint32             46
      ?Subroutine3                   13
      ?Subroutine17                  10
@@ -3684,13 +3687,13 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
      __Constant_5f5e100              4
 
  
- 2 676 bytes in segment BANKED_CODE
+ 2 681 bytes in segment BANKED_CODE
    192 bytes in segment BANK_RELAYS
      1 byte  in segment SFR_AN
     40 bytes in segment XDATA_ROM_C
      2 bytes in segment XDATA_Z
  
- 2 868 bytes of CODE  memory
+ 2 873 bytes of CODE  memory
     32 bytes of CONST memory (+ 8 bytes shared)
      0 bytes of DATA  memory (+ 1 byte  shared)
      2 bytes of XDATA memory

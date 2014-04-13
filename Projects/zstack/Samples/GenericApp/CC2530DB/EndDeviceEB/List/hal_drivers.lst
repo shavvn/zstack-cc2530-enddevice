@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR C/C++ Compiler V7.60.1.40026 for 8051             12/Apr/2014  09:44:40 #
+# IAR C/C++ Compiler V7.60.1.40026 for 8051             13/Apr/2014  17:20:06 #
 # Copyright (C) 2004-2010 IAR Systems AB.                                     #
 #                                                                             #
 #    Core               =  plain                                              #
@@ -9,18 +9,17 @@
 #    Calling convention =  xdata reentrant                                    #
 #    Constant location  =  data_rom                                           #
 #    Dptr setup         =  1,16                                               #
-#    Source file        =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Components\hal\common\hal_drivers.c          #
-#    Command line       =  -f C:\Users\John\Dropbox\grad_proj\zstack-cc2530-e #
-#                          nddevice\Projects\zstack\Samples\GenericApp\CC2530 #
-#                          DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg            #
-#                          (-DCPU32MHZ -DROOT=__near_func                     #
-#                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6         #
-#                          -DMAC_CFG_RX_MAX=3) -f C:\Users\John\Dropbox\grad_ #
-#                          proj\zstack-cc2530-enddevice\Projects\zstack\Sampl #
-#                          es\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8w #
-#                          Config.cfg (-DZIGBEEPRO -DSECURE=0                 #
-#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#    Source file        =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Compo #
+#                          nents\hal\common\hal_drivers.c                     #
+#    Command line       =  -f E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \Tools\CC2530DB\f8wEndev.cfg (-DCPU32MHZ           #
+#                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3         #
+#                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f          #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\To #
+#                          ols\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO            #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
 #                          -DDEFAULT_CHANLIST=0x00000800                      #
 #                          -DZDAPP_CONFIG_PAN_ID=0x1111                       #
 #                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
@@ -40,104 +39,103 @@
 #                          -DMAC_MAX_FRAME_SIZE=116                           #
 #                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
 #                          __code" -DGENERIC=__generic                        #
-#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
-#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
-#                          -DREJOIN_POLL_RATE=440 C:\Users\John\Dropbox\grad_ #
-#                          proj\zstack-cc2530-enddevice\Components\hal\common #
-#                          \hal_drivers.c -D HAL_ADC -D NWK_AUTO_POLL -D      #
-#                          ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC  #
-#                          -D xPOWER_SAVING -lC C:\Users\John\Dropbox\grad_pr #
-#                          oj\zstack-cc2530-enddevice\Projects\zstack\Samples #
-#                          \GenericApp\CC2530DB\EndDeviceEB\List\ -lA         #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=10000       #
+#                          -DQUEUED_POLL_RATE=10000                           #
+#                          -DRESPONSE_POLL_RATE=10000)                        #
+#                          -DREJOIN_POLL_RATE=440 E:\Dropbox\grad_proj\zstack #
+#                          -cc2530-enddevice\Components\hal\common\hal_driver #
+#                          s.c -D HAL_ADC -D HAL_KEY=FALSE -D HAL_LCD=FALSE   #
+#                          -D NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D         #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D POWER_SAVING -lC     #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \List\ -lA E:\Dropbox\grad_proj\zstack-cc2530-endd #
 #                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
 #                          EndDeviceEB\List\ --diag_suppress Pe001,Pa010 -o   #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          EndDeviceEB\Obj\ -e --require_prototypes           #
-#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \Obj\ -e --require_prototypes --no_code_motion     #
+#                          --debug --core=plain --dptr=16,1                   #
 #                          --data_model=large --code_model=banked             #
 #                          --calling_convention=xdata_reentrant               #
 #                          --place_constants=data_rom --nr_virtual_regs 16    #
-#                          -I C:\Users\John\Dropbox\grad_proj\zstack-cc2530-e #
-#                          nddevice\Projects\zstack\Samples\GenericApp\CC2530 #
-#                          DB\ -I C:\Users\John\Dropbox\grad_proj\zstack-cc25 #
-#                          30-enddevice\Projects\zstack\Samples\GenericApp\CC #
-#                          2530DB\..\Source\ -I C:\Users\John\Dropbox\grad_pr #
-#                          oj\zstack-cc2530-enddevice\Projects\zstack\Samples #
-#                          \GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I   #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\hal\include\ -I          #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\hal\target\CC2530EB\ -I  #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\mac\include\ -I          #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\mac\high_level\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\mac\low_level\srf04\ -I  #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\mac\low_level\srf04\sing #
-#                          le_chip\ -I C:\Users\John\Dropbox\grad_proj\zstack #
-#                          -cc2530-enddevice\Projects\zstack\Samples\GenericA #
-#                          pp\CC2530DB\..\..\..\..\..\Components\mt\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\osal\include\ -I         #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\osal\mcu\ccsoc\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\services\saddr\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\services\sdata\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\af\ -I             #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\nwk\ -I            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\sapi\ -I           #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\sec\ -I            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\sys\ -I            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\zdo\ -I            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\zmac\ -I                 #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\zmac\f8w\ -I             #
-#                          "C:\Program Files (x86)\IAR Systems\Embedded       #
-#                          Workbench 5.4\8051\INC\" -I "C:\Program Files      #
-#                          (x86)\IAR Systems\Embedded Workbench               #
-#                          5.4\8051\INC\CLIB\" -Ohz                           #
-#    List file          =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          EndDeviceEB\List\hal_drivers.lst                   #
-#    Object file        =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          EndDeviceEB\Obj\hal_drivers.r51                    #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\ -I      #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\Source\  #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \ZMain\TI2530DB\ -I E:\Dropbox\grad_proj\zstack-cc #
+#                          2530-enddevice\Projects\zstack\Samples\GenericApp\ #
+#                          CC2530DB\..\..\..\..\..\Components\hal\include\    #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\hal\target\CC2530EB\ -I          #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\include\ -I                     #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\high_level\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\ -I             #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\single_chip\    #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\mt\ -I                           #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\osal\include\ -I                    #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\osal\mcu\ccsoc\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\saddr\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\sdata\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\af\ -I                        #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\nwk\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sapi\ -I                      #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sec\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sys\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\zdo\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\zmac\ -I E:\Dropbox\grad_proj\zstac #
+#                          k-cc2530-enddevice\Projects\zstack\Samples\Generic #
+#                          App\CC2530DB\..\..\..\..\..\Components\zmac\f8w\   #
+#                          -I "C:\Program Files\IAR Systems\Embedded          #
+#                          Workbench 5.4\8051\INC\" -I "C:\Program Files\IAR  #
+#                          Systems\Embedded Workbench 5.4\8051\INC\CLIB\"     #
+#                          -Ohz                                               #
+#    List file          =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \List\hal_drivers.lst                              #
+#    Object file        =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \Obj\hal_drivers.r51                               #
 #                                                                             #
 #                                                                             #
 ###############################################################################
 
-C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\hal_drivers.c
+E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\hal_drivers.c
       1          /**************************************************************************************************
       2            Filename:       hal_drivers.c
       3            Revised:        $Date: 2007-07-06 10:42:24 -0700 (Fri, 06 Jul 2007) $
@@ -341,8 +339,6 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\ha
     165            /* KEY */
     166          #if (defined HAL_KEY) && (HAL_KEY == TRUE)
     167            HalKeyInit();
-   \   00000D                ; Setup parameters for call to function HalKeyInit
-   \   00000D   12....       LCALL   ??HalKeyInit?relay
     168          #endif
     169          
     170            /* SPI */
@@ -355,7 +351,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\ha
     177            usbHidInit();
     178          #endif
     179          }
-   \   000010   80..         SJMP    ?Subroutine0
+   \   00000D   80..         SJMP    ?Subroutine0
     180          
     181          
     182          /**************************************************************************************************
@@ -429,7 +425,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\ha
    \   00002A   6F           XRL     A,R7
    \                     ??Hal_ProcessEvent_5:
    \   00002B   FB           MOV     R3,A
-   \   00002C   8035         SJMP    ??Hal_ProcessEvent_6
+   \   00002C   8029         SJMP    ??Hal_ProcessEvent_6
     212            }
     213          
     214            if ( events & HAL_LED_BLINK_EVENT )
@@ -456,45 +452,39 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\ha
    \                     ??Hal_ProcessEvent_7:
    \   00003D   EE           MOV     A,R6
    \   00003E   A2E0         MOV     C,0xE0 /* A   */.0
-   \   000040   501D         JNC     ??Hal_ProcessEvent_9
+   \   000040   5006         JNC     ??Hal_ProcessEvent_9
     223            {
     224          
     225          #if (defined HAL_KEY) && (HAL_KEY == TRUE)
     226              /* Check for keys */
     227              HalKeyPoll();
-   \   000042                ; Setup parameters for call to function HalKeyPoll
-   \   000042   12....       LCALL   ??HalKeyPoll?relay
     228          
     229              /* if interrupt disabled, do next polling */
     230              if (!Hal_KeyIntEnable)
-   \   000045   90....       MOV     DPTR,#Hal_KeyIntEnable
-   \   000048   E0           MOVX    A,@DPTR
-   \   000049   7010         JNZ     ??Hal_ProcessEvent_10
     231              {
     232                osal_start_timerEx( Hal_TaskID, HAL_KEY_EVENT, 100);
-   \   00004B                ; Setup parameters for call to function osal_start_timerEx
-   \   00004B   7C64         MOV     R4,#0x64
-   \   00004D   7D00         MOV     R5,#0x0
-   \   00004F   7A01         MOV     R2,#0x1
-   \   000051   7B00         MOV     R3,#0x0
-   \   000053   90....       MOV     DPTR,#Hal_TaskID
-   \   000056   E0           MOVX    A,@DPTR
-   \   000057   F9           MOV     R1,A
-   \   000058   12....       LCALL   ??osal_start_timerEx?relay
     233              }
     234          #endif // HAL_KEY
     235          
     236              return events ^ HAL_KEY_EVENT;
-   \                     ??Hal_ProcessEvent_10:
-   \   00005B   7401         MOV     A,#0x1
-   \   00005D   80D9         SJMP    ??Hal_ProcessEvent_8
+   \   000042   7401         MOV     A,#0x1
+   \   000044   6E           XRL     A,R6
+   \   000045   FA           MOV     R2,A
+   \   000046   800F         SJMP    ??Hal_ProcessEvent_6
     237            }
     238          
     239          #ifdef POWER_SAVING
     240            if ( events & HAL_SLEEP_TIMER_EVENT )
+   \                     ??Hal_ProcessEvent_9:
+   \   000048   5404         ANL     A,#0x4
+   \   00004A   6007         JZ      ??Hal_ProcessEvent_10
     241            {
     242              halRestoreSleepLevel();
+   \   00004C                ; Setup parameters for call to function halRestoreSleepLevel
+   \   00004C   12....       LCALL   ??halRestoreSleepLevel?relay
     243              return events ^ HAL_SLEEP_TIMER_EVENT;
+   \   00004F   7404         MOV     A,#0x4
+   \   000051   80E5         SJMP    ??Hal_ProcessEvent_8
     244            }
     245          #endif
     246          
@@ -508,12 +498,12 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\ha
     254            
     255            /* Nothing interested, discard the message */
     256            return 0;
-   \                     ??Hal_ProcessEvent_9:
-   \   00005F   7A00         MOV     R2,#0x0
-   \   000061   7B00         MOV     R3,#0x0
+   \                     ??Hal_ProcessEvent_10:
+   \   000053   7A00         MOV     R2,#0x0
+   \   000055   7B00         MOV     R3,#0x0
    \                     ??Hal_ProcessEvent_6:
-   \   000063   7F02         MOV     R7,#0x2
-   \   000065   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   000057   7F02         MOV     R7,#0x2
+   \   000059   02....       LJMP    ?BANKED_LEAVE_XDATA
     257          
     258          }
     259          
@@ -561,10 +551,11 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\ha
     292          #if defined( POWER_SAVING )
     293            /* Allow sleep before the next OSAL event loop */
     294            ALLOW_SLEEP_MODE();
+   \   000007   75..01       MOV     halSleepPconValue,#0x1
     295          #endif
     296          
     297          }
-   \   000007   02....       LJMP    ?Subroutine0 & 0xFFFF
+   \   00000A   80..         SJMP    ?Subroutine0
 
    \                                 In  segment BANK_RELAYS, align 1
    \                     ??Hal_Init?relay:
@@ -593,23 +584,21 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\ha
 
    Maximum stack usage in bytes:
 
-     Function                 ISTACK PSTACK XSTACK
-     --------                 ------ ------ ------
-     HalDriverInit                2      0      0
-       -> HalAdcInit              4      0      0
-       -> HalLedInit              4      0      0
-       -> HalUARTInit             4      0      0
-       -> HalKeyInit              4      0      0
-     Hal_Init                     2      0      0
-     Hal_ProcessEvent             0      0     10
-       -> osal_msg_receive        0      0     20
-       -> osal_msg_deallocate     0      0     20
-       -> osal_msg_receive        0      0     20
-       -> HalLedUpdate            0      0     20
-       -> HalKeyPoll              0      0     20
-       -> osal_start_timerEx      0      0     20
-     Hal_ProcessPoll              2      0      0
-       -> HalUARTPoll             4      0      0
+     Function                  ISTACK PSTACK XSTACK
+     --------                  ------ ------ ------
+     HalDriverInit                 2      0      0
+       -> HalAdcInit               4      0      0
+       -> HalLedInit               4      0      0
+       -> HalUARTInit              4      0      0
+     Hal_Init                      2      0      0
+     Hal_ProcessEvent              0      0     10
+       -> osal_msg_receive         0      0     20
+       -> osal_msg_deallocate      0      0     20
+       -> osal_msg_receive         0      0     20
+       -> HalLedUpdate             0      0     20
+       -> halRestoreSleepLevel     0      0     20
+     Hal_ProcessPoll               2      0      0
+       -> HalUARTPoll              4      0      0
 
 
    Segment part sizes:
@@ -619,20 +608,20 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\ha
      Hal_TaskID                  1
      Hal_Init                    9
      ?Subroutine0                7
-     HalDriverInit              18
-     Hal_ProcessEvent          104
-     Hal_ProcessPoll            10
+     HalDriverInit              15
+     Hal_ProcessEvent           92
+     Hal_ProcessPoll            12
      ??Hal_Init?relay            6
      ??HalDriverInit?relay       6
      ??Hal_ProcessEvent?relay    6
      ??Hal_ProcessPoll?relay     6
 
  
- 148 bytes in segment BANKED_CODE
+ 135 bytes in segment BANKED_CODE
   24 bytes in segment BANK_RELAYS
    1 byte  in segment XDATA_Z
  
- 172 bytes of CODE  memory
+ 159 bytes of CODE  memory
    1 byte  of XDATA memory
 
 Errors: none

@@ -2365,12 +2365,14 @@
         <option>
           <name>CCDefines</name>
           <state>HAL_ADC</state>
+          <state>HAL_KEY=FALSE</state>
+          <state>HAL_LCD=FALSE</state>
           <state>NWK_AUTO_POLL</state>
           <state>ZTOOL_P1</state>
           <state>MT_TASK</state>
           <state>MT_SYS_FUNC</state>
           <state>MT_ZDO_FUNC</state>
-          <state>xPOWER_SAVING</state>
+          <state>POWER_SAVING</state>
         </option>
         <option>
           <name>CCPreprocFile</name>

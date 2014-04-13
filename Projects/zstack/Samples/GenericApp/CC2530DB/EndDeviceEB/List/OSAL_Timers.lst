@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR C/C++ Compiler V7.60.1.40026 for 8051             12/Apr/2014  09:44:34 #
+# IAR C/C++ Compiler V7.60.1.40026 for 8051             13/Apr/2014  17:19:38 #
 # Copyright (C) 2004-2010 IAR Systems AB.                                     #
 #                                                                             #
 #    Core               =  plain                                              #
@@ -9,18 +9,17 @@
 #    Calling convention =  xdata reentrant                                    #
 #    Constant location  =  data_rom                                           #
 #    Dptr setup         =  1,16                                               #
-#    Source file        =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Components\osal\common\OSAL_Timers.c         #
-#    Command line       =  -f C:\Users\John\Dropbox\grad_proj\zstack-cc2530-e #
-#                          nddevice\Projects\zstack\Samples\GenericApp\CC2530 #
-#                          DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg            #
-#                          (-DCPU32MHZ -DROOT=__near_func                     #
-#                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6         #
-#                          -DMAC_CFG_RX_MAX=3) -f C:\Users\John\Dropbox\grad_ #
-#                          proj\zstack-cc2530-enddevice\Projects\zstack\Sampl #
-#                          es\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8w #
-#                          Config.cfg (-DZIGBEEPRO -DSECURE=0                 #
-#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#    Source file        =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Compo #
+#                          nents\osal\common\OSAL_Timers.c                    #
+#    Command line       =  -f E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \Tools\CC2530DB\f8wEndev.cfg (-DCPU32MHZ           #
+#                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3         #
+#                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f          #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\To #
+#                          ols\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO            #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
 #                          -DDEFAULT_CHANLIST=0x00000800                      #
 #                          -DZDAPP_CONFIG_PAN_ID=0x1111                       #
 #                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
@@ -40,104 +39,103 @@
 #                          -DMAC_MAX_FRAME_SIZE=116                           #
 #                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
 #                          __code" -DGENERIC=__generic                        #
-#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
-#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
-#                          -DREJOIN_POLL_RATE=440 C:\Users\John\Dropbox\grad_ #
-#                          proj\zstack-cc2530-enddevice\Components\osal\commo #
-#                          n\OSAL_Timers.c -D HAL_ADC -D NWK_AUTO_POLL -D     #
-#                          ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC  #
-#                          -D xPOWER_SAVING -lC C:\Users\John\Dropbox\grad_pr #
-#                          oj\zstack-cc2530-enddevice\Projects\zstack\Samples #
-#                          \GenericApp\CC2530DB\EndDeviceEB\List\ -lA         #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=10000       #
+#                          -DQUEUED_POLL_RATE=10000                           #
+#                          -DRESPONSE_POLL_RATE=10000)                        #
+#                          -DREJOIN_POLL_RATE=440 E:\Dropbox\grad_proj\zstack #
+#                          -cc2530-enddevice\Components\osal\common\OSAL_Time #
+#                          rs.c -D HAL_ADC -D HAL_KEY=FALSE -D HAL_LCD=FALSE  #
+#                          -D NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D         #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D POWER_SAVING -lC     #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \List\ -lA E:\Dropbox\grad_proj\zstack-cc2530-endd #
 #                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
 #                          EndDeviceEB\List\ --diag_suppress Pe001,Pa010 -o   #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          EndDeviceEB\Obj\ -e --require_prototypes           #
-#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \Obj\ -e --require_prototypes --no_code_motion     #
+#                          --debug --core=plain --dptr=16,1                   #
 #                          --data_model=large --code_model=banked             #
 #                          --calling_convention=xdata_reentrant               #
 #                          --place_constants=data_rom --nr_virtual_regs 16    #
-#                          -I C:\Users\John\Dropbox\grad_proj\zstack-cc2530-e #
-#                          nddevice\Projects\zstack\Samples\GenericApp\CC2530 #
-#                          DB\ -I C:\Users\John\Dropbox\grad_proj\zstack-cc25 #
-#                          30-enddevice\Projects\zstack\Samples\GenericApp\CC #
-#                          2530DB\..\Source\ -I C:\Users\John\Dropbox\grad_pr #
-#                          oj\zstack-cc2530-enddevice\Projects\zstack\Samples #
-#                          \GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I   #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\hal\include\ -I          #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\hal\target\CC2530EB\ -I  #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\mac\include\ -I          #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\mac\high_level\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\mac\low_level\srf04\ -I  #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\mac\low_level\srf04\sing #
-#                          le_chip\ -I C:\Users\John\Dropbox\grad_proj\zstack #
-#                          -cc2530-enddevice\Projects\zstack\Samples\GenericA #
-#                          pp\CC2530DB\..\..\..\..\..\Components\mt\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\osal\include\ -I         #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\osal\mcu\ccsoc\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\services\saddr\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\services\sdata\ -I       #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\af\ -I             #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\nwk\ -I            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\sapi\ -I           #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\sec\ -I            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\sys\ -I            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\stack\zdo\ -I            #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\zmac\ -I                 #
-#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          ..\..\..\..\..\Components\zmac\f8w\ -I             #
-#                          "C:\Program Files (x86)\IAR Systems\Embedded       #
-#                          Workbench 5.4\8051\INC\" -I "C:\Program Files      #
-#                          (x86)\IAR Systems\Embedded Workbench               #
-#                          5.4\8051\INC\CLIB\" -Ohz                           #
-#    List file          =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          EndDeviceEB\List\OSAL_Timers.lst                   #
-#    Object file        =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
-#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          EndDeviceEB\Obj\OSAL_Timers.r51                    #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\ -I      #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\Source\  #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \ZMain\TI2530DB\ -I E:\Dropbox\grad_proj\zstack-cc #
+#                          2530-enddevice\Projects\zstack\Samples\GenericApp\ #
+#                          CC2530DB\..\..\..\..\..\Components\hal\include\    #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\hal\target\CC2530EB\ -I          #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\include\ -I                     #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\high_level\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\ -I             #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\single_chip\    #
+#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\mt\ -I                           #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\osal\include\ -I                    #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\osal\mcu\ccsoc\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\saddr\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\sdata\ -I                  #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\af\ -I                        #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\nwk\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sapi\ -I                      #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sec\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sys\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\zdo\ -I                       #
+#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\zmac\ -I E:\Dropbox\grad_proj\zstac #
+#                          k-cc2530-enddevice\Projects\zstack\Samples\Generic #
+#                          App\CC2530DB\..\..\..\..\..\Components\zmac\f8w\   #
+#                          -I "C:\Program Files\IAR Systems\Embedded          #
+#                          Workbench 5.4\8051\INC\" -I "C:\Program Files\IAR  #
+#                          Systems\Embedded Workbench 5.4\8051\INC\CLIB\"     #
+#                          -Ohz                                               #
+#    List file          =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \List\OSAL_Timers.lst                              #
+#    Object file        =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
+#                          \Obj\OSAL_Timers.r51                               #
 #                                                                             #
 #                                                                             #
 ###############################################################################
 
-C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\OSAL_Timers.c
+E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\OSAL_Timers.c
       1          /**************************************************************************************************
       2            Filename:       OSAL_Timers.c
       3            Revised:        $Date: 2010-09-17 16:25:30 -0700 (Fri, 17 Sep 2010) $
@@ -436,7 +434,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
     168                  while ( srchTimer->next )
     169                    srchTimer = srchTimer->next;
    \                     ??osalAddTimer_8:
-   \   000078   12....       LCALL   ??Subroutine4_0 & 0xFFFF
+   \   000078   12....       LCALL   ??Subroutine5_0 & 0xFFFF
    \                     ??CrossCallReturnLabel_2:
    \   00007B   8882         MOV     DPL,R0
    \   00007D   8983         MOV     DPH,R1
@@ -478,7 +476,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
    \   000009   22           RET
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ??Subroutine4_0:
+   \                     ??Subroutine5_0:
    \   000000   E0           MOVX    A,@DPTR
    \   000001   F8           MOV     R0,A
    \   000002   A3           INC     DPTR
@@ -844,9 +842,8 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
    \                     ??osal_stop_timerEx_3:
    \   000032   7906         MOV     R1,#0x6
    \                     ??osal_stop_timerEx_4:
-   \   000034                REQUIRE ?Subroutine0
-   \   000034                REQUIRE _A_IEN0
-   \   000034                ; // Fall through to label ?Subroutine0
+   \   000034   80..         SJMP    ?Subroutine0
+   \   000036                REQUIRE _A_IEN0
     330          }
     331          
     332          /*********************************************************************
@@ -915,8 +912,9 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
    \   00002F   FA           MOV     R2,A
    \   000030   EF           MOV     A,R7
    \   000031   FB           MOV     R3,A
-   \   000032   80..         SJMP    ?Subroutine0
-   \   000034                REQUIRE _A_IEN0
+   \   000032                REQUIRE ?Subroutine0
+   \   000032                REQUIRE _A_IEN0
+   \   000032                ; // Fall through to label ?Subroutine0
     360          }
     361          
     362          /*********************************************************************
@@ -961,30 +959,36 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
    \                     ??osal_timer_num_active_1:
    \   000013   09           INC     R1
     386              srchTimer = srchTimer->next;
-   \                     ??osal_timer_num_active_0:
-   \   000014   E0           MOVX    A,@DPTR
-   \   000015   FA           MOV     R2,A
-   \   000016   A3           INC     DPTR
-   \   000017   E0           MOVX    A,@DPTR
-   \   000018   FB           MOV     R3,A
-   \   000019   8A82         MOV     DPL,R2
-   \   00001B   8B83         MOV     DPH,R3
     387            }
-   \   00001D   E582         MOV     A,DPL
-   \   00001F   7002         JNZ     ??osal_timer_num_active_2
-   \   000021   E583         MOV     A,DPH
+   \                     ??osal_timer_num_active_0:
+   \   000014   12....       LCALL   ??Subroutine7_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_9:
+   \   000017   8A82         MOV     DPL,R2
+   \   000019   8B83         MOV     DPH,R3
+   \   00001B   E582         MOV     A,DPL
+   \   00001D   7002         JNZ     ??osal_timer_num_active_2
+   \   00001F   E583         MOV     A,DPH
    \                     ??osal_timer_num_active_2:
-   \   000023   70EE         JNZ     ??osal_timer_num_active_1
+   \   000021   70F0         JNZ     ??osal_timer_num_active_1
     388          
     389            HAL_EXIT_CRITICAL_SECTION( intState );   // Re-enable interrupts.
-   \   000025   EC           MOV     A,R4
-   \   000026   A2E0         MOV     C,0xE0 /* A   */.0
-   \   000028   92AF         MOV     0xa8.7,C
+   \   000023   EC           MOV     A,R4
+   \   000024   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000026   92AF         MOV     0xa8.7,C
     390          
     391            return num_timers;
-   \   00002A   02....       LJMP    ?Subroutine1 & 0xFFFF
-   \   00002D                REQUIRE _A_IEN0
+   \   000028   02....       LJMP    ?Subroutine1 & 0xFFFF
+   \   00002B                REQUIRE _A_IEN0
     392          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine7_0:
+   \   000000   E0           MOVX    A,@DPTR
+   \   000001   FA           MOV     R2,A
+   \   000002   A3           INC     DPTR
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   FB           MOV     R3,A
+   \   000005   22           RET
     393          
     394          /*********************************************************************
     395           * @fn      osalTimerUpdate
@@ -1070,7 +1074,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
    \   000050   85..82       MOV     DPL,?V0 + 4
    \   000053   85..83       MOV     DPH,?V0 + 5
    \   000056   12....       LCALL   ?Subroutine2 & 0xFFFF
-   \                     ??CrossCallReturnLabel_5:
+   \                     ??CrossCallReturnLabel_7:
    \   000059   C3           CLR     C
    \   00005A   E5..         MOV     A,?V0 + 2
    \   00005C   98           SUBB    A,R0
@@ -1120,7 +1124,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
    \   00008F   A3           INC     DPTR
    \   000090   E0           MOVX    A,@DPTR
    \                     ??osalTimerUpdate_5:
-   \   000091   7060         JNZ     ??osalTimerUpdate_6
+   \   000091   705A         JNZ     ??osalTimerUpdate_6
    \                     ??osalTimerUpdate_4:
    \   000093   85..82       MOV     DPL,?V0 + 4
    \   000096   85..83       MOV     DPH,?V0 + 5
@@ -1136,7 +1140,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
    \   0000A3   A3           INC     DPTR
    \   0000A4   E0           MOVX    A,@DPTR
    \                     ??osalTimerUpdate_7:
-   \   0000A5   606C         JZ      ??osalTimerUpdate_8
+   \   0000A5   6066         JZ      ??osalTimerUpdate_8
    \   0000A7   85..82       MOV     DPL,?V0 + 4
    \   0000AA   85..83       MOV     DPH,?V0 + 5
    \   0000AD   A3           INC     DPTR
@@ -1148,221 +1152,221 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
    \   0000B4   A3           INC     DPTR
    \   0000B5   E0           MOVX    A,@DPTR
    \                     ??osalTimerUpdate_9:
-   \   0000B6   605B         JZ      ??osalTimerUpdate_8
+   \   0000B6   6055         JZ      ??osalTimerUpdate_8
     439                {
     440                  // Notify the task of a timeout
     441                  osal_set_event( srchTimer->task_id, srchTimer->event_flag );
    \   0000B8                ; Setup parameters for call to function osal_set_event
    \   0000B8   85..82       MOV     DPL,?V0 + 4
    \   0000BB   85..83       MOV     DPH,?V0 + 5
-   \   0000BE   A3           INC     DPTR
-   \   0000BF   A3           INC     DPTR
-   \   0000C0   A3           INC     DPTR
-   \   0000C1   A3           INC     DPTR
-   \   0000C2   E0           MOVX    A,@DPTR
-   \   0000C3   FA           MOV     R2,A
-   \   0000C4   A3           INC     DPTR
-   \   0000C5   E0           MOVX    A,@DPTR
-   \   0000C6   FB           MOV     R3,A
-   \   0000C7   85..82       MOV     DPL,?V0 + 4
-   \   0000CA   85..83       MOV     DPH,?V0 + 5
-   \   0000CD   A3           INC     DPTR
-   \   0000CE   A3           INC     DPTR
-   \   0000CF   A3           INC     DPTR
-   \   0000D0   A3           INC     DPTR
-   \   0000D1   A3           INC     DPTR
-   \   0000D2   A3           INC     DPTR
-   \   0000D3   E0           MOVX    A,@DPTR
-   \   0000D4   F9           MOV     R1,A
-   \   0000D5   12....       LCALL   ??osal_set_event?relay
+   \   0000BE   12....       LCALL   ?Subroutine4 & 0xFFFF
+   \                     ??CrossCallReturnLabel_11:
+   \   0000C1   85..82       MOV     DPL,?V0 + 4
+   \   0000C4   85..83       MOV     DPH,?V0 + 5
+   \   0000C7   A3           INC     DPTR
+   \   0000C8   A3           INC     DPTR
+   \   0000C9   A3           INC     DPTR
+   \   0000CA   A3           INC     DPTR
+   \   0000CB   A3           INC     DPTR
+   \   0000CC   A3           INC     DPTR
+   \   0000CD   E0           MOVX    A,@DPTR
+   \   0000CE   F9           MOV     R1,A
+   \   0000CF   12....       LCALL   ??osal_set_event?relay
     442                  
     443                  // Reload the timer timeout value
     444                  srchTimer->timeout = srchTimer->reloadTimeout;
-   \   0000D8   85..82       MOV     DPL,?V0 + 4
-   \   0000DB   85..83       MOV     DPH,?V0 + 5
-   \   0000DE   A3           INC     DPTR
-   \   0000DF   A3           INC     DPTR
-   \   0000E0   A3           INC     DPTR
-   \   0000E1   A3           INC     DPTR
-   \   0000E2   A3           INC     DPTR
-   \   0000E3   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \   0000D2   85..82       MOV     DPL,?V0 + 4
+   \   0000D5   85..83       MOV     DPH,?V0 + 5
+   \   0000D8   A3           INC     DPTR
+   \   0000D9   A3           INC     DPTR
+   \   0000DA   A3           INC     DPTR
+   \   0000DB   A3           INC     DPTR
+   \   0000DC   A3           INC     DPTR
+   \   0000DD   12....       LCALL   ?Subroutine2 & 0xFFFF
     445                }
-   \                     ??CrossCallReturnLabel_6:
-   \   0000E6   85..82       MOV     DPL,?V0 + 4
-   \   0000E9   85..83       MOV     DPH,?V0 + 5
-   \   0000EC   A3           INC     DPTR
-   \   0000ED   A3           INC     DPTR
-   \   0000EE   E8           MOV     A,R0
-   \   0000EF   F0           MOVX    @DPTR,A
-   \   0000F0   A3           INC     DPTR
-   \   0000F1   E9           MOV     A,R1
-   \   0000F2   F0           MOVX    @DPTR,A
+   \                     ??CrossCallReturnLabel_8:
+   \   0000E0   85..82       MOV     DPL,?V0 + 4
+   \   0000E3   85..83       MOV     DPH,?V0 + 5
+   \   0000E6   A3           INC     DPTR
+   \   0000E7   A3           INC     DPTR
+   \   0000E8   E8           MOV     A,R0
+   \   0000E9   F0           MOVX    @DPTR,A
+   \   0000EA   A3           INC     DPTR
+   \   0000EB   E9           MOV     A,R1
+   \   0000EC   F0           MOVX    @DPTR,A
     446                
     447                // When timeout or delete (event_flag == 0)
     448                if ( srchTimer->timeout == 0 || srchTimer->event_flag == 0 )
    \                     ??osalTimerUpdate_6:
-   \   0000F3   85..82       MOV     DPL,?V0 + 4
-   \   0000F6   85..83       MOV     DPH,?V0 + 5
-   \   0000F9   A3           INC     DPTR
-   \   0000FA   A3           INC     DPTR
-   \   0000FB   E0           MOVX    A,@DPTR
-   \   0000FC   7002         JNZ     ??osalTimerUpdate_10
-   \   0000FE   A3           INC     DPTR
-   \   0000FF   E0           MOVX    A,@DPTR
+   \   0000ED   85..82       MOV     DPL,?V0 + 4
+   \   0000F0   85..83       MOV     DPH,?V0 + 5
+   \   0000F3   A3           INC     DPTR
+   \   0000F4   A3           INC     DPTR
+   \   0000F5   E0           MOVX    A,@DPTR
+   \   0000F6   7002         JNZ     ??osalTimerUpdate_10
+   \   0000F8   A3           INC     DPTR
+   \   0000F9   E0           MOVX    A,@DPTR
    \                     ??osalTimerUpdate_10:
-   \   000100   6011         JZ      ??osalTimerUpdate_8
-   \   000102   85..82       MOV     DPL,?V0 + 4
-   \   000105   85..83       MOV     DPH,?V0 + 5
-   \   000108   A3           INC     DPTR
+   \   0000FA   6011         JZ      ??osalTimerUpdate_8
+   \   0000FC   85..82       MOV     DPL,?V0 + 4
+   \   0000FF   85..83       MOV     DPH,?V0 + 5
+   \   000102   A3           INC     DPTR
+   \   000103   A3           INC     DPTR
+   \   000104   A3           INC     DPTR
+   \   000105   A3           INC     DPTR
+   \   000106   E0           MOVX    A,@DPTR
+   \   000107   7002         JNZ     ??osalTimerUpdate_11
    \   000109   A3           INC     DPTR
-   \   00010A   A3           INC     DPTR
-   \   00010B   A3           INC     DPTR
-   \   00010C   E0           MOVX    A,@DPTR
-   \   00010D   7002         JNZ     ??osalTimerUpdate_11
-   \   00010F   A3           INC     DPTR
-   \   000110   E0           MOVX    A,@DPTR
+   \   00010A   E0           MOVX    A,@DPTR
    \                     ??osalTimerUpdate_11:
-   \   000111   702E         JNZ     ??osalTimerUpdate_12
+   \   00010B   702E         JNZ     ??osalTimerUpdate_12
     449                {
     450                  // Take out of list
     451                  if ( prevTimer == NULL )
    \                     ??osalTimerUpdate_8:
-   \   000113   E5..         MOV     A,?V0 + 0
-   \   000115   7002         JNZ     ??osalTimerUpdate_13
-   \   000117   E5..         MOV     A,?V0 + 1
+   \   00010D   E5..         MOV     A,?V0 + 0
+   \   00010F   7002         JNZ     ??osalTimerUpdate_13
+   \   000111   E5..         MOV     A,?V0 + 1
    \                     ??osalTimerUpdate_13:
-   \   000119   85..82       MOV     DPL,?V0 + 4
-   \   00011C   85..83       MOV     DPH,?V0 + 5
-   \   00011F   7008         JNZ     ??osalTimerUpdate_14
+   \   000113   85..82       MOV     DPL,?V0 + 4
+   \   000116   85..83       MOV     DPH,?V0 + 5
+   \   000119   7008         JNZ     ??osalTimerUpdate_14
     452                    timerHead = srchTimer->next;
-   \   000121   12....       LCALL   ??Subroutine4_0 & 0xFFFF
+   \   00011B   12....       LCALL   ??Subroutine5_0 & 0xFFFF
    \                     ??CrossCallReturnLabel_3:
-   \   000124   90....       MOV     DPTR,#timerHead
-   \   000127   8009         SJMP    ??osalTimerUpdate_15
+   \   00011E   90....       MOV     DPTR,#timerHead
+   \   000121   8009         SJMP    ??osalTimerUpdate_15
     453                  else
     454                    prevTimer->next = srchTimer->next;
    \                     ??osalTimerUpdate_14:
-   \   000129   12....       LCALL   ??Subroutine4_0 & 0xFFFF
+   \   000123   12....       LCALL   ??Subroutine5_0 & 0xFFFF
    \                     ??CrossCallReturnLabel_4:
-   \   00012C   85..82       MOV     DPL,?V0 + 0
-   \   00012F   85..83       MOV     DPH,?V0 + 1
+   \   000126   85..82       MOV     DPL,?V0 + 0
+   \   000129   85..83       MOV     DPH,?V0 + 1
    \                     ??osalTimerUpdate_15:
-   \   000132   E8           MOV     A,R0
-   \   000133   F0           MOVX    @DPTR,A
-   \   000134   A3           INC     DPTR
-   \   000135   E9           MOV     A,R1
-   \   000136   F0           MOVX    @DPTR,A
+   \   00012C   E8           MOV     A,R0
+   \   00012D   F0           MOVX    @DPTR,A
+   \   00012E   A3           INC     DPTR
+   \   00012F   E9           MOV     A,R1
+   \   000130   F0           MOVX    @DPTR,A
     455          
     456                  // Setup to free memory
     457                  freeTimer = srchTimer;
-   \   000137   AE..         MOV     R6,?V0 + 4
-   \   000139   AF..         MOV     R7,?V0 + 5
+   \   000131   AE..         MOV     R6,?V0 + 4
+   \   000133   AF..         MOV     R7,?V0 + 5
     458          
     459                  // Next
     460                  srchTimer = srchTimer->next;
-   \   00013B   8E82         MOV     DPL,R6
-   \   00013D   8F83         MOV     DPH,R7
-   \   00013F   800C         SJMP    ??osalTimerUpdate_16
+   \   000135   8E82         MOV     DPL,R6
+   \   000137   8F83         MOV     DPH,R7
+   \   000139   800C         SJMP    ??osalTimerUpdate_16
     461                }
     462                else
     463                {
     464                  // Get next
     465                  prevTimer = srchTimer;
    \                     ??osalTimerUpdate_12:
-   \   000141   A8..         MOV     R0,?V0 + 4
-   \   000143   A9..         MOV     R1,?V0 + 5
-   \   000145   88..         MOV     ?V0 + 0,R0
-   \   000147   89..         MOV     ?V0 + 1,R1
+   \   00013B   A8..         MOV     R0,?V0 + 4
+   \   00013D   A9..         MOV     R1,?V0 + 5
+   \   00013F   88..         MOV     ?V0 + 0,R0
+   \   000141   89..         MOV     ?V0 + 1,R1
     466                  srchTimer = srchTimer->next;
-   \   000149   8882         MOV     DPL,R0
-   \   00014B   8983         MOV     DPH,R1
+   \   000143   8882         MOV     DPL,R0
+   \   000145   8983         MOV     DPH,R1
    \                     ??osalTimerUpdate_16:
-   \   00014D   E0           MOVX    A,@DPTR
-   \   00014E   F5..         MOV     ?V0 + 4,A
-   \   000150   A3           INC     DPTR
-   \   000151   E0           MOVX    A,@DPTR
-   \   000152   F5..         MOV     ?V0 + 5,A
+   \   000147   E0           MOVX    A,@DPTR
+   \   000148   F5..         MOV     ?V0 + 4,A
+   \   00014A   A3           INC     DPTR
+   \   00014B   E0           MOVX    A,@DPTR
+   \   00014C   F5..         MOV     ?V0 + 5,A
     467                }
     468                
     469                HAL_EXIT_CRITICAL_SECTION( intState );   // Re-enable interrupts.
-   \   000154   E5..         MOV     A,?V0 + 6
-   \   000156   A2E0         MOV     C,0xE0 /* A   */.0
-   \   000158   92AF         MOV     0xa8.7,C
+   \   00014E   E5..         MOV     A,?V0 + 6
+   \   000150   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000152   92AF         MOV     0xa8.7,C
     470                
     471                if ( freeTimer )
-   \   00015A   EE           MOV     A,R6
-   \   00015B   7001         JNZ     ??osalTimerUpdate_17
-   \   00015D   EF           MOV     A,R7
+   \   000154   EE           MOV     A,R6
+   \   000155   7001         JNZ     ??osalTimerUpdate_17
+   \   000157   EF           MOV     A,R7
    \                     ??osalTimerUpdate_17:
-   \   00015E   6030         JZ      ??osalTimerUpdate_18
+   \   000158   602A         JZ      ??osalTimerUpdate_18
     472                {
     473                  if ( freeTimer->timeout == 0 )
-   \   000160   8E82         MOV     DPL,R6
-   \   000162   8F83         MOV     DPH,R7
-   \   000164   A3           INC     DPTR
-   \   000165   A3           INC     DPTR
-   \   000166   E0           MOVX    A,@DPTR
-   \   000167   7002         JNZ     ??osalTimerUpdate_19
-   \   000169   A3           INC     DPTR
-   \   00016A   E0           MOVX    A,@DPTR
+   \   00015A   8E82         MOV     DPL,R6
+   \   00015C   8F83         MOV     DPH,R7
+   \   00015E   A3           INC     DPTR
+   \   00015F   A3           INC     DPTR
+   \   000160   E0           MOVX    A,@DPTR
+   \   000161   7002         JNZ     ??osalTimerUpdate_19
+   \   000163   A3           INC     DPTR
+   \   000164   E0           MOVX    A,@DPTR
    \                     ??osalTimerUpdate_19:
-   \   00016B   701C         JNZ     ??osalTimerUpdate_20
+   \   000165   7016         JNZ     ??osalTimerUpdate_20
     474                  {
     475                    osal_set_event( freeTimer->task_id, freeTimer->event_flag );
-   \   00016D                ; Setup parameters for call to function osal_set_event
-   \   00016D   8E82         MOV     DPL,R6
-   \   00016F   8F83         MOV     DPH,R7
-   \   000171   A3           INC     DPTR
+   \   000167                ; Setup parameters for call to function osal_set_event
+   \   000167   8E82         MOV     DPL,R6
+   \   000169   8F83         MOV     DPH,R7
+   \   00016B   12....       LCALL   ?Subroutine4 & 0xFFFF
+    476                  }
+   \                     ??CrossCallReturnLabel_12:
+   \   00016E   8E82         MOV     DPL,R6
+   \   000170   8F83         MOV     DPH,R7
    \   000172   A3           INC     DPTR
    \   000173   A3           INC     DPTR
    \   000174   A3           INC     DPTR
-   \   000175   E0           MOVX    A,@DPTR
-   \   000176   FA           MOV     R2,A
+   \   000175   A3           INC     DPTR
+   \   000176   A3           INC     DPTR
    \   000177   A3           INC     DPTR
    \   000178   E0           MOVX    A,@DPTR
-   \   000179   FB           MOV     R3,A
-   \   00017A   8E82         MOV     DPL,R6
-   \   00017C   8F83         MOV     DPH,R7
-   \   00017E   A3           INC     DPTR
-   \   00017F   A3           INC     DPTR
-   \   000180   A3           INC     DPTR
-   \   000181   A3           INC     DPTR
-   \   000182   A3           INC     DPTR
-   \   000183   A3           INC     DPTR
-   \   000184   E0           MOVX    A,@DPTR
-   \   000185   F9           MOV     R1,A
-   \   000186   12....       LCALL   ??osal_set_event?relay
-    476                  }
+   \   000179   F9           MOV     R1,A
+   \   00017A   12....       LCALL   ??osal_set_event?relay
     477                  osal_mem_free( freeTimer );
    \                     ??osalTimerUpdate_20:
-   \   000189                ; Setup parameters for call to function osal_mem_free
-   \   000189   EE           MOV     A,R6
-   \   00018A   FA           MOV     R2,A
-   \   00018B   EF           MOV     A,R7
-   \   00018C   FB           MOV     R3,A
-   \   00018D   12....       LCALL   ??osal_mem_free?relay
+   \   00017D                ; Setup parameters for call to function osal_mem_free
+   \   00017D   EE           MOV     A,R6
+   \   00017E   FA           MOV     R2,A
+   \   00017F   EF           MOV     A,R7
+   \   000180   FB           MOV     R3,A
+   \   000181   12....       LCALL   ??osal_mem_free?relay
     478                }
     479              }
    \                     ??osalTimerUpdate_18:
-   \   000190   E5..         MOV     A,?V0 + 4
-   \   000192   7002         JNZ     ??osalTimerUpdate_21
-   \   000194   E5..         MOV     A,?V0 + 5
+   \   000184   E5..         MOV     A,?V0 + 4
+   \   000186   7002         JNZ     ??osalTimerUpdate_21
+   \   000188   E5..         MOV     A,?V0 + 5
    \                     ??osalTimerUpdate_21:
-   \   000196   6003         JZ      $+5
-   \   000198   02....       LJMP    ??osalTimerUpdate_2 & 0xFFFF
+   \   00018A   6003         JZ      $+5
+   \   00018C   02....       LJMP    ??osalTimerUpdate_2 & 0xFFFF
     480            }
     481          }
    \                     ??osalTimerUpdate_1:
-   \   00019B   7F08         MOV     R7,#0x8
-   \   00019D   02....       LJMP    ?BANKED_LEAVE_XDATA
-   \   0001A0                REQUIRE _A_IEN0
+   \   00018F   7F08         MOV     R7,#0x8
+   \   000191   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   000194                REQUIRE _A_IEN0
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
    \                     ?Subroutine2:
    \   000000   A3           INC     DPTR
    \   000001   A3           INC     DPTR
-   \   000002                REQUIRE ??Subroutine4_0
-   \   000002                ; // Fall through to label ??Subroutine4_0
+   \   000002                REQUIRE ??Subroutine5_0
+   \   000002                ; // Fall through to label ??Subroutine5_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   A3           INC     DPTR
+   \   000001   A3           INC     DPTR
+   \   000002                REQUIRE ??Subroutine6_0
+   \   000002                ; // Fall through to label ??Subroutine6_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine6_0:
+   \   000000   A3           INC     DPTR
+   \   000001   A3           INC     DPTR
+   \   000002                REQUIRE ??Subroutine7_0
+   \   000002                ; // Fall through to label ??Subroutine7_0
     482          
     483          #ifdef POWER_SAVING
     484          /*********************************************************************
@@ -1374,19 +1378,44 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
     490           *
     491           * @return  none
     492           *********************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
     493          void osal_adjust_timers( void )
+   \                     osal_adjust_timers:
     494          {
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
     495            uint16 eTime;
     496          
     497            if ( timerHead != NULL )
+   \   000005   90....       MOV     DPTR,#timerHead
+   \   000008   E0           MOVX    A,@DPTR
+   \   000009   7002         JNZ     ??osal_adjust_timers_0
+   \   00000B   A3           INC     DPTR
+   \   00000C   E0           MOVX    A,@DPTR
+   \                     ??osal_adjust_timers_0:
+   \   00000D   600C         JZ      ??osal_adjust_timers_1
     498            {
     499              // Compute elapsed time (msec)
     500              eTime = TimerElapsed() /  TICK_COUNT;
+   \   00000F                ; Setup parameters for call to function TimerElapsed
+   \   00000F   12....       LCALL   ??TimerElapsed?relay
     501          
     502              if ( eTime )
+   \   000012   EA           MOV     A,R2
+   \   000013   7001         JNZ     ??osal_adjust_timers_2
+   \   000015   EB           MOV     A,R3
+   \                     ??osal_adjust_timers_2:
+   \   000016   6003         JZ      ??osal_adjust_timers_1
     503                osalTimerUpdate( eTime );
+   \   000018                ; Setup parameters for call to function osalTimerUpdate
+   \   000018   12....       LCALL   ??osalTimerUpdate?relay
     504            }
     505          }
+   \                     ??osal_adjust_timers_1:
+   \   00001B   02....       LJMP    ?Subroutine0 & 0xFFFF
     506          
     507          /*********************************************************************
     508           * @fn      osal_next_timeout
@@ -1400,35 +1429,85 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
     516           *
     517           * @return  none
     518           *********************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
     519          uint16 osal_next_timeout( void )
+   \                     osal_next_timeout:
     520          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
     521            uint16 nextTimeout;
     522            osalTimerRec_t *srchTimer;
     523          
     524            if ( timerHead != NULL )
+   \   000004   90....       MOV     DPTR,#timerHead
+   \   000007   E0           MOVX    A,@DPTR
+   \   000008   7002         JNZ     ??osal_next_timeout_0
+   \   00000A   A3           INC     DPTR
+   \   00000B   E0           MOVX    A,@DPTR
+   \                     ??osal_next_timeout_0:
+   \   00000C   602E         JZ      ??osal_next_timeout_1
     525            {
     526              // Head of the timer list
     527              srchTimer = timerHead;
+   \   00000E   90....       MOV     DPTR,#timerHead
+   \   000011   12....       LCALL   ??Subroutine5_0 & 0xFFFF
     528              nextTimeout = OSAL_TIMERS_MAX_TIMEOUT;
+   \                     ??CrossCallReturnLabel_5:
+   \   000014   7AFF         MOV     R2,#-0x1
+   \   000016   7BFF         MOV     R3,#-0x1
     529          
     530              // Look for the next timeout timer
     531              while ( srchTimer != NULL )
     532              {
     533                if (srchTimer->timeout < nextTimeout)
+   \                     ??osal_next_timeout_2:
+   \   000018   8882         MOV     DPL,R0
+   \   00001A   8983         MOV     DPH,R1
+   \   00001C   A3           INC     DPTR
+   \   00001D   A3           INC     DPTR
+   \   00001E   C3           CLR     C
+   \   00001F   E0           MOVX    A,@DPTR
+   \   000020   9A           SUBB    A,R2
+   \   000021   A3           INC     DPTR
+   \   000022   E0           MOVX    A,@DPTR
+   \   000023   9B           SUBB    A,R3
+   \   000024   5007         JNC     ??CrossCallReturnLabel_10
     534                {
     535                  nextTimeout = srchTimer->timeout;
+   \   000026   8882         MOV     DPL,R0
+   \   000028   8983         MOV     DPH,R1
+   \   00002A   12....       LCALL   ??Subroutine6_0 & 0xFFFF
     536                }
     537                // Check next timer
     538                srchTimer = srchTimer->next;
+   \                     ??CrossCallReturnLabel_10:
+   \   00002D   8882         MOV     DPL,R0
+   \   00002F   8983         MOV     DPH,R1
+   \   000031   12....       LCALL   ??Subroutine5_0 & 0xFFFF
     539              }
+   \                     ??CrossCallReturnLabel_6:
+   \   000034   E8           MOV     A,R0
+   \   000035   7001         JNZ     ??osal_next_timeout_3
+   \   000037   E9           MOV     A,R1
+   \                     ??osal_next_timeout_3:
+   \   000038   6006         JZ      ??osal_next_timeout_4
+   \   00003A   80DC         SJMP    ??osal_next_timeout_2
     540            }
     541            else
     542            {
     543              // No timers
     544              nextTimeout = 0;
+   \                     ??osal_next_timeout_1:
+   \   00003C   7A00         MOV     R2,#0x0
+   \   00003E   7B00         MOV     R3,#0x0
     545            }
     546          
     547            return ( nextTimeout );
+   \                     ??osal_next_timeout_4:
+   \   000040   02....       LJMP    ?Subroutine1 & 0xFFFF
     548          }
     549          #endif // POWER_SAVING
     550          
@@ -1516,6 +1595,16 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
    \   000003   ......       DC24    osalTimerUpdate
 
    \                                 In  segment BANK_RELAYS, align 1
+   \                     ??osal_adjust_timers?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    osal_adjust_timers
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??osal_next_timeout?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    osal_next_timeout
+
+   \                                 In  segment BANK_RELAYS, align 1
    \                     ??osal_GetSystemClock?relay:
    \   000000   12....       LCALL   ?BDISPATCH
    \   000003   ......       DC24    osal_GetSystemClock
@@ -1533,13 +1622,17 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
      osalDeleteTimer             2      0     12
      osalFindTimer               0      0     23
      osalTimerInit               0      0     12
-     osalTimerUpdate             0      0     16
+     osalTimerUpdate             0      0     28
        -> osal_set_event         0      0     32
        -> osal_set_event         0      0     32
        -> osal_mem_free          0      0     32
      osal_GetSystemClock         0      0     12
+     osal_adjust_timers          0      0     12
+       -> TimerElapsed           0      0     24
+       -> osalTimerUpdate        0      0     24
      osal_get_timeoutEx          0      0     12
        -> osalFindTimer          0      0     24
+     osal_next_timeout           2      0      0
      osal_start_reload_timer     0      0     12
        -> osalAddTimer           0      0     24
      osal_start_timerEx          0      0     10
@@ -1561,17 +1654,22 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
      ?Subroutine0                       5
      osalAddTimer                     147
      ?Subroutine3                      10
-     ??Subroutine4_0                    6
+     ??Subroutine5_0                    6
      osalFindTimer                     65
      osalDeleteTimer                   22
      ?Subroutine1                       7
      osal_start_timerEx                35
      osal_start_reload_timer           71
-     osal_stop_timerEx                 52
-     osal_get_timeoutEx                52
-     osal_timer_num_active             45
-     osalTimerUpdate                  416
+     osal_stop_timerEx                 54
+     osal_get_timeoutEx                50
+     osal_timer_num_active             43
+     ??Subroutine7_0                    6
+     osalTimerUpdate                  404
      ?Subroutine2                       2
+     ?Subroutine4                       2
+     ??Subroutine6_0                    2
+     osal_adjust_timers                30
+     osal_next_timeout                 67
      osal_GetSystemClock               24
      __Constant_0                       4
      ??osalTimerInit?relay              6
@@ -1584,16 +1682,18 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\common\O
      ??osal_get_timeoutEx?relay         6
      ??osal_timer_num_active?relay      6
      ??osalTimerUpdate?relay            6
+     ??osal_adjust_timers?relay         6
+     ??osal_next_timeout?relay          6
      ??osal_GetSystemClock?relay        6
 
  
- 983 bytes in segment BANKED_CODE
-  66 bytes in segment BANK_RELAYS
-   1 byte  in segment SFR_AN
-   4 bytes in segment XDATA_ROM_C
-   6 bytes in segment XDATA_Z
+ 1 076 bytes in segment BANKED_CODE
+    78 bytes in segment BANK_RELAYS
+     1 byte  in segment SFR_AN
+     4 bytes in segment XDATA_ROM_C
+     6 bytes in segment XDATA_Z
  
- 1 049 bytes of CODE  memory
+ 1 154 bytes of CODE  memory
      0 bytes of CONST memory (+ 4 bytes shared)
      0 bytes of DATA  memory (+ 1 byte  shared)
      6 bytes of XDATA memory
