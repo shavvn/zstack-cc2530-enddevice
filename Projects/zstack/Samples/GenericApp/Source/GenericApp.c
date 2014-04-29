@@ -204,9 +204,6 @@ void GenericApp_Init( byte task_id )
   // Register for all key events - This app will handle all key events
   RegisterForKeys( GenericApp_TaskID );
   osal_pwrmgr_task_state(GenericApp_TaskID, PWRMGR_CONSERVE);
-  //ZDO_RegisterForZDOMsg( GenericApp_TaskID, End_Device_Bind_rsp );
-  //ZDO_RegisterForZDOMsg( GenericApp_TaskID, Match_Desc_rsp );
-  //printf("\r\nGenericApp init complete!\r\n");
 }
 
 /*********************************************************************
@@ -260,7 +257,6 @@ UINT16 GenericApp_ProcessEvent( byte task_id, UINT16 events )
           {
             // The data wasn't delivered -- Do something
             //printf("\r\n Data not sent");
-
           }
           break;
 
@@ -391,16 +387,17 @@ void GenericApp_ProcessZDOMsgs( zdoIncomingMsg_t *inMsg )
  */
 void GenericApp_MessageMSGCB( afIncomingMSGPacket_t *pkt )
 {
-  unsigned char cmd = 0;
-  unsigned int data = 0;
-  unsigned char buf[6] = "";
+  //unsigned char cmd = 0;
+  //unsigned int data = 0;
+  unsigned char buf[7] = "";
   switch ( pkt->clusterId )
   {
     case GENERICAPP_CLUSTERID:
-      osal_memcpy(buf, pkt->cmd.Data, 5);
-      HalUARTWrite(0, "Msg!\r\n", 8);
-      HalUARTWrite(0, buf, 5);
+      osal_memcpy(buf, pkt->cmd.Data, 6);
+      //HalUARTWrite(0, "Msg!\r\n", 8);
+      HalUARTWrite(0, buf, 6);
       break;
+    //TODO: process commands received from coordinator here
   }
 }
 
@@ -415,18 +412,17 @@ void GenericApp_MessageMSGCB( afIncomingMSGPacket_t *pkt )
  */
 void GenericApp_SendTheMessage( void )
 {
-  unsigned char theMessageData[5] = "";
+  unsigned char theMessageData[6] = "";
   unsigned int temp_data = 0;
   unsigned int sensor_data = 0;
   //address or device info in theMessageData
-  //first byte of theMessageData:
-  //high 3 bits are the address of coordinator, low 5 bits are the address of end divice
-  theMessageData[0] = 0x21; //coordinator 001b, end device 00001b
-  theMessageData[1] = 0xCC; //2nd and 3rd byte of theMessageData is reserved or as check code
-  theMessageData[2] = 0xFF; //2nd and 3rd byte of theMessageData is reserved or as check code
+  theMessageData[0] = 0xCC; //beginning check code
+  //Byte 1 : high 3 bits are the address of coordinator, low 5 bits are the address of end divice
+  theMessageData[1] = 0x21; //coordinator 001b, end device 00001b
+  theMessageData[2] = 0xC3; //2nd and 3rd byte of theMessageData is reserved or as check code
   sensor_data = ReadSensorTempData();
   osal_buffer_uint16(&theMessageData[3], sensor_data); //4,5th byte of theMessageData store the temp
-  //printf("Temperture:%d.%d¡æ\r\n ",sensor_data/100,sensor_data%100); 
+  theMessageData[5] = 0x33; //end check code
   temp_data = HalAdcRead(HAL_ADC_CHN_AIN0,HAL_ADC_RESOLUTION_14);
   //printf("ADC:%d", temp_data);
   if ( AF_DataRequest( &GenericApp_DstAddr, &GenericApp_epDesc,
@@ -437,18 +433,14 @@ void GenericApp_SendTheMessage( void )
                        AF_DISCV_ROUTE, AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
   {
     // Successfully requested to be sent.
-    //printf("\r\n  Hello World sent!\r\n");
   }
   else
   {
     // Error occurred in request to send.
-    //printf("\r\n  Hello World not sent!\r\n");
     err_count++;
     if (err_count == 3) {
       err_count =0;
-      //printf("\r\n Reseting Device!");
-      //asm("LJMP 0x0");
-      //osal_set_event(ZDAppTaskID, ZDO_DEVICE_RESET);
+      //asm("LJMP 0x0");  // software reset
     }
   }
 }
