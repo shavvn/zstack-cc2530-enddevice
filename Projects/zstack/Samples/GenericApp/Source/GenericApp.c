@@ -81,6 +81,7 @@
 #include "hal_key.h"
 #include "hal_uart.h"
 #include "hal_ds18b20.h"
+#include "hal_i2c.h"
 #include "stdio.h"
 
 
@@ -183,7 +184,8 @@ void GenericApp_Init( byte task_id )
   GenericApp_TransID = 0;
   
   HalUARTInit();
-
+  
+  HalI2CInit();
   // Device hardware initialization can be added here or in main() (Zmain.c).
   // If the hardware is application specific - add it here.
   // If the hardware is other parts of the device add it in main().
@@ -413,17 +415,26 @@ void GenericApp_MessageMSGCB( afIncomingMSGPacket_t *pkt )
 void GenericApp_SendTheMessage( void )
 {
   unsigned char theMessageData[6] = "";
-  unsigned int temp_data = 0;
+  unsigned char temp_data[3] ="";
+  unsigned char config = 0x9C;
+  unsigned int adc_data = 0;
   unsigned int sensor_data = 0;
   //address or device info in theMessageData
   theMessageData[0] = 0xCC; //beginning check code
   //Byte 1 : high 3 bits are the address of coordinator, low 5 bits are the address of end divice
   theMessageData[1] = 0x21; //coordinator 001b, end device 00001b
   theMessageData[2] = 0xC3; //2nd and 3rd byte of theMessageData is reserved or as check code
+  if(HalI2CSend(0x90, &config, 1)) {
+    HalUARTWrite(0,"no", 3);
+  }
   sensor_data = ReadSensorTempData();
+  HalI2CSend(0x90, &config, 1);
+  if(HalI2CReceive(0x91, &temp_data[0], 3)) {
+    HalUARTWrite(0,"n0", 3);
+  }
   osal_buffer_uint16(&theMessageData[3], sensor_data); //4,5th byte of theMessageData store the temp
   theMessageData[5] = 0x33; //end check code
-  temp_data = HalAdcRead(HAL_ADC_CHN_AIN0,HAL_ADC_RESOLUTION_14);
+  adc_data = HalAdcRead(HAL_ADC_CHN_AIN0,HAL_ADC_RESOLUTION_14);
   //printf("ADC:%d", temp_data);
   if ( AF_DataRequest( &GenericApp_DstAddr, &GenericApp_epDesc,
                        GENERICAPP_CLUSTERID,

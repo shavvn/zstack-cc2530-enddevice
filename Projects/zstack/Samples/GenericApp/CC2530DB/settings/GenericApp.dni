@@ -1,8 +1,7 @@
 [DebugChecksum]
-Checksum=1559856861
+Checksum=-1074141202
 [DisAssemblyWindow]
-NumStates=_ 1
-State 1=_ 1
+NumStates=_ 0
 [InstructionProfiling]
 Enabled=_ 0
 [CodeCoverage]
@@ -19,6 +18,12 @@ UseTrigger=1
 TriggerName=main
 LimitSize=0
 ByteLimit=50
+[Breakpoints]
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\..\Source\GenericApp.c}.427.3@1" 1 0 0 0 "" 0 ""
+Count=1
+[ChipconEmu]
+Stop timers on halt=1
+Leave target running=1
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
@@ -26,19 +31,16 @@ Category=_ 0
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""
-[Breakpoints]
-Count=0
-[ChipconEmu]
-Stop timers on halt=0
-Leave target running=1
 [Aliases]
-A0=_ "E:\Dropbox\grad_proj\ZStack-CC2530-2.4.0-1.4.0\Components\zmac\f8w\zmac.c" "C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\zmac\f8w\zmac.c"
-A1=_ "E:\Program\MCU\zigbee\CC2530\ZStack-CC2530-2.4.0-1.4.0-1\ZStack-CC2530-2.4.0-1.4.0\Components\hal\target\CC2530EB\_hal_uart_dma.c" ""
-A2=_ "E:\Program\MCU\zigbee\CC2530\ZStack-CC2530-2.4.0-1.4.0-1\ZStack-CC2530-2.4.0-1.4.0\Components\hal\target\CC2530EB\hal_led.c" "E:\Dropbox\grad_proj\ZStack-CC2530-2.4.0-1.4.0\Components\hal\target\CC2530EB\hal_led.c"
-A3=_ "E:\Program\MCU\zigbee\CC2530\ZStack-CC2530-2.4.0-1.4.0-1\ZStack-CC2530-2.4.0-1.4.0\Components\hal\target\CC2530EB\hal_uart.c" ""
-A4=_ "E:\Program\MCU\zigbee\CC2530\ZStack-CC2530-2.4.0-1.4.0-1\ZStack-CC2530-2.4.0-1.4.0\Components\mac\low_level\srf04\single_chip\mac_mcu.c" ""
-A5=_ "E:\Program\MCU\zigbee\CC2530\ZStack-CC2530-2.4.0-1.4.0-1\ZStack-CC2530-2.4.0-1.4.0\Components\mac\low_level\srf04\single_chip\mac_mem.c" "E:\Dropbox\grad_proj\ZStack-CC2530-2.4.0-1.4.0\Components\mac\low_level\srf04\single_chip\mac_mem.c"
-A6=_ "E:\Program\MCU\zigbee\CC2530\ZStack-CC2530-2.4.0-1.4.0-1\ZStack-CC2530-2.4.0-1.4.0\Components\osal\mcu\cc2530\OSAL_Math.s51" ""
-A7=_ "E:\Program\MCU\zigbee\CC2530\ZStack-CC2530-2.4.0-1.4.0-1\ZStack-CC2530-2.4.0-1.4.0\Components\zmac\f8w\zmac.c" "E:\Dropbox\grad_proj\ZStack-CC2530-2.4.0-1.4.0\Components\zmac\f8w\zmac.c"
-Count=8
+A0=_ "E:\Dropbox\grad_proj\ZStack-CC2530-2.4.0-1.4.0\Components\osal\mcu\cc2530\OSAL_Math.s51" "C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\osal\mcu\cc2530\OSAL_Math.s51"
+A1=_ "E:\Dropbox\grad_proj\ZStack-CC2530-2.4.0-1.4.0\Components\zmac\f8w\zmac.c" "C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\zmac\f8w\zmac.c"
+A2=_ "E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\target\CC2530EB\hal_uart.c" "C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\target\CC2530EB\hal_uart.c"
+A3=_ "E:\Program\MCU\zigbee\CC2530\ZStack-CC2530-2.4.0-1.4.0-1\ZStack-CC2530-2.4.0-1.4.0\Components\hal\target\CC2530EB\_hal_uart_dma.c" ""
+A4=_ "E:\Program\MCU\zigbee\CC2530\ZStack-CC2530-2.4.0-1.4.0-1\ZStack-CC2530-2.4.0-1.4.0\Components\hal\target\CC2530EB\hal_led.c" "E:\Dropbox\grad_proj\ZStack-CC2530-2.4.0-1.4.0\Components\hal\target\CC2530EB\hal_led.c"
+A5=_ "E:\Program\MCU\zigbee\CC2530\ZStack-CC2530-2.4.0-1.4.0-1\ZStack-CC2530-2.4.0-1.4.0\Components\hal\target\CC2530EB\hal_uart.c" ""
+A6=_ "E:\Program\MCU\zigbee\CC2530\ZStack-CC2530-2.4.0-1.4.0-1\ZStack-CC2530-2.4.0-1.4.0\Components\mac\low_level\srf04\single_chip\mac_mcu.c" ""
+A7=_ "E:\Program\MCU\zigbee\CC2530\ZStack-CC2530-2.4.0-1.4.0-1\ZStack-CC2530-2.4.0-1.4.0\Components\mac\low_level\srf04\single_chip\mac_mem.c" "E:\Dropbox\grad_proj\ZStack-CC2530-2.4.0-1.4.0\Components\mac\low_level\srf04\single_chip\mac_mem.c"
+A8=_ "E:\Program\MCU\zigbee\CC2530\ZStack-CC2530-2.4.0-1.4.0-1\ZStack-CC2530-2.4.0-1.4.0\Components\osal\mcu\cc2530\OSAL_Math.s51" ""
+A9=_ "E:\Program\MCU\zigbee\CC2530\ZStack-CC2530-2.4.0-1.4.0-1\ZStack-CC2530-2.4.0-1.4.0\Components\zmac\f8w\zmac.c" "E:\Dropbox\grad_proj\ZStack-CC2530-2.4.0-1.4.0\Components\zmac\f8w\zmac.c"
+Count=10
 SuppressDialog=1

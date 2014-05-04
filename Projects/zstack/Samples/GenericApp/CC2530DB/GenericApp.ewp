@@ -3192,6 +3192,9 @@
         <name>$PROJ_DIR$\..\..\..\..\..\Components\hal\include\hal_flash.h</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\hal_i2c.h</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\..\..\..\..\Components\hal\include\hal_key.h</name>
       </file>
       <file>
@@ -3233,6 +3236,9 @@
           </file>
           <file>
             <name>$PROJ_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\hal_flash.c</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\hal_i2c.c</name>
           </file>
           <file>
             <name>$PROJ_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\hal_key.c</name>
