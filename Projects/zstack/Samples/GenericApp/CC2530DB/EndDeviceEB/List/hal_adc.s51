@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR C/C++ Compiler V7.60.1.40026 for 8051            13/Apr/2014  19:30:46 /
+// IAR C/C++ Compiler V7.60.1.40026 for 8051            04/May/2014  15:12:51 /
 // Copyright (C) 2004-2010 IAR Systems AB.                                    /
 //                                                                            /
 //    Core               =  plain                                             /
@@ -9,17 +9,18 @@
 //    Calling convention =  xdata reentrant                                   /
 //    Constant location  =  data_rom                                          /
 //    Dptr setup         =  1,16                                              /
-//    Source file        =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Comp /
-//                          onents\hal\target\CC2530EB\hal_adc.c              /
-//    Command line       =  -f E:\Dropbox\grad_proj\zstack-cc2530-enddevice\P /
-//                          rojects\zstack\Samples\GenericApp\CC2530DB\..\..\ /
-//                          ..\Tools\CC2530DB\f8wEndev.cfg (-DCPU32MHZ        /
-//                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3        /
-//                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f         /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          Tools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO         /
-//                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR      /
+//    Source file        =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Components\hal\target\CC2530EB\hal_adc.c   /
+//    Command line       =  -f C:\Users\John\Dropbox\grad_proj\zstack-cc2530- /
+//                          enddevice\Projects\zstack\Samples\GenericApp\CC25 /
+//                          30DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg         /
+//                          (-DCPU32MHZ -DROOT=__near_func                    /
+//                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6        /
+//                          -DMAC_CFG_RX_MAX=3) -f C:\Users\John\Dropbox\grad /
+//                          _proj\zstack-cc2530-enddevice\Projects\zstack\Sam /
+//                          ples\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\ /
+//                          f8wConfig.cfg (-DZIGBEEPRO -DSECURE=0             /
+//                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                 /
 //                          -DDEFAULT_CHANLIST=0x00000800                     /
 //                          -DZDAPP_CONFIG_PAN_ID=0x1111                      /
 //                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_M /
@@ -41,96 +42,97 @@
 //                          __code" -DGENERIC=__generic                       /
 //                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=8000       /
 //                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
-//                          -DREJOIN_POLL_RATE=440 E:\Dropbox\grad_proj\zstac /
-//                          k-cc2530-enddevice\Components\hal\target\CC2530EB /
-//                          \hal_adc.c -D HAL_ADC -D HAL_KEY=FALSE -D         /
-//                          HAL_LCD=FALSE -D NWK_AUTO_POLL -D ZTOOL_P1 -D     /
-//                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D          /
-//                          POWER_SAVING -D NV_STORE -lC                      /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\EndDevice /
-//                          EB\List\ -lA E:\Dropbox\grad_proj\zstack-cc2530-e /
-//                          nddevice\Projects\zstack\Samples\GenericApp\CC253 /
-//                          0DB\EndDeviceEB\List\ --diag_suppress             /
-//                          Pe001,Pa010 -o E:\Dropbox\grad_proj\zstack-cc2530 /
-//                          -enddevice\Projects\zstack\Samples\GenericApp\CC2 /
-//                          530DB\EndDeviceEB\Obj\ -e --require_prototypes    /
+//                          -DREJOIN_POLL_RATE=440 C:\Users\John\Dropbox\grad /
+//                          _proj\zstack-cc2530-enddevice\Components\hal\targ /
+//                          et\CC2530EB\hal_adc.c -D HAL_ADC=FALSE -D         /
+//                          HAL_KEY=FALSE -D HAL_LED=FALSE -D HAL_LCD=FALSE   /
+//                          -D NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D        /
+//                          MT_SYS_FUNC -D MT_ZDO_FUNC -D POWER_SAVING -D     /
+//                          NV_STORE -lC C:\Users\John\Dropbox\grad_proj\zsta /
+//                          ck-cc2530-enddevice\Projects\zstack\Samples\Gener /
+//                          icApp\CC2530DB\EndDeviceEB\List\ -lA              /
+//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\EndDeviceEB\List\ --diag_suppress Pe001,Pa010   /
+//                          -o C:\Users\John\Dropbox\grad_proj\zstack-cc2530- /
+//                          enddevice\Projects\zstack\Samples\GenericApp\CC25 /
+//                          30DB\EndDeviceEB\Obj\ -e --require_prototypes     /
 //                          --no_code_motion --debug --core=plain             /
 //                          --dptr=16,1 --data_model=large                    /
 //                          --code_model=banked --calling_convention=xdata_re /
 //                          entrant --place_constants=data_rom                /
 //                          --nr_virtual_regs 16 -I                           /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\ -I       /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\Source /
-//                          \ -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice /
-//                          \Projects\zstack\Samples\GenericApp\CC2530DB\..\. /
-//                          .\..\ZMain\TI2530DB\ -I                           /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\hal\include\ -I                  /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\hal\target\CC2530EB\ -I          /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\mac\include\ -I                  /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\mac\high_level\ -I               /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\mac\low_level\srf04\ -I          /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\mac\low_level\srf04\single_chip\ /
-//                           -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\ /
-//                          Projects\zstack\Samples\GenericApp\CC2530DB\..\.. /
-//                          \..\..\..\Components\mt\ -I                       /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\osal\include\ -I                 /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\osal\mcu\ccsoc\ -I               /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\services\saddr\ -I               /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\services\sdata\ -I               /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\stack\af\ -I                     /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\stack\nwk\ -I                    /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\stack\sapi\ -I                   /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\stack\sec\ -I                    /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\stack\sys\ -I                    /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\stack\zdo\ -I                    /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\zmac\ -I                         /
-//                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\ /
-//                          ..\..\Components\zmac\f8w\ -I "C:\Program         /
-//                          Files\IAR Systems\Embedded Workbench              /
-//                          5.4\8051\INC\" -I "C:\Program Files\IAR           /
-//                          Systems\Embedded Workbench 5.4\8051\INC\CLIB\"    /
-//                          -Ohz                                              /
-//    List file          =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proj /
-//                          ects\zstack\Samples\GenericApp\CC2530DB\EndDevice /
-//                          EB\List\hal_adc.s51                               /
+//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\ -I C:\Users\John\Dropbox\grad_proj\zstack-cc25 /
+//                          30-enddevice\Projects\zstack\Samples\GenericApp\C /
+//                          C2530DB\..\Source\ -I C:\Users\John\Dropbox\grad_ /
+//                          proj\zstack-cc2530-enddevice\Projects\zstack\Samp /
+//                          les\GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\  /
+//                          -I C:\Users\John\Dropbox\grad_proj\zstack-cc2530- /
+//                          enddevice\Projects\zstack\Samples\GenericApp\CC25 /
+//                          30DB\..\..\..\..\..\Components\hal\include\ -I    /
+//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\..\..\..\..\..\Components\hal\target\CC2530EB\  /
+//                          -I C:\Users\John\Dropbox\grad_proj\zstack-cc2530- /
+//                          enddevice\Projects\zstack\Samples\GenericApp\CC25 /
+//                          30DB\..\..\..\..\..\Components\mac\include\ -I    /
+//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\..\..\..\..\..\Components\mac\high_level\ -I    /
+//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\..\..\..\..\..\Components\mac\low_level\srf04\  /
+//                          -I C:\Users\John\Dropbox\grad_proj\zstack-cc2530- /
+//                          enddevice\Projects\zstack\Samples\GenericApp\CC25 /
+//                          30DB\..\..\..\..\..\Components\mac\low_level\srf0 /
+//                          4\single_chip\ -I C:\Users\John\Dropbox\grad_proj /
+//                          \zstack-cc2530-enddevice\Projects\zstack\Samples\ /
+//                          GenericApp\CC2530DB\..\..\..\..\..\Components\mt\ /
+//                           -I C:\Users\John\Dropbox\grad_proj\zstack-cc2530 /
+//                          -enddevice\Projects\zstack\Samples\GenericApp\CC2 /
+//                          530DB\..\..\..\..\..\Components\osal\include\ -I  /
+//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\..\..\..\..\..\Components\osal\mcu\ccsoc\ -I    /
+//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\..\..\..\..\..\Components\services\saddr\ -I    /
+//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\..\..\..\..\..\Components\services\sdata\ -I    /
+//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\..\..\..\..\..\Components\stack\af\ -I          /
+//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\..\..\..\..\..\Components\stack\nwk\ -I         /
+//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\..\..\..\..\..\Components\stack\sapi\ -I        /
+//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\..\..\..\..\..\Components\stack\sec\ -I         /
+//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\..\..\..\..\..\Components\stack\sys\ -I         /
+//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\..\..\..\..\..\Components\stack\zdo\ -I         /
+//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\..\..\..\..\..\Components\zmac\ -I              /
+//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\..\..\..\..\..\Components\zmac\f8w\ -I          /
+//                          "C:\Program Files (x86)\IAR Systems\Embedded      /
+//                          Workbench 5.4\8051\INC\" -I "C:\Program Files     /
+//                          (x86)\IAR Systems\Embedded Workbench              /
+//                          5.4\8051\INC\CLIB\" -Ohz                          /
+//    List file          =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\EndDeviceEB\List\hal_adc.s51                    /
 //                                                                            /
 //                                                                            /
 ///////////////////////////////////////////////////////////////////////////////
@@ -153,14 +155,8 @@
         RSEG PSTACK:XDATA:NOROOT(0)
         RSEG XSTACK:XDATA:NOROOT(0)
 
-        EXTERN ?BANKED_ENTER_XDATA
-        EXTERN ?BANKED_LEAVE_XDATA
         EXTERN ?BDISPATCH
         EXTERN ?BRET
-        EXTERN ?SS_SHR
-        EXTERN ?UC_SWITCH_DENSE
-        EXTERN ?V0
-        EXTERN __INIT_XDATA_Z
 
         PUBLIC ??HalAdcCheckVdd?relay
         FUNCTION ??HalAdcCheckVdd?relay,0203H
@@ -170,26 +166,21 @@
         FUNCTION ??HalAdcRead?relay,0203H
         PUBLIC ??HalAdcSetReference?relay
         FUNCTION ??HalAdcSetReference?relay,0203H
-        PUBWEAK ADCCFG
         PUBWEAK ADCCON1
         PUBWEAK ADCCON3
         PUBWEAK ADCH
-        PUBWEAK ADCL
         PUBLIC HalAdcCheckVdd
         FUNCTION HalAdcCheckVdd,0203H
         ARGFRAME XSTACK, 0, STACK
         PUBLIC HalAdcInit
         FUNCTION HalAdcInit,0203H
         ARGFRAME XSTACK, 0, STACK
-        LOCFRAME ISTACK, 2, STACK
         PUBLIC HalAdcRead
-        FUNCTION HalAdcRead,080203H
+        FUNCTION HalAdcRead,0203H
         ARGFRAME XSTACK, 0, STACK
-        LOCFRAME XSTACK, 10, STACK
         PUBLIC HalAdcSetReference
         FUNCTION HalAdcSetReference,0203H
         ARGFRAME XSTACK, 0, STACK
-        LOCFRAME ISTACK, 2, STACK
         
         CFI Names cfiNames0
         CFI StackFrame CFA_SP SP IDATA
@@ -288,7 +279,7 @@ HalAdcRead          SYMBOL "HalAdcRead"
 HalAdcSetReference  SYMBOL "HalAdcSetReference"
 ??HalAdcSetReference?relay SYMBOL "?relay", HalAdcSetReference
 
-// E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\target\CC2530EB\hal_adc.c
+// C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\target\CC2530EB\hal_adc.c
 //    1 /**************************************************************************************************
 //    2   Filename:       hal_adc.c
 //    3   Revised:        $Date: 2010-03-12 16:10:36 -0800 (Fri, 12 Mar 2010) $
@@ -344,19 +335,9 @@ ADCCON1:
 ADCCON3:
         DS 1
 
-        ASEGN SFR_AN:DATA:NOROOT,0baH
-// unsigned char volatile __sfr ADCL
-ADCL:
-        DS 1
-
         ASEGN SFR_AN:DATA:NOROOT,0bbH
 // unsigned char volatile __sfr ADCH
 ADCH:
-        DS 1
-
-        ASEGN SFR_AN:DATA:NOROOT,0f2H
-// unsigned char volatile __sfr ADCCFG
-ADCCFG:
         DS 1
 //   45 #include  "hal_defs.h"
 //   46 #include  "hal_mcu.h"
@@ -398,12 +379,7 @@ ADCCFG:
 //   82  */
 //   83 
 //   84 #if (HAL_ADC == TRUE)
-
-        RSEG XDATA_Z:XDATA:NOROOT(0)
 //   85 static uint8 adcRef;
-adcRef:
-        DS 1
-        REQUIRE __INIT_XDATA_Z
 //   86 #endif
 //   87 
 //   88 /**************************************************************************************************
@@ -422,40 +398,14 @@ HalAdcInit:
         CFI Block cfiBlock0 Using cfiCommon0
         CFI Function HalAdcInit
 //   98 {
-        PUSH    DPL
-        CFI DPL0 Frame(CFA_SP, 4)
-        CFI CFA_SP SP+-4
-        PUSH    DPH
-        CFI DPH0 Frame(CFA_SP, 5)
-        CFI CFA_SP SP+-5
-        ; Saved register size: 2
+        ; Saved register size: 0
         ; Auto size: 0
 //   99 #if (HAL_ADC == TRUE)
 //  100   adcRef = HAL_ADC_REF_VOLT;
-        MOV     A,#-0x80
-        CFI EndBlock cfiBlock0
-        REQUIRE ?Subroutine0
-        ; // Fall through to label ?Subroutine0
 //  101 #endif
 //  102 }
-
-        RSEG BANKED_CODE:CODE:NOROOT(0)
-?Subroutine0:
-        CFI Block cfiBlock1 Using cfiCommon0
-        CFI NoFunction
-        CFI CFA_SP SP+-5
-        CFI DPL0 Frame(CFA_SP, 4)
-        CFI DPH0 Frame(CFA_SP, 5)
-        MOV     DPTR,#adcRef
-        MOVX    @DPTR,A
-        POP     DPH
-        CFI CFA_SP SP+-4
-        CFI DPH0 SameValue
-        POP     DPL
-        CFI CFA_SP SP+-3
-        CFI DPL0 SameValue
         LJMP    ?BRET
-        CFI EndBlock cfiBlock1
+        CFI EndBlock cfiBlock0
 //  103 
 //  104 /**************************************************************************************************
 //  105  * @fn      HalAdcRead
@@ -474,35 +424,16 @@ HalAdcInit:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 //  117 uint16 HalAdcRead (uint8 channel, uint8 resolution)
 HalAdcRead:
-        CFI Block cfiBlock2 Using cfiCommon0
+        CFI Block cfiBlock1 Using cfiCommon0
         CFI Function HalAdcRead
 //  118 {
-        MOV     A,#-0xa
-        LCALL   ?BANKED_ENTER_XDATA
-        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
-        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
-        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
-        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
-        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
-        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
-        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
-        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
-        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
-        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
-        CFI CFA_SP SP+0
-        CFI CFA_XSP16 add(XSP16, 10)
-        ; Saved register size: 10
+        ; Saved register size: 0
         ; Auto size: 0
-        MOV     A,R1
-        MOV     R4,A
-        MOV     A,R2
-        MOV     R5,A
 //  119   int16  reading = 0;
 //  120 
 //  121 #if (HAL_ADC == TRUE)
 //  122   uint8   i, resbits;
 //  123   uint8  adcChannel = 1;
-        MOV     R3,#0x1
 //  124 
 //  125   /*
 //  126    * If Analog input channel is AIN0..AIN7, make sure corresponing P0 I/O pin is enabled.  The code
@@ -513,172 +444,65 @@ HalAdcRead:
 //  131    * than actuality because the pin did not have time to fully charge.
 //  132    */
 //  133   if (channel < 8)
-        MOV     A,R4
-        CLR     C
-        SUBB    A,#0x8
-        JNC     ??HalAdcRead_0
 //  134   {
 //  135     for (i=0; i < channel; i++)
-        MOV     R2,#0x0
-        SJMP    ??HalAdcRead_1
 //  136     {
 //  137       adcChannel <<= 1;
-??HalAdcRead_2:
-        MOV     A,R3
-        CLR     C
-        RLC     A
-        MOV     R3,A
 //  138     }
-        INC     R2
-??HalAdcRead_1:
-        MOV     A,R2
-        CLR     C
-        SUBB    A,R4
-        JC      ??HalAdcRead_2
 //  139   }
 //  140 
 //  141   /* Enable channel */
 //  142   ADCCFG |= adcChannel;
-??HalAdcRead_0:
-        MOV     A,R3
-        ORL     A,0xf2
-        MOV     0xf2,A
 //  143 
 //  144   /* Convert resolution to decimation rate */
 //  145   switch (resolution)
-        MOV     A,R5
-        LCALL   ?UC_SWITCH_DENSE
-`?<Jumptable for HalAdcRead>_0`:
-        DATA
-        DB        1
-        DB        2
-        DW        ??HalAdcRead_3
-        DW        ??HalAdcRead_4
-        DW        ??HalAdcRead_5
-        DW        ??HalAdcRead_6
-        CODE
 //  146   {
 //  147     case HAL_ADC_RESOLUTION_8:
 //  148       resbits = HAL_ADC_DEC_064;
-??HalAdcRead_4:
-        CLR     A
-        SJMP    ??HalAdcRead_7
 //  149       break;
 //  150     case HAL_ADC_RESOLUTION_10:
 //  151       resbits = HAL_ADC_DEC_128;
-??HalAdcRead_5:
-        MOV     A,#0x10
-        SJMP    ??HalAdcRead_7
 //  152       break;
 //  153     case HAL_ADC_RESOLUTION_12:
 //  154       resbits = HAL_ADC_DEC_256;
-??HalAdcRead_6:
-        MOV     A,#0x20
-        SJMP    ??HalAdcRead_7
 //  155       break;
 //  156     case HAL_ADC_RESOLUTION_14:
 //  157     default:
 //  158       resbits = HAL_ADC_DEC_512;
-??HalAdcRead_3:
-        MOV     A,#0x30
 //  159       break;
 //  160   }
 //  161 
 //  162   /* writing to this register starts the extra conversion */
 //  163   ADCCON3 = channel | resbits | adcRef;
-??HalAdcRead_7:
-        MOV     DPTR,#adcRef
-        ORL     A,R4
-        MOV     R2,A
-        MOVX    A,@DPTR
-        ORL     A,R2
-        MOV     0xb6,A
 //  164 
 //  165   /* Wait for the conversion to be done */
 //  166   while (!(ADCCON1 & HAL_ADC_EOC));
-??HalAdcRead_8:
-        MOV     A,0xb4
-        MOV     C,0xE0 /* A   */.7
-        JNC     ??HalAdcRead_8
 //  167 
 //  168   /* Disable channel after done conversion */
 //  169   ADCCFG &= (adcChannel ^ 0xFF);
-        MOV     A,#-0x1
-        XRL     A,R3
-        ANL     A,0xf2
-        MOV     0xf2,A
 //  170 
 //  171   /* Read the result */
 //  172   reading = (int16) (ADCL);
-        MOV     A,0xba
-        MOV     ?V0 + 0,A
 //  173   reading |= (int16) (ADCH << 8);
-        MOV     A,0xbb
-        MOV     R2,?V0 + 0
-        MOV     R3,A
 //  174 
 //  175   /* Treat small negative as 0 */
 //  176   if (reading < 0)
-        CLR     C
-        SUBB    A,#0x0
-        MOV     C,0xD0 /* PSW */.2
-        XRL     A,PSW
-        RLC     A
-        JNC     ??HalAdcRead_9
 //  177     reading = 0;
-        MOV     R2,#0x0
-        MOV     R3,#0x0
 //  178 
 //  179   switch (resolution)
-??HalAdcRead_9:
-        MOV     A,R5
-        LCALL   ?UC_SWITCH_DENSE
-`?<Jumptable for HalAdcRead>_1`:
-        DATA
-        DB        1
-        DB        2
-        DW        ??HalAdcRead_10
-        DW        ??HalAdcRead_11
-        DW        ??HalAdcRead_12
-        DW        ??HalAdcRead_13
-        CODE
 //  180   {
 //  181     case HAL_ADC_RESOLUTION_8:
 //  182       reading >>= 8;
-??HalAdcRead_11:
-        MOV     ?V0 + 0,R2
-        MOV     ?V0 + 1,R3
-        MOV     A,#0x8
-        SJMP    ??HalAdcRead_14
 //  183       break;
 //  184     case HAL_ADC_RESOLUTION_10:
 //  185       reading >>= 6;
-??HalAdcRead_12:
-        MOV     ?V0 + 0,R2
-        MOV     ?V0 + 1,R3
-        MOV     A,#0x6
-        SJMP    ??HalAdcRead_14
 //  186       break;
 //  187     case HAL_ADC_RESOLUTION_12:
 //  188       reading >>= 4;
-??HalAdcRead_13:
-        MOV     ?V0 + 0,R2
-        MOV     ?V0 + 1,R3
-        MOV     A,#0x4
-        SJMP    ??HalAdcRead_14
 //  189       break;
 //  190     case HAL_ADC_RESOLUTION_14:
 //  191     default:
 //  192       reading >>= 2;
-??HalAdcRead_10:
-        MOV     ?V0 + 0,R2
-        MOV     ?V0 + 1,R3
-        MOV     A,#0x2
-??HalAdcRead_14:
-        MOV     R0,#?V0 + 0
-        LCALL   ?SS_SHR
-        MOV     R2,?V0 + 0
-        MOV     R3,?V0 + 1
 //  193     break;
 //  194   }
 //  195 #else
@@ -688,14 +512,10 @@ HalAdcRead:
 //  199 #endif
 //  200 
 //  201   return ((uint16)reading);
-        MOV     R7,#0x2
-        LJMP    ?BANKED_LEAVE_XDATA
-        CFI EndBlock cfiBlock2
-        REQUIRE ADCL
-        REQUIRE ADCH
-        REQUIRE ADCCON1
-        REQUIRE ADCCON3
-        REQUIRE ADCCFG
+        MOV     R2,#0x0
+        MOV     R3,#0x0
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock1
 //  202 }
 //  203 
 //  204 /**************************************************************************************************
@@ -712,24 +532,17 @@ HalAdcRead:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 //  214 void HalAdcSetReference ( uint8 reference )
 HalAdcSetReference:
-        CFI Block cfiBlock3 Using cfiCommon0
+        CFI Block cfiBlock2 Using cfiCommon0
         CFI Function HalAdcSetReference
 //  215 {
-        PUSH    DPL
-        CFI DPL0 Frame(CFA_SP, 4)
-        CFI CFA_SP SP+-4
-        PUSH    DPH
-        CFI DPH0 Frame(CFA_SP, 5)
-        CFI CFA_SP SP+-5
-        ; Saved register size: 2
+        ; Saved register size: 0
         ; Auto size: 0
 //  216 #if (HAL_ADC == TRUE)
 //  217   adcRef = reference;
-        MOV     A,R1
-        LJMP    ?Subroutine0 & 0xFFFF
-        CFI EndBlock cfiBlock3
 //  218 #endif
 //  219 }
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock2
 //  220 
 //  221 /*********************************************************************
 //  222  * @fn      HalAdcCheckVdd
@@ -746,7 +559,7 @@ HalAdcSetReference:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 //  232 bool HalAdcCheckVdd(uint8 vdd)
 HalAdcCheckVdd:
-        CFI Block cfiBlock4 Using cfiCommon0
+        CFI Block cfiBlock3 Using cfiCommon0
         CFI Function HalAdcCheckVdd
 //  233 {
         ; Saved register size: 0
@@ -771,10 +584,10 @@ HalAdcCheckVdd:
         MOV     R1,#0x0
 ??HalAdcCheckVdd_2:
         LJMP    ?BRET
-        CFI EndBlock cfiBlock4
-        REQUIRE ADCH
+        CFI EndBlock cfiBlock3
         REQUIRE ADCCON1
         REQUIRE ADCCON3
+        REQUIRE ADCH
 //  237 }
 
         RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
@@ -806,14 +619,12 @@ HalAdcCheckVdd:
 //  239 /**************************************************************************************************
 //  240 **************************************************************************************************/
 // 
-// 217 bytes in segment BANKED_CODE
-//  24 bytes in segment BANK_RELAYS
-//   5 bytes in segment SFR_AN
-//   1 byte  in segment XDATA_Z
+// 39 bytes in segment BANKED_CODE
+// 24 bytes in segment BANK_RELAYS
+//  3 bytes in segment SFR_AN
 // 
-// 241 bytes of CODE  memory
-//   0 bytes of DATA  memory (+ 5 bytes shared)
-//   1 byte  of XDATA memory
+// 63 bytes of CODE memory
+//  0 bytes of DATA memory (+ 3 bytes shared)
 //
 //Errors: none
 //Warnings: none

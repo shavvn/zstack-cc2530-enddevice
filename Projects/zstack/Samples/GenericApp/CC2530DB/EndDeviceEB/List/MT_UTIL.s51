@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR C/C++ Compiler V7.60.1.40026 for 8051            29/Apr/2014  20:55:08 /
+// IAR C/C++ Compiler V7.60.1.40026 for 8051            04/May/2014  15:12:57 /
 // Copyright (C) 2004-2010 IAR Systems AB.                                    /
 //                                                                            /
 //    Core               =  plain                                             /
@@ -44,10 +44,10 @@
 //                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
 //                          -DREJOIN_POLL_RATE=440 C:\Users\John\Dropbox\grad /
 //                          _proj\zstack-cc2530-enddevice\Components\mt\MT_UT /
-//                          IL.c -D HAL_ADC -D HAL_KEY=FALSE -D               /
-//                          HAL_LCD=FALSE -D NWK_AUTO_POLL -D ZTOOL_P1 -D     /
-//                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D          /
-//                          POWER_SAVING -D NV_STORE -lC                      /
+//                          IL.c -D HAL_ADC=FALSE -D HAL_KEY=FALSE -D         /
+//                          HAL_LED=FALSE -D HAL_LCD=FALSE -D NWK_AUTO_POLL   /
+//                          -D ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D          /
+//                          MT_ZDO_FUNC -D POWER_SAVING -D NV_STORE -lC       /
 //                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
 //                          device\Projects\zstack\Samples\GenericApp\CC2530D /
 //                          B\EndDeviceEB\List\ -lA                           /

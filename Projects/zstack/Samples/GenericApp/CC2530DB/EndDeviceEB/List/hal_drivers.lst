@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR C/C++ Compiler V7.60.1.40026 for 8051             29/Apr/2014  20:55:16 #
+# IAR C/C++ Compiler V7.60.1.40026 for 8051             04/May/2014  15:13:04 #
 # Copyright (C) 2004-2010 IAR Systems AB.                                     #
 #                                                                             #
 #    Core               =  plain                                              #
@@ -44,16 +44,16 @@
 #                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
 #                          -DREJOIN_POLL_RATE=440 C:\Users\John\Dropbox\grad_ #
 #                          proj\zstack-cc2530-enddevice\Components\hal\common #
-#                          \hal_drivers.c -D HAL_ADC -D HAL_KEY=FALSE -D      #
-#                          HAL_LCD=FALSE -D NWK_AUTO_POLL -D ZTOOL_P1 -D      #
-#                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D           #
-#                          POWER_SAVING -D NV_STORE -lC                       #
+#                          \hal_drivers.c -D HAL_ADC=FALSE -D HAL_KEY=FALSE   #
+#                          -D HAL_LED=FALSE -D HAL_LCD=FALSE -D               #
+#                          NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D            #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D POWER_SAVING -D      #
+#                          NV_STORE -lC C:\Users\John\Dropbox\grad_proj\zstac #
+#                          k-cc2530-enddevice\Projects\zstack\Samples\Generic #
+#                          App\CC2530DB\EndDeviceEB\List\ -lA                 #
 #                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
 #                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          EndDeviceEB\List\ -lA C:\Users\John\Dropbox\grad_p #
-#                          roj\zstack-cc2530-enddevice\Projects\zstack\Sample #
-#                          s\GenericApp\CC2530DB\EndDeviceEB\List\            #
-#                          --diag_suppress Pe001,Pa010 -o                     #
+#                          EndDeviceEB\List\ --diag_suppress Pe001,Pa010 -o   #
 #                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
 #                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
 #                          EndDeviceEB\Obj\ -e --require_prototypes           #
@@ -306,8 +306,6 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\ha
     134            /* ADC */
     135          #if (defined HAL_ADC) && (HAL_ADC == TRUE)
     136            HalAdcInit();
-   \   000004                ; Setup parameters for call to function HalAdcInit
-   \   000004   12....       LCALL   ??HalAdcInit?relay
     137          #endif
     138          
     139            /* DMA */
@@ -329,15 +327,13 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\ha
     155            /* LED */
     156          #if (defined HAL_LED) && (HAL_LED == TRUE)
     157            HalLedInit();
-   \   000007                ; Setup parameters for call to function HalLedInit
-   \   000007   12....       LCALL   ??HalLedInit?relay
     158          #endif
     159          
     160            /* UART */
     161          #if (defined HAL_UART) && (HAL_UART == TRUE)
     162            HalUARTInit();
-   \   00000A                ; Setup parameters for call to function HalUARTInit
-   \   00000A   12....       LCALL   ??HalUARTInit?relay
+   \   000004                ; Setup parameters for call to function HalUARTInit
+   \   000004   12....       LCALL   ??HalUARTInit?relay
     163          #endif
     164          
     165            /* KEY */
@@ -355,7 +351,7 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\ha
     177            usbHidInit();
     178          #endif
     179          }
-   \   00000D   80..         SJMP    ?Subroutine0
+   \   000007   80..         SJMP    ?Subroutine0
     180          
     181          
     182          /**************************************************************************************************
@@ -429,34 +425,31 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\ha
    \   00002A   6F           XRL     A,R7
    \                     ??Hal_ProcessEvent_5:
    \   00002B   FB           MOV     R3,A
-   \   00002C   8029         SJMP    ??Hal_ProcessEvent_6
+   \   00002C   8026         SJMP    ??Hal_ProcessEvent_6
     212            }
     213          
     214            if ( events & HAL_LED_BLINK_EVENT )
    \                     ??Hal_ProcessEvent_1:
    \   00002E   EE           MOV     A,R6
    \   00002F   5402         ANL     A,#0x2
-   \   000031   600A         JZ      ??Hal_ProcessEvent_7
+   \   000031   6006         JZ      ??Hal_ProcessEvent_7
     215            {
     216          #if (defined (BLINK_LEDS)) && (HAL_LED == TRUE)
     217              HalLedUpdate();
-   \   000033                ; Setup parameters for call to function HalLedUpdate
-   \   000033   12....       LCALL   ??HalLedUpdate?relay
     218          #endif /* BLINK_LEDS && HAL_LED */
     219              return events ^ HAL_LED_BLINK_EVENT;
-   \   000036   7402         MOV     A,#0x2
+   \   000033   7402         MOV     A,#0x2
    \                     ??Hal_ProcessEvent_8:
-   \   000038   6E           XRL     A,R6
-   \   000039   FA           MOV     R2,A
-   \   00003A   EF           MOV     A,R7
-   \   00003B   80EE         SJMP    ??Hal_ProcessEvent_5
+   \   000035   6E           XRL     A,R6
+   \   000036   FA           MOV     R2,A
+   \   000037   801B         SJMP    ??Hal_ProcessEvent_6
     220            }
     221          
     222            if (events & HAL_KEY_EVENT)
    \                     ??Hal_ProcessEvent_7:
-   \   00003D   EE           MOV     A,R6
-   \   00003E   A2E0         MOV     C,0xE0 /* A   */.0
-   \   000040   5006         JNC     ??Hal_ProcessEvent_9
+   \   000039   EE           MOV     A,R6
+   \   00003A   A2E0         MOV     C,0xE0 /* A   */.0
+   \   00003C   5004         JNC     ??Hal_ProcessEvent_9
     223            {
     224          
     225          #if (defined HAL_KEY) && (HAL_KEY == TRUE)
@@ -471,24 +464,25 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\ha
     234          #endif // HAL_KEY
     235          
     236              return events ^ HAL_KEY_EVENT;
-   \   000042   7401         MOV     A,#0x1
-   \   000044   6E           XRL     A,R6
-   \   000045   FA           MOV     R2,A
-   \   000046   800F         SJMP    ??Hal_ProcessEvent_6
+   \   00003E   7401         MOV     A,#0x1
+   \   000040   80F3         SJMP    ??Hal_ProcessEvent_8
     237            }
     238          
     239          #ifdef POWER_SAVING
     240            if ( events & HAL_SLEEP_TIMER_EVENT )
    \                     ??Hal_ProcessEvent_9:
-   \   000048   5404         ANL     A,#0x4
-   \   00004A   6007         JZ      ??Hal_ProcessEvent_10
+   \   000042   5404         ANL     A,#0x4
+   \   000044   600A         JZ      ??Hal_ProcessEvent_10
     241            {
     242              halRestoreSleepLevel();
-   \   00004C                ; Setup parameters for call to function halRestoreSleepLevel
-   \   00004C   12....       LCALL   ??halRestoreSleepLevel?relay
+   \   000046                ; Setup parameters for call to function halRestoreSleepLevel
+   \   000046   12....       LCALL   ??halRestoreSleepLevel?relay
     243              return events ^ HAL_SLEEP_TIMER_EVENT;
-   \   00004F   7404         MOV     A,#0x4
-   \   000051   80E5         SJMP    ??Hal_ProcessEvent_8
+   \   000049   7404         MOV     A,#0x4
+   \   00004B   6E           XRL     A,R6
+   \   00004C   FA           MOV     R2,A
+   \   00004D   EF           MOV     A,R7
+   \   00004E   80DB         SJMP    ??Hal_ProcessEvent_5
     244            }
     245          #endif
     246          
@@ -503,11 +497,11 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\ha
     255            /* Nothing interested, discard the message */
     256            return 0;
    \                     ??Hal_ProcessEvent_10:
-   \   000053   7A00         MOV     R2,#0x0
-   \   000055   7B00         MOV     R3,#0x0
+   \   000050   7A00         MOV     R2,#0x0
+   \   000052   7B00         MOV     R3,#0x0
    \                     ??Hal_ProcessEvent_6:
-   \   000057   7F02         MOV     R7,#0x2
-   \   000059   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   000054   7F02         MOV     R7,#0x2
+   \   000056   02....       LJMP    ?BANKED_LEAVE_XDATA
     257          
     258          }
     259          
@@ -591,15 +585,12 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\ha
      Function                  ISTACK PSTACK XSTACK
      --------                  ------ ------ ------
      HalDriverInit                 2      0      0
-       -> HalAdcInit               4      0      0
-       -> HalLedInit               4      0      0
        -> HalUARTInit              4      0      0
      Hal_Init                      2      0      0
      Hal_ProcessEvent              0      0     10
        -> osal_msg_receive         0      0     20
        -> osal_msg_deallocate      0      0     20
        -> osal_msg_receive         0      0     20
-       -> HalLedUpdate             0      0     20
        -> halRestoreSleepLevel     0      0     20
      Hal_ProcessPoll               2      0      0
        -> HalUARTPoll              4      0      0
@@ -612,8 +603,8 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\ha
      Hal_TaskID                  1
      Hal_Init                    9
      ?Subroutine0                7
-     HalDriverInit              15
-     Hal_ProcessEvent           92
+     HalDriverInit               9
+     Hal_ProcessEvent           89
      Hal_ProcessPoll            12
      ??Hal_Init?relay            6
      ??HalDriverInit?relay       6
@@ -621,11 +612,11 @@ C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\hal\common\ha
      ??Hal_ProcessPoll?relay     6
 
  
- 135 bytes in segment BANKED_CODE
+ 126 bytes in segment BANKED_CODE
   24 bytes in segment BANK_RELAYS
    1 byte  in segment XDATA_Z
  
- 159 bytes of CODE  memory
+ 150 bytes of CODE  memory
    1 byte  of XDATA memory
 
 Errors: none

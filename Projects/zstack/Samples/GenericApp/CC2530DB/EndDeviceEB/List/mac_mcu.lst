@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR C/C++ Compiler V7.60.1.40026 for 8051             13/Apr/2014  19:30:54 #
+# IAR C/C++ Compiler V7.60.1.40026 for 8051             04/May/2014  15:12:44 #
 # Copyright (C) 2004-2010 IAR Systems AB.                                     #
 #                                                                             #
 #    Core               =  plain                                              #
@@ -9,17 +9,19 @@
 #    Calling convention =  xdata reentrant                                    #
 #    Constant location  =  data_rom                                           #
 #    Dptr setup         =  1,16                                               #
-#    Source file        =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Compo #
-#                          nents\mac\low_level\srf04\single_chip\mac_mcu.c    #
-#    Command line       =  -f E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
-#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
-#                          \Tools\CC2530DB\f8wEndev.cfg (-DCPU32MHZ           #
-#                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3         #
-#                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f          #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\To #
-#                          ols\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO            #
-#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#    Source file        =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Components\mac\low_level\srf04\single_chip\m #
+#                          ac_mcu.c                                           #
+#    Command line       =  -f C:\Users\John\Dropbox\grad_proj\zstack-cc2530-e #
+#                          nddevice\Projects\zstack\Samples\GenericApp\CC2530 #
+#                          DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg            #
+#                          (-DCPU32MHZ -DROOT=__near_func                     #
+#                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6         #
+#                          -DMAC_CFG_RX_MAX=3) -f C:\Users\John\Dropbox\grad_ #
+#                          proj\zstack-cc2530-enddevice\Projects\zstack\Sampl #
+#                          es\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8w #
+#                          Config.cfg (-DZIGBEEPRO -DSECURE=0                 #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
 #                          -DDEFAULT_CHANLIST=0x00000800                      #
 #                          -DZDAPP_CONFIG_PAN_ID=0x1111                       #
 #                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
@@ -41,101 +43,105 @@
 #                          __code" -DGENERIC=__generic                        #
 #                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=8000        #
 #                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
-#                          -DREJOIN_POLL_RATE=440 E:\Dropbox\grad_proj\zstack #
-#                          -cc2530-enddevice\Components\mac\low_level\srf04\s #
-#                          ingle_chip\mac_mcu.c -D HAL_ADC -D HAL_KEY=FALSE   #
-#                          -D HAL_LCD=FALSE -D NWK_AUTO_POLL -D ZTOOL_P1 -D   #
+#                          -DREJOIN_POLL_RATE=440 C:\Users\John\Dropbox\grad_ #
+#                          proj\zstack-cc2530-enddevice\Components\mac\low_le #
+#                          vel\srf04\single_chip\mac_mcu.c -D HAL_ADC=FALSE   #
+#                          -D HAL_KEY=FALSE -D HAL_LED=FALSE -D               #
+#                          HAL_LCD=FALSE -D NWK_AUTO_POLL -D ZTOOL_P1 -D      #
 #                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D           #
 #                          POWER_SAVING -D NV_STORE -lC                       #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
-#                          \List\ -lA E:\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
 #                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          EndDeviceEB\List\ --diag_suppress Pe001,Pa010 -o   #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
-#                          \Obj\ -e --require_prototypes --no_code_motion     #
-#                          --debug --core=plain --dptr=16,1                   #
+#                          EndDeviceEB\List\ -lA C:\Users\John\Dropbox\grad_p #
+#                          roj\zstack-cc2530-enddevice\Projects\zstack\Sample #
+#                          s\GenericApp\CC2530DB\EndDeviceEB\List\            #
+#                          --diag_suppress Pe001,Pa010 -o                     #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          EndDeviceEB\Obj\ -e --require_prototypes           #
+#                          --no_code_motion --debug --core=plain --dptr=16,1  #
 #                          --data_model=large --code_model=banked             #
 #                          --calling_convention=xdata_reentrant               #
 #                          --place_constants=data_rom --nr_virtual_regs 16    #
-#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
-#                          ojects\zstack\Samples\GenericApp\CC2530DB\ -I      #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\..\Source\  #
-#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
-#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
-#                          \ZMain\TI2530DB\ -I E:\Dropbox\grad_proj\zstack-cc #
-#                          2530-enddevice\Projects\zstack\Samples\GenericApp\ #
-#                          CC2530DB\..\..\..\..\..\Components\hal\include\    #
-#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
-#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
-#                          \..\..\Components\hal\target\CC2530EB\ -I          #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
-#                          \..\Components\mac\include\ -I                     #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
-#                          \..\Components\mac\high_level\ -I                  #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
-#                          \..\Components\mac\low_level\srf04\ -I             #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
-#                          \..\Components\mac\low_level\srf04\single_chip\    #
-#                          -I E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Pr #
-#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
-#                          \..\..\Components\mt\ -I                           #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
-#                          \..\Components\osal\include\ -I                    #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
-#                          \..\Components\osal\mcu\ccsoc\ -I                  #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
-#                          \..\Components\services\saddr\ -I                  #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
-#                          \..\Components\services\sdata\ -I                  #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
-#                          \..\Components\stack\af\ -I                        #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
-#                          \..\Components\stack\nwk\ -I                       #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
-#                          \..\Components\stack\sapi\ -I                      #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
-#                          \..\Components\stack\sec\ -I                       #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
-#                          \..\Components\stack\sys\ -I                       #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
-#                          \..\Components\stack\zdo\ -I                       #
-#                          E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
-#                          \..\Components\zmac\ -I E:\Dropbox\grad_proj\zstac #
-#                          k-cc2530-enddevice\Projects\zstack\Samples\Generic #
-#                          App\CC2530DB\..\..\..\..\..\Components\zmac\f8w\   #
-#                          -I "C:\Program Files\IAR Systems\Embedded          #
-#                          Workbench 5.4\8051\INC\" -I "C:\Program Files\IAR  #
-#                          Systems\Embedded Workbench 5.4\8051\INC\CLIB\"     #
-#                          -Ohz                                               #
-#    List file          =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
-#                          \List\mac_mcu.lst                                  #
-#    Object file        =  E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Proje #
-#                          cts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB #
-#                          \Obj\mac_mcu.r51                                   #
+#                          -I C:\Users\John\Dropbox\grad_proj\zstack-cc2530-e #
+#                          nddevice\Projects\zstack\Samples\GenericApp\CC2530 #
+#                          DB\ -I C:\Users\John\Dropbox\grad_proj\zstack-cc25 #
+#                          30-enddevice\Projects\zstack\Samples\GenericApp\CC #
+#                          2530DB\..\Source\ -I C:\Users\John\Dropbox\grad_pr #
+#                          oj\zstack-cc2530-enddevice\Projects\zstack\Samples #
+#                          \GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I   #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\hal\include\ -I          #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\hal\target\CC2530EB\ -I  #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\mac\include\ -I          #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\mac\high_level\ -I       #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\mac\low_level\srf04\ -I  #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\mac\low_level\srf04\sing #
+#                          le_chip\ -I C:\Users\John\Dropbox\grad_proj\zstack #
+#                          -cc2530-enddevice\Projects\zstack\Samples\GenericA #
+#                          pp\CC2530DB\..\..\..\..\..\Components\mt\ -I       #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\osal\include\ -I         #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\osal\mcu\ccsoc\ -I       #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\services\saddr\ -I       #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\services\sdata\ -I       #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\stack\af\ -I             #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\stack\nwk\ -I            #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\stack\sapi\ -I           #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\stack\sec\ -I            #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\stack\sys\ -I            #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\stack\zdo\ -I            #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\zmac\ -I                 #
+#                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\zmac\f8w\ -I             #
+#                          "C:\Program Files (x86)\IAR Systems\Embedded       #
+#                          Workbench 5.4\8051\INC\" -I "C:\Program Files      #
+#                          (x86)\IAR Systems\Embedded Workbench               #
+#                          5.4\8051\INC\CLIB\" -Ohz                           #
+#    List file          =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          EndDeviceEB\List\mac_mcu.lst                       #
+#    Object file        =  C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
+#                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
+#                          EndDeviceEB\Obj\mac_mcu.r51                        #
 #                                                                             #
 #                                                                             #
 ###############################################################################
 
-E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\single_chip\mac_mcu.c
+C:\Users\John\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\single_chip\mac_mcu.c
       1          /**************************************************************************************************
       2            Filename:       mac_mcu.c
       3            Revised:        $Date: 2010-10-05 16:20:03 -0700 (Tue, 05 Oct 2010) $
@@ -824,17 +830,17 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   00015D   12....       LCALL   ?DEALLOC_XSTACK8
    \   000160   7F02         MOV     R7,#0x2
    \   000162   02....       LJMP    ?BANKED_LEAVE_XDATA
-   \   000165                REQUIRE IEN2
-   \   000165                REQUIRE IP0
-   \   000165                REQUIRE T2M1
    \   000165                REQUIRE T2CTRL
-   \   000165                REQUIRE _A_IEN0
+   \   000165                REQUIRE IEN2
    \   000165                REQUIRE CLKCONSTA
    \   000165                REQUIRE T2M0
+   \   000165                REQUIRE T2M1
+   \   000165                REQUIRE _A_IEN0
+   \   000165                REQUIRE IP0
+   \   000165                REQUIRE _A_IEN1
+   \   000165                REQUIRE IP1
    \   000165                REQUIRE RNDL
    \   000165                REQUIRE T2MSEL
-   \   000165                REQUIRE IP1
-   \   000165                REQUIRE _A_IEN1
     329          
     330          
     331          /**************************************************************************************************
@@ -866,8 +872,8 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
     348            return(RNDH);
    \   000008   A9BD         MOV     R1,0xbd
    \   00000A   02....       LJMP    ?BRET
-   \   00000D                REQUIRE RNDH
    \   00000D                REQUIRE ADCCON1
+   \   00000D                REQUIRE RNDH
     349          }
     350          
     351          
@@ -913,9 +919,9 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   000011   39           ADDC    A,R1
    \   000012   FB           MOV     R3,A
    \   000013   02....       LJMP    ?BRET
-   \   000016                REQUIRE RNDH
-   \   000016                REQUIRE RNDL
    \   000016                REQUIRE ADCCON1
+   \   000016                REQUIRE RNDL
+   \   000016                REQUIRE RNDH
     376          }
     377          
     378          
@@ -956,9 +962,9 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   000011   92AF         MOV     0xa8.7,C
     398          }
    \   000013   02....       LJMP    ?BRET
+   \   000016                REQUIRE T2M0
    \   000016                REQUIRE T2M1
    \   000016                REQUIRE _A_IEN0
-   \   000016                REQUIRE T2M0
    \   000016                REQUIRE T2MSEL
     399          
     400          /**************************************************************************************************
@@ -1004,9 +1010,9 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   000016   AA..         MOV     R2,?V0 + 0
    \   000018   D0..         POP     ?V0 + 0
    \   00001A   02....       LJMP    ?BRET
+   \   00001D                REQUIRE T2M0
    \   00001D                REQUIRE T2M1
    \   00001D                REQUIRE _A_IEN0
-   \   00001D                REQUIRE T2M0
    \   00001D                REQUIRE T2MSEL
     423          }
     424          
@@ -1052,11 +1058,11 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   000012   E5A2         MOV     A,0xa2
     451            ((uint8 *)&overflowCount)[UINT32_NDX0] = T2MOVF0;
    \   000014   02....       LJMP    ?Subroutine1 & 0xFFFF
-   \   000017                REQUIRE T2MOVF1
+   \   000017                REQUIRE T2M0
    \   000017                REQUIRE T2MOVF0
+   \   000017                REQUIRE T2MOVF1
    \   000017                REQUIRE T2MOVF2
    \   000017                REQUIRE _A_IEN0
-   \   000017                REQUIRE T2M0
    \   000017                REQUIRE T2MSEL
     452            ((uint8 *)&overflowCount)[UINT32_NDX1] = T2MOVF1;
     453            ((uint8 *)&overflowCount)[UINT32_NDX2] = T2MOVF2;
@@ -1160,8 +1166,8 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   00000F   75C310       MOV     0xc3,#0x10
     480            ((uint8 *)&overflowCapture)[UINT32_NDX0] = T2MOVF0;
    \   000012   02....       LJMP    ?Subroutine1 & 0xFFFF
-   \   000015                REQUIRE T2MOVF1
    \   000015                REQUIRE T2MOVF0
+   \   000015                REQUIRE T2MOVF1
    \   000015                REQUIRE T2MOVF2
    \   000015                REQUIRE _A_IEN0
    \   000015                REQUIRE T2MSEL
@@ -1270,8 +1276,8 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   00007C   EA           MOV     A,R2
    \   00007D   A2E7         MOV     C,0xE0 /* A   */.7
    \   00007F                REQUIRE ?Subroutine3
-   \   00007F                REQUIRE T2MOVF1
    \   00007F                REQUIRE T2MOVF0
+   \   00007F                REQUIRE T2MOVF1
    \   00007F                REQUIRE T2MOVF2
    \   00007F                REQUIRE _A_IEN0
    \   00007F                REQUIRE T2MSEL
@@ -1419,9 +1425,9 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   00006E   EA           MOV     A,R2
    \   00006F   A2E0         MOV     C,0xE0 /* A   */.0
    \   000071   02....       LJMP    ?Subroutine3 & 0xFFFF
-   \   000074                REQUIRE T2MOVF1
    \   000074                REQUIRE T2IRQF
    \   000074                REQUIRE T2MOVF0
+   \   000074                REQUIRE T2MOVF1
    \   000074                REQUIRE T2MOVF2
    \   000074                REQUIRE T2IRQM
    \   000074                REQUIRE _A_IEN0
@@ -1664,8 +1670,8 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   00005F   02....       LJMP    ??Subroutine8_0 & 0xFFFF
    \   000062                REQUIRE T2IRQF
    \   000062                REQUIRE T2IRQM
-   \   000062                REQUIRE T2MOVF1
    \   000062                REQUIRE T2MOVF0
+   \   000062                REQUIRE T2MOVF1
    \   000062                REQUIRE T2MOVF2
    \   000062                REQUIRE _A_IEN0
    \   000062                REQUIRE T2MSEL
@@ -1754,11 +1760,11 @@ E:\Dropbox\grad_proj\zstack-cc2530-enddevice\Components\mac\low_level\srf04\sing
    \   00005A   78..         MOV     R0,#?V0 + 0
    \   00005C   12....       LCALL   ?L_ADD_X
    \   00005F   02....       LJMP    ??Subroutine7_0 & 0xFFFF
-   \   000062                REQUIRE T2MOVF1
+   \   000062                REQUIRE T2M0
    \   000062                REQUIRE T2MOVF0
+   \   000062                REQUIRE T2MOVF1
    \   000062                REQUIRE T2MOVF2
    \   000062                REQUIRE _A_IEN0
-   \   000062                REQUIRE T2M0
    \   000062                REQUIRE T2MSEL
     724          }
     725          

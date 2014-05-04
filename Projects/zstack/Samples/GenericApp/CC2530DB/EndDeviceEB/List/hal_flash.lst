@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR C/C++ Compiler V7.60.1.40026 for 8051             29/Apr/2014  20:55:16 #
+# IAR C/C++ Compiler V7.60.1.40026 for 8051             04/May/2014  15:12:48 #
 # Copyright (C) 2004-2010 IAR Systems AB.                                     #
 #                                                                             #
 #    Core               =  plain                                              #
@@ -44,16 +44,16 @@
 #                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
 #                          -DREJOIN_POLL_RATE=440 C:\Users\John\Dropbox\grad_ #
 #                          proj\zstack-cc2530-enddevice\Components\hal\target #
-#                          \CC2530EB\hal_flash.c -D HAL_ADC -D HAL_KEY=FALSE  #
-#                          -D HAL_LCD=FALSE -D NWK_AUTO_POLL -D ZTOOL_P1 -D   #
-#                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D           #
-#                          POWER_SAVING -D NV_STORE -lC                       #
+#                          \CC2530EB\hal_flash.c -D HAL_ADC=FALSE -D          #
+#                          HAL_KEY=FALSE -D HAL_LED=FALSE -D HAL_LCD=FALSE    #
+#                          -D NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D         #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D POWER_SAVING -D      #
+#                          NV_STORE -lC C:\Users\John\Dropbox\grad_proj\zstac #
+#                          k-cc2530-enddevice\Projects\zstack\Samples\Generic #
+#                          App\CC2530DB\EndDeviceEB\List\ -lA                 #
 #                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
 #                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
-#                          EndDeviceEB\List\ -lA C:\Users\John\Dropbox\grad_p #
-#                          roj\zstack-cc2530-enddevice\Projects\zstack\Sample #
-#                          s\GenericApp\CC2530DB\EndDeviceEB\List\            #
-#                          --diag_suppress Pe001,Pa010 -o                     #
+#                          EndDeviceEB\List\ --diag_suppress Pe001,Pa010 -o   #
 #                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-endd #
 #                          evice\Projects\zstack\Samples\GenericApp\CC2530DB\ #
 #                          EndDeviceEB\Obj\ -e --require_prototypes           #

@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR C/C++ Compiler V7.60.1.40026 for 8051            04/May/2014  10:56:19 /
+// IAR C/C++ Compiler V7.60.1.40026 for 8051            04/May/2014  15:22:42 /
 // Copyright (C) 2004-2010 IAR Systems AB.                                    /
 //                                                                            /
 //    Core               =  plain                                             /
@@ -45,13 +45,14 @@
 //                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
 //                          -DREJOIN_POLL_RATE=440 C:\Users\John\Dropbox\grad /
 //                          _proj\zstack-cc2530-enddevice\Projects\zstack\Sam /
-//                          ples\GenericApp\Source\GenericApp.c -D HAL_ADC    /
-//                          -D HAL_KEY=FALSE -D HAL_LCD=FALSE -D              /
-//                          NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D           /
-//                          MT_SYS_FUNC -D MT_ZDO_FUNC -D POWER_SAVING -D     /
-//                          NV_STORE -lC C:\Users\John\Dropbox\grad_proj\zsta /
-//                          ck-cc2530-enddevice\Projects\zstack\Samples\Gener /
-//                          icApp\CC2530DB\EndDeviceEB\List\ -lA              /
+//                          ples\GenericApp\Source\GenericApp.c -D            /
+//                          HAL_ADC=FALSE -D HAL_KEY=FALSE -D HAL_LED=FALSE   /
+//                          -D HAL_LCD=FALSE -D NWK_AUTO_POLL -D ZTOOL_P1 -D  /
+//                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D          /
+//                          POWER_SAVING -D NV_STORE -lC                      /
+//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
+//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
+//                          B\EndDeviceEB\List\ -lA                           /
 //                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
 //                          device\Projects\zstack\Samples\GenericApp\CC2530D /
 //                          B\EndDeviceEB\List\ --diag_suppress Pe001,Pa010   /
@@ -212,7 +213,7 @@
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         LOCFRAME ISTACK, 2, STACK
-        LOCFRAME XSTACK, 29, STACK
+        LOCFRAME XSTACK, 30, STACK
         PUBLIC GenericApp_SimpleDesc
         PUBLIC GenericApp_TaskID
         PUBLIC GenericApp_TransID
@@ -388,14 +389,12 @@ ZDO_ParseEPListRsp  SYMBOL "ZDO_ParseEPListRsp"
 osal_mem_free       SYMBOL "osal_mem_free"
 osal_memcpy         SYMBOL "osal_memcpy"
 HalUARTWrite        SYMBOL "HalUARTWrite"
-HalI2CSend          SYMBOL "HalI2CSend"
 ReadSensorTempData  SYMBOL "ReadSensorTempData"
+HalI2CSend          SYMBOL "HalI2CSend"
 HalI2CReceive       SYMBOL "HalI2CReceive"
 osal_buffer_uint16  SYMBOL "osal_buffer_uint16"
-HalAdcRead          SYMBOL "HalAdcRead"
 AF_DataRequest      SYMBOL "AF_DataRequest"
 ??AF_DataRequest?relay SYMBOL "?relay", AF_DataRequest
-??HalAdcRead?relay  SYMBOL "?relay", HalAdcRead
 ??HalI2CInit?relay  SYMBOL "?relay", HalI2CInit
 ??HalI2CReceive?relay SYMBOL "?relay", HalI2CReceive
 ??HalI2CSend?relay  SYMBOL "?relay", HalI2CSend
@@ -520,55 +519,46 @@ GenericApp_SendTheMessage SYMBOL "GenericApp_SendTheMessage"
         FUNCTION HalUARTWrite,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 20, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN HalI2CSend
-        FUNCTION HalI2CSend,0202H
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 20, STACK
+        ARGFRAME XSTACK, 18, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN ReadSensorTempData
         FUNCTION ReadSensorTempData,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 20, STACK
+        ARGFRAME XSTACK, 21, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN HalI2CSend
+        FUNCTION HalI2CSend,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 21, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN HalI2CReceive
         FUNCTION HalI2CReceive,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 20, STACK
+        ARGFRAME XSTACK, 21, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN osal_buffer_uint16
         FUNCTION osal_buffer_uint16,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 20, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN HalAdcRead
-        FUNCTION HalAdcRead,0202H
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 20, STACK
+        ARGFRAME XSTACK, 21, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN AF_DataRequest
         FUNCTION AF_DataRequest,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 29, STACK
+        ARGFRAME XSTACK, 30, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN ??AF_DataRequest?relay
         FUNCTION ??AF_DataRequest?relay,00H
-        EXTERN ??HalAdcRead?relay
-        FUNCTION ??HalAdcRead?relay,00H
         EXTERN ??HalI2CInit?relay
         FUNCTION ??HalI2CInit?relay,00H
         EXTERN ??HalI2CReceive?relay
@@ -1372,17 +1362,6 @@ GenericApp_ProcessZDOMsgs:
         ARGFRAME XSTACK, 10, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL GenericApp_ProcessZDOMsgs, HalLedSet
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 10, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 10, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL GenericApp_ProcessZDOMsgs, ZDO_ParseEPListRsp
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -1466,13 +1445,12 @@ GenericApp_ProcessZDOMsgs:
         MOV     DPH,A
         MOV     DPL,R0
         MOVX    A,@DPTR
-        JNZ     ??GenericApp_ProcessZDOMsgs_3
+        JNZ     ??GenericApp_ProcessZDOMsgs_2
 //  339       {
 //  340         // Light LED
 //  341         HalLedSet( HAL_LED_4, HAL_LED_MODE_ON );
         ; Setup parameters for call to function HalLedSet
         MOV     R2,#0x1
-??GenericApp_ProcessZDOMsgs_4:
         MOV     R1,#0x8
         LCALL   ??HalLedSet?relay
         SJMP    ??GenericApp_ProcessZDOMsgs_2
@@ -1482,10 +1460,6 @@ GenericApp_ProcessZDOMsgs:
 //  345       {
 //  346         // Flash LED to show failure
 //  347         HalLedSet ( HAL_LED_4, HAL_LED_MODE_FLASH );
-??GenericApp_ProcessZDOMsgs_3:
-        ; Setup parameters for call to function HalLedSet
-        MOV     R2,#0x4
-        SJMP    ??GenericApp_ProcessZDOMsgs_4
 //  348       }
 //  349 #endif
 //  350       break;
@@ -1502,21 +1476,21 @@ GenericApp_ProcessZDOMsgs:
         MOV     R7,?V0 + 1
 //  355         if ( pRsp )
         MOV     A,R6
-        JNZ     ??GenericApp_ProcessZDOMsgs_5
+        JNZ     ??GenericApp_ProcessZDOMsgs_3
         MOV     A,R7
-??GenericApp_ProcessZDOMsgs_5:
+??GenericApp_ProcessZDOMsgs_3:
         JZ      ??GenericApp_ProcessZDOMsgs_2
 //  356         {
 //  357           if ( pRsp->status == ZSuccess && pRsp->cnt )
         MOV     DPL,R6
         MOV     DPH,R7
         MOVX    A,@DPTR
-        JNZ     ??GenericApp_ProcessZDOMsgs_6
+        JNZ     ??GenericApp_ProcessZDOMsgs_4
         INC     DPTR
         INC     DPTR
         INC     DPTR
         MOVX    A,@DPTR
-        JZ      ??GenericApp_ProcessZDOMsgs_6
+        JZ      ??GenericApp_ProcessZDOMsgs_4
 //  358           {
 //  359             GenericApp_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;
         MOV     A,#0x2
@@ -1557,7 +1531,7 @@ GenericApp_ProcessZDOMsgs:
         LCALL   ??HalLedSet?relay
 //  366           }
 //  367           osal_mem_free( pRsp );
-??GenericApp_ProcessZDOMsgs_6:
+??GenericApp_ProcessZDOMsgs_4:
         ; Setup parameters for call to function osal_mem_free
         MOV     A,R6
         MOV     R2,A
@@ -1795,103 +1769,59 @@ GenericApp_SendTheMessage:
         CFI Block cfiBlock8 Using cfiCommon0
         CFI Function GenericApp_SendTheMessage
 //  416 {
-        FUNCALL GenericApp_SendTheMessage, HalI2CSend
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 20, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 20, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL GenericApp_SendTheMessage, HalUARTWrite
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 20, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 20, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL GenericApp_SendTheMessage, ReadSensorTempData
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 20, STACK
+        LOCFRAME XSTACK, 21, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 20, STACK
+        ARGFRAME XSTACK, 21, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL GenericApp_SendTheMessage, HalI2CSend
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 20, STACK
+        LOCFRAME XSTACK, 21, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 20, STACK
+        ARGFRAME XSTACK, 21, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL GenericApp_SendTheMessage, HalI2CReceive
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 20, STACK
+        LOCFRAME XSTACK, 21, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 20, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL GenericApp_SendTheMessage, HalUARTWrite
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 20, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 20, STACK
+        ARGFRAME XSTACK, 21, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL GenericApp_SendTheMessage, osal_buffer_uint16
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 20, STACK
+        LOCFRAME XSTACK, 21, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 20, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL GenericApp_SendTheMessage, HalAdcRead
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 20, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 20, STACK
+        ARGFRAME XSTACK, 21, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL GenericApp_SendTheMessage, AF_DataRequest
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 29, STACK
+        LOCFRAME XSTACK, 30, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 29, STACK
+        ARGFRAME XSTACK, 30, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         MOV     A,#-0xa
@@ -1909,76 +1839,58 @@ GenericApp_SendTheMessage:
         CFI CFA_SP SP+0
         CFI CFA_XSP16 add(XSP16, 10)
         ; Saved register size: 10
-        ; Auto size: 10
-        MOV     A,#-0xa
+        ; Auto size: 11
+        MOV     A,#-0xb
         LCALL   ?ALLOC_XSTACK8
-        CFI CFA_XSP16 add(XSP16, 20)
-//  417   unsigned char theMessageData[6] = "";
-        MOV     A,#0x1
+        CFI CFA_XSP16 add(XSP16, 21)
+//  417   unsigned char theMessageData[8] = "";
+        MOV     A,#0x3
         LCALL   ?XSTACK_DISP0_8
         MOV     R4,DPL
         MOV     R5,DPH
         MOV     DPH,#((`?<Constant "">_1` >> 8) & 0xff)
         MOV     DPL,#(`?<Constant "">_1` & 0xff)
-        MOV     A,#0x6
+        MOV     A,#0x8
         LCALL   ?MOVE_LONG8_XDATA_XDATA
-//  418   unsigned char temp_data[3] ="";
+//  418   unsigned char temp_data[2] ="";
+        MOV     A,#0x1
+        LCALL   ?XSTACK_DISP0_8
+        MOV     R4,DPL
+        MOV     R5,DPH
         MOV     DPH,#((`?<Constant "">_2` >> 8) & 0xff)
         MOV     DPL,#(`?<Constant "">_2` & 0xff)
-        MOV     A,#0x3
+        MOV     A,#0x2
         LCALL   ?MOVE_LONG8_XDATA_XDATA
 //  419   unsigned char config = 0x9C;
         MOV     A,#-0x64
         MOV     DPL,?XSP + 0
         MOV     DPH,?XSP + 1
         MOVX    @DPTR,A
-//  420   unsigned int adc_data = 0;
+//  420   //unsigned int adc_data = 0;
 //  421   unsigned int sensor_data = 0;
 //  422   //address or device info in theMessageData
 //  423   theMessageData[0] = 0xCC; //beginning check code
-        MOV     A,#0x1
+        MOV     A,#0x3
         LCALL   ?XSTACK_DISP0_8
         MOV     A,#-0x34
         MOVX    @DPTR,A
 //  424   //Byte 1 : high 3 bits are the address of coordinator, low 5 bits are the address of end divice
 //  425   theMessageData[1] = 0x21; //coordinator 001b, end device 00001b
-        MOV     A,#0x2
+        MOV     A,#0x4
         LCALL   ?XSTACK_DISP0_8
         MOV     A,#0x21
         MOVX    @DPTR,A
 //  426   theMessageData[2] = 0xC3; //2nd and 3rd byte of theMessageData is reserved or as check code
-        MOV     A,#0x3
+        MOV     A,#0x5
         LCALL   ?XSTACK_DISP0_8
         MOV     A,#-0x3d
         MOVX    @DPTR,A
-//  427   if(HalI2CSend(0x90, &config, 1)) {
-        ; Setup parameters for call to function HalI2CSend
-        MOV     R4,#0x1
-        MOV     R5,#0x0
-        MOV     DPL,?XSP + 0
-        MOV     DPH,?XSP + 1
-        MOV     R2,DPL
-        MOV     R3,DPH
-        MOV     R1,#-0x70
-        LCALL   ??HalI2CSend?relay
-        MOV     A,R1
-        JZ      ??GenericApp_SendTheMessage_0
-//  428     HalUARTWrite(0,"no", 3);
-        ; Setup parameters for call to function HalUARTWrite
-        MOV     R4,#0x3
-        MOV     R5,#0x0
-        MOV     R2,#(`?<Constant "no">` & 0xff)
-        MOV     R3,#((`?<Constant "no">` >> 8) & 0xff)
-        MOV     R1,#0x0
-        LCALL   ??HalUARTWrite?relay
-//  429   }
-//  430   sensor_data = ReadSensorTempData();
-??GenericApp_SendTheMessage_0:
+//  427   sensor_data = ReadSensorTempData();
         ; Setup parameters for call to function ReadSensorTempData
         LCALL   ??ReadSensorTempData?relay
         MOV     ?V0 + 0,R2
         MOV     ?V0 + 1,R3
-//  431   HalI2CSend(0x90, &config, 1);
+//  428   if(HalI2CSend(0x90, &config, 1)) {
         ; Setup parameters for call to function HalI2CSend
         MOV     R4,#0x1
         MOV     R5,#0x0
@@ -1988,80 +1900,90 @@ GenericApp_SendTheMessage:
         MOV     R3,DPH
         MOV     R1,#-0x70
         LCALL   ??HalI2CSend?relay
-//  432   if(HalI2CReceive(0x91, &temp_data[0], 3)) {
+//  429     //problem in i2c
+//  430   }
+//  431   if(HalI2CReceive(0x91, &temp_data[0], 2)) {
         ; Setup parameters for call to function HalI2CReceive
-        MOV     R4,#0x3
+        MOV     R4,#0x2
         MOV     R5,#0x0
-        MOV     A,#0x7
+        MOV     A,#0x1
         LCALL   ?XSTACK_DISP0_8
         MOV     R2,DPL
         MOV     R3,DPH
         MOV     R1,#-0x6f
         LCALL   ??HalI2CReceive?relay
-        MOV     A,R1
-        JZ      ??GenericApp_SendTheMessage_1
-//  433     HalUARTWrite(0,"n0", 3);
-        ; Setup parameters for call to function HalUARTWrite
-        MOV     R4,#0x3
-        MOV     R5,#0x0
-        MOV     R2,#(`?<Constant "n0">` & 0xff)
-        MOV     R3,#((`?<Constant "n0">` >> 8) & 0xff)
-        MOV     R1,#0x0
-        LCALL   ??HalUARTWrite?relay
-//  434   }
-//  435   osal_buffer_uint16(&theMessageData[3], sensor_data); //4,5th byte of theMessageData store the temp
-??GenericApp_SendTheMessage_1:
+//  432     //problem in i2c
+//  433   }
+//  434   osal_buffer_uint16(&theMessageData[3], sensor_data); //4,5th byte of theMessageData store the temp
         ; Setup parameters for call to function osal_buffer_uint16
         MOV     R4,?V0 + 0
         MOV     R5,?V0 + 1
-        MOV     A,#0x4
+        MOV     A,#0x6
         LCALL   ?XSTACK_DISP0_8
         MOV     R2,DPL
         MOV     R3,DPH
         LCALL   ??osal_buffer_uint16?relay
-//  436   theMessageData[5] = 0x33; //end check code
-        MOV     A,#0x6
+//  435   theMessageData[5] = temp_data[0];
+        MOV     A,#0x1
+        LCALL   ?XSTACK_DISP0_8
+        MOVX    A,@DPTR
+        PUSH    A
+        CFI CFA_SP SP+-1
+        MOV     A,#0x8
+        LCALL   ?XSTACK_DISP0_8
+        POP     A
+        CFI CFA_SP SP+0
+        MOVX    @DPTR,A
+//  436   theMessageData[6] = temp_data[1];
+        MOV     A,#0x2
+        LCALL   ?XSTACK_DISP0_8
+        MOVX    A,@DPTR
+        PUSH    A
+        CFI CFA_SP SP+-1
+        MOV     A,#0x9
+        LCALL   ?XSTACK_DISP0_8
+        POP     A
+        CFI CFA_SP SP+0
+        MOVX    @DPTR,A
+//  437   theMessageData[7] = 0x33; //end check code
+        MOV     A,#0xa
         LCALL   ?XSTACK_DISP0_8
         MOV     A,#0x33
         MOVX    @DPTR,A
-//  437   adc_data = HalAdcRead(HAL_ADC_CHN_AIN0,HAL_ADC_RESOLUTION_14);
-        ; Setup parameters for call to function HalAdcRead
-        MOV     R2,#0x4
-        MOV     R1,#0x0
-        LCALL   ??HalAdcRead?relay
-//  438   //printf("ADC:%d", temp_data);
-//  439   if ( AF_DataRequest( &GenericApp_DstAddr, &GenericApp_epDesc,
-//  440                        GENERICAPP_CLUSTERID,
-//  441                        6,//(byte)osal_strlen( theMessageData ) + 1
-//  442                        theMessageData,
-//  443                        &GenericApp_TransID,
-//  444                        AF_DISCV_ROUTE, AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+//  438   //adc_data = HalAdcRead(HAL_ADC_CHN_AIN0,HAL_ADC_RESOLUTION_14);
+//  439   //printf("ADC:%d", temp_data);
+//  440   if ( AF_DataRequest( &GenericApp_DstAddr, &GenericApp_epDesc,
+//  441                        GENERICAPP_CLUSTERID,
+//  442                        9,//(byte)osal_strlen( theMessageData ) + 1
+//  443                        theMessageData,
+//  444                        &GenericApp_TransID,
+//  445                        AF_DISCV_ROUTE, AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
         ; Setup parameters for call to function AF_DataRequest
         MOV     ?V0 + 0,#0x1e
         MOV     R0,#?V0 + 0
         LCALL   ?PUSH_XSTACK_I_ONE
-        CFI CFA_XSP16 add(XSP16, 21)
+        CFI CFA_XSP16 add(XSP16, 22)
         MOV     ?V0 + 0,#(GenericApp_TransID & 0xff)
         MOV     ?V0 + 1,#((GenericApp_TransID >> 8) & 0xff)
         MOV     R0,#?V0 + 0
         LCALL   ?PUSH_XSTACK_I_TWO
-        CFI CFA_XSP16 add(XSP16, 23)
-        MOV     A,#0x4
+        CFI CFA_XSP16 add(XSP16, 24)
+        MOV     A,#0x6
         LCALL   ?XSTACK_DISP0_8
         MOV     ?V0 + 0,DPL
         MOV     ?V0 + 1,DPH
         MOV     R0,#?V0 + 0
         LCALL   ?PUSH_XSTACK_I_TWO
-        CFI CFA_XSP16 add(XSP16, 25)
-        MOV     ?V0 + 0,#0x6
+        CFI CFA_XSP16 add(XSP16, 26)
+        MOV     ?V0 + 0,#0x9
         MOV     ?V0 + 1,#0x0
         MOV     R0,#?V0 + 0
         LCALL   ?PUSH_XSTACK_I_TWO
-        CFI CFA_XSP16 add(XSP16, 27)
+        CFI CFA_XSP16 add(XSP16, 28)
         MOV     ?V0 + 0,#0x1
         MOV     R0,#?V0 + 0
         LCALL   ?PUSH_XSTACK_I_TWO
-        CFI CFA_XSP16 add(XSP16, 29)
+        CFI CFA_XSP16 add(XSP16, 30)
         MOV     R1,#0x20
         MOV     R4,#(GenericApp_epDesc & 0xff)
         MOV     R5,#((GenericApp_epDesc >> 8) & 0xff)
@@ -2070,32 +1992,32 @@ GenericApp_SendTheMessage:
         LCALL   ??AF_DataRequest?relay
         MOV     A,#0x9
         LCALL   ?DEALLOC_XSTACK8
-        CFI CFA_XSP16 add(XSP16, 20)
+        CFI CFA_XSP16 add(XSP16, 21)
         MOV     A,R1
-        JZ      ??GenericApp_SendTheMessage_2
-//  445   {
-//  446     // Successfully requested to be sent.
-//  447   }
-//  448   else
-//  449   {
-//  450     // Error occurred in request to send.
-//  451     err_count++;
+        JZ      ??GenericApp_SendTheMessage_0
+//  446   {
+//  447     // Successfully requested to be sent.
+//  448   }
+//  449   else
+//  450   {
+//  451     // Error occurred in request to send.
+//  452     err_count++;
         MOV     DPTR,#err_count
         MOVX    A,@DPTR
         INC     A
         MOVX    @DPTR,A
-//  452     if (err_count == 3) {
+//  453     if (err_count == 3) {
         XRL     A,#0x3
-        JNZ     ??GenericApp_SendTheMessage_2
-//  453       err_count =0;
+        JNZ     ??GenericApp_SendTheMessage_0
+//  454       err_count =0;
         CLR     A
         MOVX    @DPTR,A
-//  454       //asm("LJMP 0x0");  // software reset
-//  455     }
-//  456   }
-//  457 }
-??GenericApp_SendTheMessage_2:
-        MOV     A,#0xa
+//  455       //asm("LJMP 0x0");  // software reset
+//  456     }
+//  457   }
+//  458 }
+??GenericApp_SendTheMessage_0:
+        MOV     A,#0xb
         LCALL   ?DEALLOC_XSTACK8
         CFI CFA_XSP16 add(XSP16, 10)
         LJMP    ?Subroutine0 & 0xFFFF
@@ -2141,37 +2063,27 @@ GenericApp_SendTheMessage:
         DATA
 `?<Constant "">_1`:
         DB ""
-        DB 0, 0, 0, 0, 0
+        DB 0, 0, 0, 0, 0, 0, 0
 
         RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
         DATA
 `?<Constant "">_2`:
         DB ""
-        DB 0, 0
-
-        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
-        DATA
-`?<Constant "no">`:
-        DB "no"
-
-        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
-        DATA
-`?<Constant "n0">`:
-        DB "n0"
+        DB 0
 
         END
-//  458 
-//  459 /*********************************************************************
-//  460 *********************************************************************/
+//  459 
+//  460 /*********************************************************************
+//  461 *********************************************************************/
 // 
-// 859 bytes in segment BANKED_CODE
+// 838 bytes in segment BANKED_CODE
 //  30 bytes in segment BANK_RELAYS
-//  36 bytes in segment XDATA_ROM_C
+//  31 bytes in segment XDATA_ROM_C
 //  22 bytes in segment XDATA_Z
 // 
-// 889 bytes of CODE  memory
-//  36 bytes of CONST memory
+// 868 bytes of CODE  memory
+//  31 bytes of CONST memory
 //  22 bytes of XDATA memory
 //
 //Errors: none
-//Warnings: 1
+//Warnings: none

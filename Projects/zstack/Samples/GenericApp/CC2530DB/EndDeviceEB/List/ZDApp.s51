@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR C/C++ Compiler V7.60.1.40026 for 8051            29/Apr/2014  20:55:11 /
+// IAR C/C++ Compiler V7.60.1.40026 for 8051            04/May/2014  15:12:47 /
 // Copyright (C) 2004-2010 IAR Systems AB.                                    /
 //                                                                            /
 //    Core               =  plain                                             /
@@ -44,10 +44,10 @@
 //                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
 //                          -DREJOIN_POLL_RATE=440 C:\Users\John\Dropbox\grad /
 //                          _proj\zstack-cc2530-enddevice\Components\stack\zd /
-//                          o\ZDApp.c -D HAL_ADC -D HAL_KEY=FALSE -D          /
-//                          HAL_LCD=FALSE -D NWK_AUTO_POLL -D ZTOOL_P1 -D     /
-//                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D          /
-//                          POWER_SAVING -D NV_STORE -lC                      /
+//                          o\ZDApp.c -D HAL_ADC=FALSE -D HAL_KEY=FALSE -D    /
+//                          HAL_LED=FALSE -D HAL_LCD=FALSE -D NWK_AUTO_POLL   /
+//                          -D ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D          /
+//                          MT_ZDO_FUNC -D POWER_SAVING -D NV_STORE -lC       /
 //                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
 //                          device\Projects\zstack\Samples\GenericApp\CC2530D /
 //                          B\EndDeviceEB\List\ -lA                           /
@@ -9041,17 +9041,6 @@ ZDO_NetworkFormationConfirmCB:
         ARGFRAME XSTACK, 9, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_NetworkFormationConfirmCB, HalLedSet
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 9, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 9, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL ZDO_NetworkFormationConfirmCB, osal_set_event
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -9100,29 +9089,23 @@ ZDO_NetworkFormationConfirmCB:
 // 2107 
 // 2108     if ( devState == DEV_HOLD )
 ??CrossCallReturnLabel_40:
-        JNZ     ??ZDO_NetworkFormationConfirmCB_1
+        JNZ     ??ZDO_NetworkFormationConfirmCB_0
 // 2109     {
 // 2110       // Began with HOLD_AUTO_START
 // 2111       devState = DEV_COORD_STARTING;
         MOV     A,#0x8
         MOVX    @DPTR,A
-        SJMP    ??ZDO_NetworkFormationConfirmCB_1
 // 2112     }
 // 2113   }
 // 2114 #if defined(BLINK_LEDS)
 // 2115   else
 // 2116   {
 // 2117     HalLedSet ( HAL_LED_3, HAL_LED_MODE_FLASH );  // Flash LED to show failure
-??ZDO_NetworkFormationConfirmCB_0:
-        ; Setup parameters for call to function HalLedSet
-        MOV     R2,#0x4
-        MOV     R1,#0x4
-        LCALL   ??HalLedSet?relay
 // 2118   }
 // 2119 #endif
 // 2120 
 // 2121   osal_set_event( ZDAppTaskID, ZDO_NETWORK_START );
-??ZDO_NetworkFormationConfirmCB_1:
+??ZDO_NetworkFormationConfirmCB_0:
         ; Setup parameters for call to function osal_set_event
         MOV     R2,#0x2
         LJMP    ?Subroutine0 & 0xFFFF
@@ -10307,17 +10290,6 @@ ZDO_StartRouterConfirmCB:
         ARGFRAME XSTACK, 9, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_StartRouterConfirmCB, HalLedSet
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 9, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 9, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL ZDO_StartRouterConfirmCB, osal_set_event
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -10360,29 +10332,23 @@ ZDO_StartRouterConfirmCB:
 // 2286     HalLedSet ( HAL_LED_4, HAL_LED_MODE_OFF);
 // 2287     if ( devState == DEV_HOLD )
 ??CrossCallReturnLabel_41:
-        JNZ     ??ZDO_StartRouterConfirmCB_1
+        JNZ     ??ZDO_StartRouterConfirmCB_0
 // 2288     {
 // 2289       // Began with HOLD_AUTO_START
 // 2290       devState = DEV_END_DEVICE;
         MOV     A,#0x6
         MOVX    @DPTR,A
-        SJMP    ??ZDO_StartRouterConfirmCB_1
 // 2291     }
 // 2292   }
 // 2293 #if defined(BLINK_LEDS)
 // 2294   else
 // 2295   {
 // 2296     HalLedSet( HAL_LED_3, HAL_LED_MODE_FLASH );  // Flash LED to show failure
-??ZDO_StartRouterConfirmCB_0:
-        ; Setup parameters for call to function HalLedSet
-        MOV     R2,#0x4
-        MOV     R1,#0x4
-        LCALL   ??HalLedSet?relay
 // 2297   }
 // 2298 #endif
 // 2299 
 // 2300   osal_set_event( ZDAppTaskID, ZDO_ROUTER_START );
-??ZDO_StartRouterConfirmCB_1:
+??ZDO_StartRouterConfirmCB_0:
         ; Setup parameters for call to function osal_set_event
         MOV     R2,#0x20
         LJMP    ?Subroutine0 & 0xFFFF
@@ -10493,17 +10459,6 @@ ZDO_JoinConfirmCB:
         ARGFRAME XSTACK, 14, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_JoinConfirmCB, HalLedSet
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 14, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 14, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL ZDO_JoinConfirmCB, ZDApp_SendMsg
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -10552,13 +10507,12 @@ ZDO_JoinConfirmCB:
 // 2325     HalLedSet ( HAL_LED_4, HAL_LED_MODE_OFF);
 // 2326     if ( (devState == DEV_HOLD) )
 ??CrossCallReturnLabel_42:
-        JNZ     ??ZDO_JoinConfirmCB_1
+        JNZ     ??ZDO_JoinConfirmCB_0
 // 2327     {
 // 2328       // Began with HOLD_AUTO_START
 // 2329       devState = DEV_NWK_JOINING;
         MOV     A,#0x3
         MOVX    @DPTR,A
-        SJMP    ??ZDO_JoinConfirmCB_1
 // 2330     }
 // 2331 
 // 2332     if ( !ZG_SECURE_ENABLED )
@@ -10571,24 +10525,19 @@ ZDO_JoinConfirmCB:
 // 2339   {
 // 2340 #if defined(BLINK_LEDS)
 // 2341     HalLedSet ( HAL_LED_3, HAL_LED_MODE_FLASH );  // Flash LED to show failure
-??ZDO_JoinConfirmCB_0:
-        ; Setup parameters for call to function HalLedSet
-        MOV     R2,#0x4
-        MOV     R1,#0x4
-        LCALL   ??HalLedSet?relay
 // 2342 #endif
 // 2343   }
 // 2344     
 // 2345   // Pass the join confirm to higher layer if callback registered
 // 2346   if (zdoCBFunc[ZDO_JOIN_CNF_CBID] != NULL )
-??ZDO_JoinConfirmCB_1:
+??ZDO_JoinConfirmCB_0:
         MOV     DPTR,#(zdoCBFunc + 8)
         MOVX    A,@DPTR
-        JNZ     ??ZDO_JoinConfirmCB_2
+        JNZ     ??ZDO_JoinConfirmCB_1
         INC     DPTR
         MOVX    A,@DPTR
-??ZDO_JoinConfirmCB_2:
-        JZ      ??ZDO_JoinConfirmCB_3
+??ZDO_JoinConfirmCB_1:
+        JZ      ??ZDO_JoinConfirmCB_2
 // 2347   {  
 // 2348     zdoJoinCnf_t joinCnf;
 // 2349     
@@ -10630,7 +10579,7 @@ ZDO_JoinConfirmCB:
 // 2356   
 // 2357   // Notify ZDApp
 // 2358   ZDApp_SendMsg( ZDAppTaskID, ZDO_NWK_JOIN_IND, sizeof(osal_event_hdr_t), (byte*)NULL );
-??ZDO_JoinConfirmCB_3:
+??ZDO_JoinConfirmCB_2:
         ; Setup parameters for call to function ZDApp_SendMsg
         MOV     R4,#0x0
         MOV     R5,#0x0
@@ -14355,14 +14304,14 @@ __Constant_3e8:
 // 2973 /*********************************************************************
 // 2974 *********************************************************************/
 // 
-// 4 963 bytes in segment BANKED_CODE
+// 4 936 bytes in segment BANKED_CODE
 //   378 bytes in segment BANK_RELAYS
 //    11 bytes in segment XDATA_I
 //    11 bytes in segment XDATA_ID
 //    12 bytes in segment XDATA_ROM_C
 //    50 bytes in segment XDATA_Z
 // 
-// 5 352 bytes of CODE  memory
+// 5 325 bytes of CODE  memory
 //     0 bytes of CONST memory (+ 12 bytes shared)
 //    61 bytes of XDATA memory
 //

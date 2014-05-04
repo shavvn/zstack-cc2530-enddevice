@@ -414,31 +414,32 @@ void GenericApp_MessageMSGCB( afIncomingMSGPacket_t *pkt )
  */
 void GenericApp_SendTheMessage( void )
 {
-  unsigned char theMessageData[6] = "";
-  unsigned char temp_data[3] ="";
+  unsigned char theMessageData[8] = "";
+  unsigned char temp_data[2] ="";
   unsigned char config = 0x9C;
-  unsigned int adc_data = 0;
+  //unsigned int adc_data = 0;
   unsigned int sensor_data = 0;
   //address or device info in theMessageData
   theMessageData[0] = 0xCC; //beginning check code
   //Byte 1 : high 3 bits are the address of coordinator, low 5 bits are the address of end divice
   theMessageData[1] = 0x21; //coordinator 001b, end device 00001b
   theMessageData[2] = 0xC3; //2nd and 3rd byte of theMessageData is reserved or as check code
-  if(HalI2CSend(0x90, &config, 1)) {
-    HalUARTWrite(0,"no", 3);
-  }
   sensor_data = ReadSensorTempData();
-  HalI2CSend(0x90, &config, 1);
-  if(HalI2CReceive(0x91, &temp_data[0], 3)) {
-    HalUARTWrite(0,"n0", 3);
+  if(HalI2CSend(0x90, &config, 1)) {
+    //problem in i2c
+  }
+  if(HalI2CReceive(0x91, &temp_data[0], 2)) {
+    //problem in i2c
   }
   osal_buffer_uint16(&theMessageData[3], sensor_data); //4,5th byte of theMessageData store the temp
-  theMessageData[5] = 0x33; //end check code
-  adc_data = HalAdcRead(HAL_ADC_CHN_AIN0,HAL_ADC_RESOLUTION_14);
+  theMessageData[5] = temp_data[0];
+  theMessageData[6] = temp_data[1];
+  theMessageData[7] = 0x33; //end check code
+  //adc_data = HalAdcRead(HAL_ADC_CHN_AIN0,HAL_ADC_RESOLUTION_14);
   //printf("ADC:%d", temp_data);
   if ( AF_DataRequest( &GenericApp_DstAddr, &GenericApp_epDesc,
                        GENERICAPP_CLUSTERID,
-                       6,//(byte)osal_strlen( theMessageData ) + 1
+                       9,//(byte)osal_strlen( theMessageData ) + 1
                        theMessageData,
                        &GenericApp_TransID,
                        AF_DISCV_ROUTE, AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )

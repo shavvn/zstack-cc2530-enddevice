@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR C/C++ Compiler V7.60.1.40026 for 8051            29/Apr/2014  20:55:16 /
+// IAR C/C++ Compiler V7.60.1.40026 for 8051            04/May/2014  15:13:04 /
 // Copyright (C) 2004-2010 IAR Systems AB.                                    /
 //                                                                            /
 //    Core               =  plain                                             /
@@ -44,13 +44,13 @@
 //                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
 //                          -DREJOIN_POLL_RATE=440 C:\Users\John\Dropbox\grad /
 //                          _proj\zstack-cc2530-enddevice\Components\hal\comm /
-//                          on\hal_drivers.c -D HAL_ADC -D HAL_KEY=FALSE -D   /
-//                          HAL_LCD=FALSE -D NWK_AUTO_POLL -D ZTOOL_P1 -D     /
-//                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D          /
-//                          POWER_SAVING -D NV_STORE -lC                      /
-//                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
-//                          device\Projects\zstack\Samples\GenericApp\CC2530D /
-//                          B\EndDeviceEB\List\ -lA                           /
+//                          on\hal_drivers.c -D HAL_ADC=FALSE -D              /
+//                          HAL_KEY=FALSE -D HAL_LED=FALSE -D HAL_LCD=FALSE   /
+//                          -D NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D        /
+//                          MT_SYS_FUNC -D MT_ZDO_FUNC -D POWER_SAVING -D     /
+//                          NV_STORE -lC C:\Users\John\Dropbox\grad_proj\zsta /
+//                          ck-cc2530-enddevice\Projects\zstack\Samples\Gener /
+//                          icApp\CC2530DB\EndDeviceEB\List\ -lA              /
 //                          C:\Users\John\Dropbox\grad_proj\zstack-cc2530-end /
 //                          device\Projects\zstack\Samples\GenericApp\CC2530D /
 //                          B\EndDeviceEB\List\ --diag_suppress Pe001,Pa010   /
@@ -275,17 +275,11 @@
         CFI ?RET_LOW Frame(CFA_SP, 1)
         CFI EndCommon cfiCommon0
         
-HalAdcInit          SYMBOL "HalAdcInit"
-HalLedInit          SYMBOL "HalLedInit"
 HalUARTInit         SYMBOL "HalUARTInit"
 osal_msg_receive    SYMBOL "osal_msg_receive"
 osal_msg_deallocate SYMBOL "osal_msg_deallocate"
-HalLedUpdate        SYMBOL "HalLedUpdate"
 halRestoreSleepLevel SYMBOL "halRestoreSleepLevel"
 HalUARTPoll         SYMBOL "HalUARTPoll"
-??HalAdcInit?relay  SYMBOL "?relay", HalAdcInit
-??HalLedInit?relay  SYMBOL "?relay", HalLedInit
-??HalLedUpdate?relay SYMBOL "?relay", HalLedUpdate
 ??HalUARTInit?relay SYMBOL "?relay", HalUARTInit
 ??HalUARTPoll?relay SYMBOL "?relay", HalUARTPoll
 ??halRestoreSleepLevel?relay SYMBOL "?relay", halRestoreSleepLevel
@@ -300,20 +294,6 @@ Hal_ProcessEvent    SYMBOL "Hal_ProcessEvent"
 Hal_ProcessPoll     SYMBOL "Hal_ProcessPoll"
 ??Hal_ProcessPoll?relay SYMBOL "?relay", Hal_ProcessPoll
 
-        EXTERN HalAdcInit
-        FUNCTION HalAdcInit,0202H
-        ARGFRAME ISTACK, 2, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN HalLedInit
-        FUNCTION HalLedInit,0202H
-        ARGFRAME ISTACK, 2, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         EXTERN HalUARTInit
         FUNCTION HalUARTInit,0202H
         ARGFRAME ISTACK, 2, STACK
@@ -335,13 +315,6 @@ Hal_ProcessPoll     SYMBOL "Hal_ProcessPoll"
         ARGFRAME XSTACK, 10, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN HalLedUpdate
-        FUNCTION HalLedUpdate,0202H
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 10, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         EXTERN halRestoreSleepLevel
         FUNCTION halRestoreSleepLevel,0202H
         ARGFRAME ISTACK, 0, STACK
@@ -356,12 +329,6 @@ Hal_ProcessPoll     SYMBOL "Hal_ProcessPoll"
         ARGFRAME XSTACK, 0, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN ??HalAdcInit?relay
-        FUNCTION ??HalAdcInit?relay,00H
-        EXTERN ??HalLedInit?relay
-        FUNCTION ??HalLedInit?relay,00H
-        EXTERN ??HalLedUpdate?relay
-        FUNCTION ??HalLedUpdate?relay,00H
         EXTERN ??HalUARTInit?relay
         FUNCTION ??HalUARTInit?relay,00H
         EXTERN ??HalUARTPoll?relay
@@ -548,28 +515,6 @@ HalDriverInit:
         CFI Block cfiBlock2 Using cfiCommon0
         CFI Function HalDriverInit
 //  128 {
-        FUNCALL HalDriverInit, HalAdcInit
-        LOCFRAME ISTACK, 2, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 0, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 2, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL HalDriverInit, HalLedInit
-        LOCFRAME ISTACK, 2, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 0, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 2, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL HalDriverInit, HalUARTInit
         LOCFRAME ISTACK, 2, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -597,8 +542,6 @@ HalDriverInit:
 //  134   /* ADC */
 //  135 #if (defined HAL_ADC) && (HAL_ADC == TRUE)
 //  136   HalAdcInit();
-        ; Setup parameters for call to function HalAdcInit
-        LCALL   ??HalAdcInit?relay
 //  137 #endif
 //  138 
 //  139   /* DMA */
@@ -620,8 +563,6 @@ HalDriverInit:
 //  155   /* LED */
 //  156 #if (defined HAL_LED) && (HAL_LED == TRUE)
 //  157   HalLedInit();
-        ; Setup parameters for call to function HalLedInit
-        LCALL   ??HalLedInit?relay
 //  158 #endif
 //  159 
 //  160   /* UART */
@@ -690,17 +631,6 @@ Hal_ProcessEvent:
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL Hal_ProcessEvent, osal_msg_receive
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 10, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 10, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL Hal_ProcessEvent, HalLedUpdate
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
         LOCFRAME XSTACK, 10, STACK
@@ -801,16 +731,13 @@ Hal_ProcessEvent:
 //  215   {
 //  216 #if (defined (BLINK_LEDS)) && (HAL_LED == TRUE)
 //  217     HalLedUpdate();
-        ; Setup parameters for call to function HalLedUpdate
-        LCALL   ??HalLedUpdate?relay
 //  218 #endif /* BLINK_LEDS && HAL_LED */
 //  219     return events ^ HAL_LED_BLINK_EVENT;
         MOV     A,#0x2
 ??Hal_ProcessEvent_8:
         XRL     A,R6
         MOV     R2,A
-        MOV     A,R7
-        SJMP    ??Hal_ProcessEvent_5
+        SJMP    ??Hal_ProcessEvent_6
 //  220   }
 //  221 
 //  222   if (events & HAL_KEY_EVENT)
@@ -833,9 +760,7 @@ Hal_ProcessEvent:
 //  235 
 //  236     return events ^ HAL_KEY_EVENT;
         MOV     A,#0x1
-        XRL     A,R6
-        MOV     R2,A
-        SJMP    ??Hal_ProcessEvent_6
+        SJMP    ??Hal_ProcessEvent_8
 //  237   }
 //  238 
 //  239 #ifdef POWER_SAVING
@@ -849,7 +774,10 @@ Hal_ProcessEvent:
         LCALL   ??halRestoreSleepLevel?relay
 //  243     return events ^ HAL_SLEEP_TIMER_EVENT;
         MOV     A,#0x4
-        SJMP    ??Hal_ProcessEvent_8
+        XRL     A,R6
+        MOV     R2,A
+        MOV     A,R7
+        SJMP    ??Hal_ProcessEvent_5
 //  244   }
 //  245 #endif
 //  246 
@@ -972,11 +900,11 @@ Hal_ProcessPoll:
 //  301 **************************************************************************************************/
 //  302 
 // 
-// 135 bytes in segment BANKED_CODE
+// 126 bytes in segment BANKED_CODE
 //  24 bytes in segment BANK_RELAYS
 //   1 byte  in segment XDATA_Z
 // 
-// 159 bytes of CODE  memory
+// 150 bytes of CODE  memory
 //   1 byte  of XDATA memory
 //
 //Errors: none
